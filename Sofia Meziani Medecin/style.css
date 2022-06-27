@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+
+:root{
+    --Montserrat : 'Montserrat', sans-serif;
+    --Parisienne : 'Parisienne', cursive;
+    --green : #03B769;
+    --blue: #8FD3F4;
+    --white: #FFFFFF;
+    --black: #363636;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flux{
+    max-width: 1250px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+h1{
+    font-family: var(--Montserrat);
+    font-size: 3.2rem;
+    color: var(--white);
+    font-weight: 700;
+}
+
+h2{
+    font-family: var(--Montserrat);
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+h3{
+    font-family: var(--Montserrat);
+}
+
+li{
+    list-style: none;
+    color: var(--black);
+    font-family: var(--Montserrat);
+}
+
+a{
+    text-decoration: none;
+    color: var(--black);
+}
+button{
+    cursor: pointer;
+}
+
+p{
+    font-family: var(--Montserrat);
+}
+
+body{position: relative;}
+
+
+.top-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0;
+    width: 90%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.right-nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 6rem;    
+    font-size: 1.2rem;
+
+}
+
+.right-nav li{
+    color: var(--white);
+    font-weight: 600;
+}
+
+#nav-logo{
+    font-family: var(--Parisienne);
+    font-size: 1.6rem;
+    color: var(--white);
+
+}
+
+#connect{
+    background: none;
+    font-family: var(--Montserrat);
+    color: var(--blue);
+    border: none;
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+#connect span{
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+#rdv{
+    background: none;
+    font-family: var(--Montserrat);
+    color: var(--blue);
+    border: 2px solid var(--blue);
+    font-weight: 800;
+    border-radius: 16px;
+    padding: 16px 24px;
+    font-size: 1rem;
+}
+
+
+
+
+/*  BANNER  */
+
+.hero-banner-bg{
+    background: url("./img/rond_fond.png") no-repeat;
+    background-position: right 23vw center; 
+}
+
+.hero-banner{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.hero-banner-right img{
+    width: 80px;
+}
+
+.hero-banner-left, .hero-banner-right{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero-banner-right{
+    gap: 24px;
+}
+
+.color-spe{
+    display: grid;
+    grid-template-columns: 32% 68%;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    height: 100px;
+    padding: 8px 24px;
+    border-radius: 25px;
+    margin-left: 56px;
+    text-align: center;
+    font-family: var(--Montserrat);
+    line-height: 1.8rem;
+}
+
+#color-spe-1{
+    background-color: #D6D9F9;
+}
+
+#color-spe-2{
+    background-color: #FBA39E;
+}
+
+#color-spe-3{
+    background-color: #FCDB9D;
+}
+
+.title-med{
+    color: var(--black);
+    font-weight: 700;
+    font-size: 1.4rem;
+
+}
+
+.sub-title-med{
+    color: var(--black);
+    font-weight: 400;
+    font-size: 1rem;
+
+}
+
+
+
+
+.hero-banner-content p{
+    color: var(--white);
+    margin: 32px 16px 32px 0;
+}
+
+#contact{
+    text-transform: uppercase;
+    color: var(--white);
+    border: 2px solid white;
+    padding: 24px 48px;
+    background: none;
+    border-radius: 25px;
+    font-family: var(--Montserrat);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.button-hero-container{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 2rem;
+}
+
+#rdv2{
+    text-transform: uppercase;
+    color: var(--blue);
+    border: 2px solid white;
+    padding: 13px 48px;
+    background: var(--white);
+    border-radius: 25px;
+    font-family: var(--Montserrat);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+#rdv2 span{
+    text-transform: none;
+    font-weight: 400;
+
+}
+
+
+/* // Section Author  // */
+
+.container-author{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    align-items: center;
+    margin: 56px 0;
+}
+.img-container-author{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.img-container-author img{
+width: 80%;}
+
+.container-author p{
+    border: 12px solid var(--green);
+    border-image: linear-gradient(to right bottom, var(--green), var(--blue)) 1;
+    border-left: none;
+    padding: 80px 36px;
+    width: 83%;
+}
+
+
+/* // Informations // */
+
+#title-info{
+    color: var(--green);
+    margin-left: 10%;
+}
+
+.container-info{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    border: 12px solid var(--green);
+    border-image: linear-gradient(to right bottom, var(--green), var(--blue)) 1;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 56px;
+}
+
+.container-info-text{
+    margin: 36px 0;
+}
+
+.info_prio{
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 12px 0;
+    color: var(--black)
+
+}
+
+.info-info{
+    font-weight: 400;
+    font-size: 0.8rem;
+    padding: 24px 0 4px 0;
+    color: var(--black)
+}
+
+#info-title-text{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--black)
+
+}
+
+#phone{
+    color: var(--green);
+    font-size: 1.2rem;
+    margin: 8px 0;
+}
+
+
+/* // RDV Form // */
+
+.container-rdv-bg{
+    background: rgb(143,211,244);
+background: linear-gradient(331deg, rgba(143,211,244,0.9164040616246498) 0%, rgba(93,201,191,1) 20%, rgba(34,189,129,1) 80%, rgba(3,183,96,0.8911939775910365) 100%);
+padding: 48px 0;
+}
+
+.container-rdv{
+    padding: 46px 0;
+}
+
+.container-rdv h2{
+    color: var(--white);
+    margin-left: 10%;
+}
+
+.container-rdv h2 span{
+    color: var(--black);
+}
+
+.container-rdv-form{
+    background-color: var(--white);
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 8px;
+
+}
+
+.container-rdv-form form{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.form-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px 4vw;
+    text-align: left;
+
+}
+
+.form-right{
+    display: grid;
+    grid-template-rows: 50% 50%;
+    padding: 16px 4vw;
+    height: 100%;
+}
+
+.left-input{
+    border: 1px solid var(--black);
+    height: 40px;
+    font-size: 1.2rem;
+    border-radius: 12px;
+    outline: none;
+    padding: 0 16px;
+}
+
+.left-input:focus{
+    outline: 2px solid var(--green);
+    border: none;
+}
+
+.label-left{
+    text-align: left;
+    font-family: var(--Montserrat);
+    color: var(--black);
+    font-weight: 600;
+    font-size: 1rem;
+    padding-bottom: 8px;
+    padding-top: 24px;
+}
+
+
+#rdv-validation{
+    color: var(--white);
+    background: var(--black);
+    border-radius: 25px;
+    font-family: var(--Montserrat);
+    font-weight: 600;
+    font-size: 1rem;
+    height: 60px;
+    width: 210px;
+    border: none;
+    transform: translateY(50%);
+    margin: 0 auto;
+}
+
+#rdv-validation span{
+    color: var(--white);
+}
+
+.area-container{
+    padding-top: 16px;
+}
+
+
+#area{
+    height: 80%;
+    width: 100%;
+    font-family: var(--Montserrat);
+    padding: 8px;
+    resize: none;
+    margin-top: 8px;
+}
+
+footer{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    align-items: center;
+    color: #363636;
+    padding: 36px 0;
+}
+
+.col-footer-left{
+    text-align: left;
+}
+
+.col-footer-mid{
+    text-align: center;
+}
+
+.col-footer-right{
+    text-align: right;
+}
+
+#footer-logo{
+    font-family: var(--Parisienne);
+    font-size: 1.6rem;
+    color: var(--black);
+    
+}
+
+.footer-sublogo{
+    font-size: 0.8rem;
+    padding: 8px 0;
+}
+
+.footer-text{
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 8px 0;
+}
+
+#footer-phone{
+    font-weight: 600;
+    font-size: 1.2rem;
+}
