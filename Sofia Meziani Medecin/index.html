@@ -7,21 +7,29 @@
     <title>Docteur Sofia Meziani</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/rond_fond.png">
 </head>
 <body>
     <header>
         <nav class="top-nav">
-        <div>
-            <a href="#"><p id="nav-logo">Docteur Sofia Meziani</p></a>
-        </div>
-        <div>
+        
+                <a href="#"><p id="nav-logo">Docteur Sofia Meziani</p></a>
+            
+            
+            <div class="toggle-btn" id="btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
             <ul class="right-nav">
                 <li>Accueil</li>
                 <li>Présentation</li>
                 <li><button id="connect">Se connecter <br><span>Gérer mes RDV</span></button></li>
                 <li><button id="rdv" type="button">Prendre RDV</button></li>
             </ul>
-        </div>
+            
+
         </nav>
     </header>
 
@@ -44,7 +52,7 @@
             <div class="hero-banner-right">
                 
                     <div class="color-spe" id="color-spe-1">
-                        <div><img src="img/stethoscope (1).png" alt="stethoscope"></div>
+                        <div class="center-img"><img src="img/stethoscope (1).png" alt="stethoscope"></div>
                         <div>
                             <p class="title-med">Médecine générale</p>
                             <p class="sub-title-med">Suivi de l'enfant à l'adulte</p>
@@ -52,7 +60,7 @@
                     </div>
 
                     <div class="color-spe" id="color-spe-2">
-                        <div><img src="img/baby.png" alt="baby"></div>
+                        <div class="center-img"><img src="img/baby.png" alt="baby"></div>
                         <div>
                             <p class="title-med">Gynécologie</p>
                             <p class="sub-title-med">Suivi de l'enfant à l'adulte</p>
@@ -60,7 +68,7 @@
                     </div>
 
                     <div class="color-spe" id="color-spe-3">
-                        <div><img src="img/heart-handshake.png" alt="aide et orientation"></div>
+                        <div class="center-img"><img src="img/heart-handshake.png" alt="aide et orientation"></div>
                         <div>
                             <p class="title-med">Orientation <br>et conseils</p>
                         </div>
@@ -76,11 +84,11 @@
                 <div class="img-container-author">
                     <img src="img/indoor-shot-of-beautiful-happy-african-american-woman-smiling-cheerfully-keeping-her-arms-folded-relaxing-indoors-after-morning-lectures-.png" alt="photo du docteur Sofia Meziani">
                 </div>
-                <div>
+                
                 <p>Bonjour je suis la Dr. Sofia Meziani. <br>
                     Je suis diplômée de médecine générale spécialité gynécologie.<br>
                     Je vous accueille avec plaisir dans mon cabinet à Châtillon.</p>
-                </div>
+                
             </div>
 
         </section>
@@ -105,7 +113,7 @@
                         <p class="info_prio">Parking derrère le bâtiment</p>
                     
                     </div>
-                    <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2627.866604428018!2d2.2854793158520526!3d48.803524512522074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe858ff1d4e34f04a!2zNDjCsDQ4JzEyLjciTiAywrAxNycxNS42IkU!5e0!3m2!1sfr!2sfr!4v1656326624671!5m2!1sfr!2sfr" width="400" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                    <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2627.866604428018!2d2.2854793158520526!3d48.803524512522074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe858ff1d4e34f04a!2zNDjCsDQ4JzEyLjciTiAywrAxNycxNS42IkU!5e0!3m2!1sfr!2sfr!4v1656326624671!5m2!1sfr!2sfr" width="400" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="gMaps"></iframe></div>
 
                 
             </div>
@@ -120,7 +128,7 @@
                     <form action="" id="formRDV">
                         <div class="form-left">
                             <label for="name" class="label-left">Nom</label>
-                            <input type="text" name="name" id="name" class="left-input">
+                            <input type="text" name="name" id="name" class="left-input" placeholder="Nom">
                             <label for="forname" class="label-left">Prénom</label>
                             <input type="text" name="forname" id="forname" class="left-input">
                             <label for="email" class="label-left">Email</label>
