@@ -446,7 +446,7 @@ body {
 
 .form-right {
   display: grid;
-  grid-template-rows: 50% 50%;
+  grid-template-rows: 30% 20% 45%;
   padding: 16px 4vw;
   height: 100%;
 }
@@ -486,7 +486,7 @@ body {
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
-  width: 210px;
+  width: 55%;
   text-align: left;
   font-family: var(--Montserrat);
   font-weight: 500;
@@ -500,10 +500,30 @@ body {
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
-  width: 150px;
+  width: 40%;
   text-align: left;
   font-family: var(--Montserrat);
   font-weight: 500;
+}
+
+#spe {
+  background: none;
+  outline: none;
+  border: 1px solid var(--black);
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1rem;
+  width: 70%;
+  text-align: left;
+  font-family: var(--Montserrat);
+  font-weight: 500;
+  display: block;
+}
+
+.date-hours {
+  display: flex;
+  justify-content: space-between;
 }
 
 .date-container {
@@ -817,6 +837,17 @@ footer {
     color: white;
     border-color: #ffffff;
   }
+
+  .date-hours {
+    flex-direction: column;
+  }
+
+  #date {
+    width: 80%;
+  }
+  #hours {
+    width: 50%;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -948,6 +979,25 @@ footer {
   }
 
   .area-container label {
+    display: contents;
+  }
+
+  .date-hours {
+    flex-direction: column;
+  }
+
+  #date {
+    width: 80%;
+    background-color: var(--white);
+    border: none;
+  }
+  #hours {
+    width: 50%;
+    background-color: var(--white);
+    border: none;
+  }
+
+  #date-label {
     display: contents;
   }
 

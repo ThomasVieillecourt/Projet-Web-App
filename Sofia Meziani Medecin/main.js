@@ -54,6 +54,19 @@ const today = new Date().toISOString().split("T")[0];
 date.value = today;
 date.min = today;
 
+const datePicker = document.getElementById("date");
+
+datePicker.addEventListener("change", function (e) {
+  var day = new Date(this.value).getUTCDay();
+  if ([6, 0].includes(day)) {
+    e.target.setCustomValidity(
+      "Veuiller séléctionner un jour de la semaine (hors week-end)"
+    );
+  } else {
+    e.target.setCustomValidity("");
+  }
+});
+
 ///
 
 function validMail() {
@@ -129,6 +142,5 @@ phone.addEventListener("input", (e) => {
 
 formRDV.addEventListener("submit", (e) => {
   e.preventDefault();
-
   valid();
 });

@@ -140,6 +140,7 @@
                         <div class="form-right">
                             <div class="date-container">
                                 <label for="date" class="label-left" id="date-label">Séléctionner une date de RDV</label>
+                                <div class="date-hours">
                                 <input type="date" name="date" id="date" required>
                                 <select name="from" id="hours" required>
                                     <option value="9:00">9:00</option>
@@ -149,7 +150,15 @@
                                     <option value="11:00">11:00</option>
                                     <option value="11:30">11:30</option>
                                 </select>
+                            </div>
+                            </div>
 
+                            <div class="spe-container">
+                                <label for="spécialité" class="label-left">Spécialitié</label>
+                                <select name="specialité" id="spe" required>
+                                    <option value="medG">Médecine générale</option>
+                                    <option value="gyné">Gynécologie</option>
+                                </select>
                             </div>
 
                             <div class="area-container">
