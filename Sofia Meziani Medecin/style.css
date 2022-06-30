@@ -14,6 +14,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 .flux {
@@ -49,6 +50,7 @@ li {
 a {
   text-decoration: none;
   color: var(--black);
+  cursor: pointer;
 }
 button {
   cursor: pointer;
@@ -87,6 +89,11 @@ body {
   font-weight: 600;
 }
 
+.right-nav li:hover {
+  color: var(--black);
+  border-color: var(--black);
+}
+
 #nav-logo {
   font-family: var(--Parisienne);
   font-size: 1.6rem;
@@ -105,6 +112,12 @@ body {
 #connect span {
   font-weight: 500;
   font-size: 0.8rem;
+  text-align: center;
+}
+
+#connect:hover {
+  color: var(--black);
+  border-color: var(--black);
 }
 
 #rdv {
@@ -116,6 +129,12 @@ body {
   border-radius: 16px;
   padding: 16px 24px;
   font-size: 1rem;
+}
+
+#rdv:hover {
+  background-color: var(--black);
+  color: var(--white);
+  border-color: var(--black);
 }
 
 @media screen and (max-width: 1400px) {
@@ -246,6 +265,11 @@ body {
   font-size: 1rem;
 }
 
+#contact:hover {
+  color: var(--black);
+  background-color: var(--white);
+}
+
 .button-hero-container {
   display: flex;
   align-items: center;
@@ -268,6 +292,11 @@ body {
 #rdv2 span {
   text-transform: none;
   font-weight: 400;
+}
+
+#rdv2:hover {
+  background-color: var(--black);
+  color: var(--white);
 }
 
 @media screen and (max-width: 1300px) {
@@ -436,6 +465,10 @@ body {
   border: none;
 }
 
+.left-input::placeholder {
+  color: transparent;
+}
+
 .label-left {
   text-align: left;
   font-family: var(--Montserrat);
@@ -460,8 +493,10 @@ body {
   margin: 0 auto;
 }
 
-#rdv-validation span {
-  color: var(--white);
+#rdv-validation:hover {
+  color: var(--black);
+  border: 2px solid var(--black);
+  background-color: var(--white);
 }
 
 .area-container {
@@ -642,6 +677,8 @@ footer {
     position: absolute;
     flex-direction: column;
     transition: 0.5s ease-out;
+    justify-content: center;
+    gap: 4rem;
     right: -1200px;
     z-index: 4;
     background-color: var(--black);
@@ -735,6 +772,17 @@ footer {
   .color-spe img {
     width: 60%;
     margin: auto 0;
+  }
+
+  #connect {
+    border: none;
+    background-color: var(--black);
+    color: white;
+  }
+
+  #rdv {
+    color: white;
+    border-color: #ffffff;
   }
 }
 
@@ -833,11 +881,11 @@ footer {
   }
 
   h2 span {
-    word-spacing: 2rem;
+    word-spacing: 10rem;
   }
 
   .container-rdv-bg {
-    padding: 16px 0 36px 0;
+    padding: 0px 0 36px 0;
   }
 
   .container-rdv-form form {
@@ -857,7 +905,67 @@ footer {
     display: none;
   }
 
-  #name::placeholder {
-    color: #363636b0;
+  .left-input::placeholder {
+    color: #363636ce;
+  }
+
+  #area {
+    border: none;
+    height: 180px;
+  }
+
+  .area-container label {
+    display: contents;
+  }
+
+  #rdv-validation {
+    transform: translateY(180%);
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2rem;
+    align-items: center;
+    color: #363636;
+    padding: 36px 0 24px 0;
+  }
+
+  footer ul {
+    display: none;
+  }
+
+  .col-footer-left {
+    text-align: center;
+  }
+
+  .col-footer-mid {
+    text-align: center;
+  }
+
+  .col-footer-right {
+    text-align: right;
+  }
+
+  #footer-logo {
+    font-family: var(--Parisienne);
+    font-size: 1.6rem;
+    color: var(--black);
+  }
+
+  .footer-sublogo {
+    font-size: 0.8rem;
+    padding: 8px 0;
+  }
+
+  .footer-text {
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 8px 0;
+  }
+
+  #footer-phone {
+    font-weight: 600;
+    font-size: 1.2rem;
   }
 }

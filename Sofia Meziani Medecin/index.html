@@ -13,7 +13,7 @@
     <header>
         <nav class="top-nav">
         
-                <a href="#"><p id="nav-logo">Docteur Sofia Meziani</p></a>
+            <a href="#"><p id="nav-logo">Docteur Sofia Meziani</p></a>
             
             
             <div class="toggle-btn" id="btn">
@@ -23,10 +23,10 @@
             </div>
 
             <ul class="right-nav">
-                <li>Accueil</li>
-                <li>Présentation</li>
-                <li><button id="connect">Se connecter <br><span>Gérer mes RDV</span></button></li>
-                <li><button id="rdv" type="button">Prendre RDV</button></li>
+                <a href="#nav-logo" target="_self"><li>Accueil</li></a>
+                <a href="#presentation" target="_self"><li>Présentation</li></a>
+                <a href=""><li><button id="connect">Se connecter <br><span>Gérer mes RDV</span></button></li></a>
+                <a href="#formRDV"><li><button id="rdv" type="button" href="formRDV" target="_self">Prendre RDV</button></li></a>
             </ul>
             
 
@@ -79,7 +79,7 @@
 
 
 
-        <section class="flux">
+        <section class="flux" id="presentation">
             <div class="container-author">
                 <div class="img-container-author">
                     <img src="img/indoor-shot-of-beautiful-happy-african-american-woman-smiling-cheerfully-keeping-her-arms-folded-relaxing-indoors-after-morning-lectures-.png" alt="photo du docteur Sofia Meziani">
@@ -130,11 +130,11 @@
                             <label for="name" class="label-left">Nom</label>
                             <input type="text" name="name" id="name" class="left-input" placeholder="Nom">
                             <label for="forname" class="label-left">Prénom</label>
-                            <input type="text" name="forname" id="forname" class="left-input">
+                            <input type="text" name="forname" id="forname" class="left-input" placeholder="Prénom">
                             <label for="email" class="label-left">Email</label>
-                            <input type="text" name="email" id="email" class="left-input">
+                            <input type="text" name="email" id="email" class="left-input" placeholder="Email">
                             <label for="phone" class="label-left">Téléphone</label>
-                            <input type="number" name="phone" id="phone" class="left-input">
+                            <input type="number" name="phone" id="phone" class="left-input" placeholder="Numéro de téléphone">
                         </div>
 
                         <div class="form-right">
@@ -179,9 +179,9 @@
 
         <div class="col-footer-right">
             <ul>
-                <li class="footer-text">À propos</li>
-                <li class="footer-text">Informations</li>
-                <li class="footer-text">Prendre rendez-vous</li>
+                <a href="#presentation"><li class="footer-text">À propos</li></a>
+                <a href="#title-info"><li class="footer-text">Informations</li></a>
+                <a href="#formRDV"><li class="footer-text">Prendre rendez-vous</li></a>
             </ul>
         </div>
     </footer>
