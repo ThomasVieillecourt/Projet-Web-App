@@ -2,6 +2,10 @@ const btnToggle = document.querySelector(".toggle-btn");
 const btnClicked = document.querySelector(".btn-clicked");
 const body = document.querySelector("body");
 
+const validForm = document.getElementById("rdv-validation");
+
+// MENU BURGER //
+
 const sidebar = document.querySelector(".right-nav");
 
 btnToggle.addEventListener("click", () => {
@@ -31,4 +35,100 @@ sidebar.addEventListener("click", () => {
     sidebar.style.height = "";
     sidebar.style.width = "";
   }
+});
+
+// --------------- //
+
+// REGEX FORM //
+const mail = document.getElementById("email");
+const phone = document.getElementById("telephone");
+const prenom = document.getElementById("forname");
+const famille = document.getElementById("name");
+const heure = document.getElementById("hours");
+
+const mailFormat = /^[\w\._-]+@[\w-/]+\.[a-z]{2,4}$/i;
+const phoneFormat = /^((\+)33|0|0033)[1-9](\d{2}){4}$/g;
+
+// DATE//
+const today = new Date().toISOString().split("T")[0];
+date.value = today;
+date.min = today;
+
+///
+
+function validMail() {
+  if (mail.value.match(mailFormat)) {
+    return true;
+  } else if (mail.value == "") {
+    mail.attributes["required"];
+    mail.style.border = "2px solid red";
+    mail.setCustomValidity("Merci de renseigner un mail");
+  } else {
+    mail.style.border = "2px solid red";
+    mail.setCustomValidity("Merci de renseigner un mail valide");
+  }
+}
+
+function validPhone() {
+  if (phone.value.match(phoneFormat)) {
+    return true;
+  } else if (phone.value == "") {
+    phone.attributes["required"];
+    phone.style.border = "2px solid red";
+    phone.setCustomValidity("Merci de renseigner un numéro de téléphone");
+  } else {
+    phone.style.border = "2px solid red";
+    phone.setCustomValidity(
+      "Merci de renseigner un numéro de téléphone valide"
+    );
+  }
+}
+
+function valid() {
+  if (validMail() === true && validPhone() === true) {
+    console.log(
+      " Le rendez-vous pour " +
+        prenom.value +
+        famille.value +
+        " est validé pour le " +
+        date.value +
+        " à " +
+        heure.value +
+        " heure."
+    );
+  }
+}
+
+mail.addEventListener("input", (e) => {
+  if (e.target.value.match(mailFormat)) {
+    mail.setCustomValidity("");
+    mail.style.border = "";
+    validMail === true;
+  } else if (e.target.value == "") {
+    mail.style.border = "2px solid red";
+    mail.setCustomValidity("Merci de renseigner un mail");
+  } else {
+    mail.style.border = "2px solid red";
+    mail.setCustomValidity("Merci de renseigner un mail valide");
+  }
+});
+
+phone.addEventListener("input", (e) => {
+  if (e.target.value.match(phoneFormat)) {
+    phone.setCustomValidity("");
+    phone.style.border = "";
+    validPhone === true;
+  } else if (e.target.value == "") {
+    phone.style.border = "2px solid red";
+    phone.setCustomValidity("Merci de renseigner un numéro de téléphone");
+  } else {
+    phone.style.border = "2px solid red";
+    phone.setCustomValidity("Merci de renseigner un numéro de téléphone");
+  }
+});
+
+formRDV.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  valid();
 });

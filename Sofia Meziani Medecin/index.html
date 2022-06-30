@@ -110,7 +110,7 @@
                         <p class="info_prio">Tram T6 - Châtillon centre</p>
                         <p class="info-info">Informations pratiques</p>
                         <p class="info_prio">Accès handicapé</p>
-                        <p class="info_prio">Parking derrère le bâtiment</p>
+                        <p class="info_prio">Parking derrière le bâtiment</p>
                     
                     </div>
                     <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2627.866604428018!2d2.2854793158520526!3d48.803524512522074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe858ff1d4e34f04a!2zNDjCsDQ4JzEyLjciTiAywrAxNycxNS42IkU!5e0!3m2!1sfr!2sfr!4v1656326624671!5m2!1sfr!2sfr" width="400" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="gMaps"></iframe></div>
@@ -133,14 +133,23 @@
                             <input type="text" name="forname" id="forname" class="left-input" placeholder="Prénom">
                             <label for="email" class="label-left">Email</label>
                             <input type="text" name="email" id="email" class="left-input" placeholder="Email">
-                            <label for="phone" class="label-left">Téléphone</label>
-                            <input type="number" name="phone" id="phone" class="left-input" placeholder="Numéro de téléphone">
+                            <label for="telephone" class="label-left">Téléphone</label>
+                            <input type="number" name="telephone" id="telephone" class="left-input" placeholder="Numéro de téléphone" >
                         </div>
 
                         <div class="form-right">
-                            <div>
-                                <label for="date" class="label-left">Séléctionner une date</label>
-                                <input type="date" name="date" id="date">
+                            <div class="date-container">
+                                <label for="date" class="label-left" id="date-label">Séléctionner une date de RDV</label>
+                                <input type="date" name="date" id="date" required>
+                                <select name="from" id="hours" required>
+                                    <option value="9:00">9:00</option>
+                                    <option value="9:30">9:30</option>
+                                    <option value="10:00">10:00</option>
+                                    <option value="10:30">10:30</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="11:30">11:30</option>
+                                </select>
+
                             </div>
 
                             <div class="area-container">
@@ -151,7 +160,7 @@
 
 
                     </form>
-                    <button type="submit" id="rdv-validation" form="formeRDV">Prendre <br><span>RENDEZ-VOUS</span></button>
+                    <button type="submit" id="rdv-validation" form="formRDV">Prendre <br><span>RENDEZ-VOUS</span></button>
                     
                 </div>
 

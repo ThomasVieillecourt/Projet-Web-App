@@ -461,8 +461,7 @@ body {
 }
 
 .left-input:focus {
-  outline: 2px solid var(--green);
-  border: none;
+  border: 2px solid var(--green);
 }
 
 .left-input::placeholder {
@@ -477,6 +476,40 @@ body {
   font-size: 1rem;
   padding-bottom: 8px;
   padding-top: 24px;
+}
+
+#date {
+  background: none;
+  outline: none;
+  border: 1px solid var(--black);
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1rem;
+  width: 210px;
+  text-align: left;
+  font-family: var(--Montserrat);
+  font-weight: 500;
+}
+
+#hours {
+  background: none;
+  outline: none;
+  border: 1px solid var(--black);
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1rem;
+  width: 150px;
+  text-align: left;
+  font-family: var(--Montserrat);
+  font-weight: 500;
+}
+
+.date-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
 }
 
 #rdv-validation {
