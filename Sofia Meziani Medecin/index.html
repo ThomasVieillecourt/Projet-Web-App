@@ -41,8 +41,8 @@
                         <h1>Docteur Sofia Meziani</h1>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea laudantium at eligendi veniam consequuntur molestiae non, ex iure labore dignissimos eius,   reprehenderit quasi aliquid hic quis a. Amet, similique dolores.</p>
                             <div class="button-hero-container">
-                                <button type="button" id="contact">CONTACTER</button>
-                                <button type="button" id="rdv2"><span> Prendre</span><br>RENDEZ-VOUS</button>
+                                <button type="button" id="contact" onclick="window.location.href='#title-info'" target="_self">CONTACTER</button>
+                                <button type="button" id="rdv2" onclick="window.location.href='#formRDV'" target="_self"><span> Prendre</span><br>RENDEZ-VOUS</button>
                             </div>
                     </div>
                 </div>
@@ -151,7 +151,7 @@
                                     <option value="11:30">11:30</option>
                                 </select>
                             </div>
-                            </div>
+                        </div>
 
                             <div class="spe-container">
                                 <label for="spécialité" class="label-left">Spécialitié</label>
@@ -167,8 +167,21 @@
                             </div>
                         </div>
 
-
+                        
                     </form>
+
+                    <div class="checkbox-container">
+                        <div>
+                        <input type="checkbox" name="CGU" id="CGU" required>
+                        <label for="CGU">J'accèpte les conditions d'utilisation.</label></div>
+                        <div><input type="checkbox" name="data" id="data" required>
+                        <label for="data">Je certifie l'exactitude des données renseignées et je m'engage à respecter le rendez-vous convenu.</label></div>
+                    </div>
+
+                    <div class="alert-container">
+                        <p id="alert" class="alertCGU">Merci d'accepter les condidtions générales d'utilisation ainsi que la certification des données renseignées</p>
+                    </div>   
+
                     <button type="submit" id="rdv-validation" form="formRDV">Prendre <br><span>RENDEZ-VOUS</span></button>
                     
                 </div>

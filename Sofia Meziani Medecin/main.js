@@ -45,6 +45,8 @@ const phone = document.getElementById("telephone");
 const prenom = document.getElementById("forname");
 const famille = document.getElementById("name");
 const heure = document.getElementById("hours");
+const containerCheckbox = document.querySelector(".checkbox-container");
+const alertCGU = document.querySelector("#alert");
 
 const mailFormat = /^[\w\._-]+@[\w-/]+\.[a-z]{2,4}$/i;
 const phoneFormat = /^((\+)33|0|0033)[1-9](\d{2}){4}$/g;
@@ -97,8 +99,19 @@ function validPhone() {
   }
 }
 
+function check() {
+  const cguBox = document.getElementById("CGU");
+  const dataBox = document.getElementById("data");
+
+  if (cguBox.checked && dataBox.checked) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 function valid() {
-  if (validMail() === true && validPhone() === true) {
+  if (validMail() === true && validPhone() === true && check() === true) {
     console.log(
       " Le rendez-vous pour " +
         prenom.value +
@@ -143,4 +156,10 @@ phone.addEventListener("input", (e) => {
 formRDV.addEventListener("submit", (e) => {
   e.preventDefault();
   valid();
+
+  if (check() != true) {
+    alertCGU.style.display = "contents";
+  } else if (check() === true) {
+    alertCGU.style.display = "none";
+  }
 });

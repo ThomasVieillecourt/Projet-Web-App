@@ -176,7 +176,7 @@ body {
 
 .hero-banner-bg {
   background: url("./img/rond_fond.png") no-repeat;
-  background-position: right 24vw center;
+  background-position: right 25vw center;
 }
 
 .hero-banner {
@@ -313,6 +313,10 @@ body {
     width: 100%;
     margin-right: auto;
     margin-left: auto;
+  }
+
+  .right-nav {
+    gap: 6rem;
   }
 }
 
@@ -563,6 +567,22 @@ body {
   padding: 8px;
   resize: none;
   margin-top: 8px;
+}
+
+.checkbox-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  font-family: var(--Montserrat);
+  font-size: 0.8rem;
+}
+
+.alertCGU {
+  display: none;
+  color: red;
+  height: 20px;
+  font-size: 0.8rem;
 }
 
 footer {
