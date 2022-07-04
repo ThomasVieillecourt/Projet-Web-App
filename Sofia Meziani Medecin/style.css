@@ -336,6 +336,9 @@ body {
 
 .img-container-author img {
   width: 80%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
 .container-author p {
@@ -939,7 +942,7 @@ footer {
 
   .img-container-author img {
     width: 60%;
-    transform: translateY(30%);
+    transform: translateY(20%);
   }
 
   .container-author p {
@@ -1070,5 +1073,13 @@ footer {
   #footer-phone {
     font-weight: 600;
     font-size: 1.2rem;
+  }
+
+  @media screen and (max-width: 500px) {
+    .img-container-author img {
+      width: 55%;
+      height: 50%;
+      transform: translateY(20%);
+    }
   }
 }
