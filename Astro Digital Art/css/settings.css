@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:wght@200;300;400;500;600;700&family=Prata&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  height: 300vh;
+  width: 100%;
+  background-image: url("../img/1x/bg-gradient.png");
+  position: relative;
+}
