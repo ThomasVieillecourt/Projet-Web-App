@@ -7,6 +7,7 @@ nav {
   justify-content: space-around;
   align-items: center;
   height: 100px;
+  z-index: 3;
 }
 
 .nav-left-column {
@@ -22,6 +23,11 @@ nav {
   margin-right: 8vw;
   font-family: "Albert Sans", sans-serif;
   gap: 2rem;
+  color: white;
+}
+
+.nav-right-column a {
+  color: white;
 }
 
 #favicon {
@@ -35,6 +41,10 @@ ul {
   gap: 4rem;
   font-family: "Albert Sans", sans-serif;
   font-weight: 600;
+}
+
+ul li {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 select {

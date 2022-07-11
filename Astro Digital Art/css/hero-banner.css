@@ -81,3 +81,258 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 0.2rem;
 }
+
+.hero-banner-col3 {
+  height: 90vh;
+  width: 640px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* From https://css.glass */
+  background: rgba(214, 127, 149, 0.09);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.9px);
+  -webkit-backdrop-filter: blur(1.9px);
+  border: none;
+  border-bottom-left-radius: 8px;
+  z-index: 2;
+}
+
+.col3-top {
+  display: grid;
+  grid-template-columns: 30% 50% 20%;
+  align-items: center;
+  margin-right: 60px;
+}
+
+#col3-top-textabso {
+  padding: 36px 0;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Albert Sans", sans-serif;
+  transform: translateX(-40%);
+}
+
+.col3-author {
+  text-align: right;
+  padding: 0 16px;
+  font-family: "Albert Sans", sans-serif;
+}
+
+#img-col3-author {
+  width: 50px;
+  height: 50px;
+  border-radius: 80px;
+  object-fit: cover;
+}
+
+.design {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1rem;
+}
+
+.author {
+  color: white;
+}
+
+.container-hero-img {
+  background: url("../img/AstroDigitalArt.jpg") no-repeat center/cover;
+  height: 50vh;
+  width: 60%;
+  position: relative;
+  animation: bg-move 20s infinite alternate linear;
+  transition: all 0.3s;
+}
+
+@keyframes bg-move {
+  from {
+    background-position: top left;
+  }
+
+  to {
+    background-position: bottom right;
+  }
+}
+
+.bandeau-img {
+  width: 100%;
+  height: 20%;
+  position: absolute;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: none;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 24px;
+  font-family: "Albert Sans", sans-serif;
+}
+
+.astro {
+  color: white;
+  font-size: 1.1rem;
+  font-family: "Prata", serif;
+}
+
+.seeMore {
+  width: 60%;
+  background: none;
+  border: none;
+  border-bottom: 1px solid white;
+  text-transform: uppercase;
+  color: white;
+  font-size: 0.9rem;
+  font-family: "Albert Sans", sans-serif;
+  letter-spacing: 0.2rem;
+  text-align: left;
+  padding-top: 36px;
+  padding-bottom: 6px;
+}
+
+@media screen and (max-width: 1200px) {
+  .hero-banner-col3 {
+    width: 420px;
+  }
+
+  .container-hero-img {
+    height: 45vh;
+    width: 80%;
+    position: relative;
+  }
+
+  .col3-top {
+    margin-right: 10px;
+  }
+
+  .seeMore {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .hero-banner-container {
+    height: 150vh;
+    width: 100%;
+    display: flex;
+    gap: 56px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-banner-col3 {
+    height: 500px;
+    width: 80%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 80px 80px 80px;
+    border-radius: 8px;
+  }
+
+  .container-hero-img {
+    height: 400px;
+    width: 100%;
+    background: url("../img/AstroDigitalArt.jpg") no-repeat center/cover;
+    position: relative;
+    animation: bg-move 40s infinite alternate linear;
+    transition: all 0.3s;
+  }
+
+  .col3-top {
+    display: flex;
+    gap: 16px;
+    justify-content: start;
+    position: absolute;
+    right: 80px;
+    bottom: 16px;
+    z-index: 4;
+  }
+
+  #col3-top-textabso {
+    display: none;
+  }
+
+  #img-col3-author {
+    width: 50px;
+    height: 50px;
+    border-radius: 80px;
+    object-fit: cover;
+  }
+
+  .design {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1rem;
+  }
+
+  .author {
+    color: white;
+  }
+
+  .bandeau-img {
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 12px;
+    font-family: "Albert Sans", sans-serif;
+  }
+
+  .seeMore {
+    width: 40%;
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    text-transform: uppercase;
+    color: white;
+    font-size: 0.9rem;
+    font-family: "Albert Sans", sans-serif;
+    letter-spacing: 0.2rem;
+    text-align: left;
+    padding-top: 0px;
+    padding-bottom: 6px;
+    position: absolute;
+    left: 80px;
+    bottom: 24px;
+  }
+
+  .hero-banner-col2 {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    height: 100%;
+    font-family: "Albert Sans", sans-serif;
+  }
+
+  @keyframes bg-move {
+    from {
+      background-position: top left;
+    }
+
+    to {
+      background-position: bottom right;
+    }
+  }
+}

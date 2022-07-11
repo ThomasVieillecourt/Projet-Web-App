@@ -8,11 +8,15 @@
 
 a {
   text-decoration: none;
-  color: white;
+  cursor: pointer;
 }
 
 li {
   list-style: none;
+}
+
+button {
+  cursor: pointer;
 }
 
 body {
