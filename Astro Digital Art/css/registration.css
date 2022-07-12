@@ -1,0 +1,87 @@
+.registration-container {
+  height: 60vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  align-items: center;
+  justify-content: center;
+}
+
+.registration-container-left {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  align-items: center;
+  color: rgb(255, 255, 255);
+}
+
+.registration-col-1 {
+  text-align: center;
+  font-family: "Albert Sans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  transform: rotate(-90deg);
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1rem;
+}
+
+.registration-col-2 {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 6vh;
+  height: 100%;
+  font-family: "Albert Sans", sans-serif;
+  border-top: 2px solid rgba(255, 255, 255, 0.5);
+  padding-top: 16px;
+}
+
+.registration-col-2 h2 {
+  font-family: "Prata", serif;
+  font-size: 4rem;
+}
+
+.registration-col-2 button {
+  text-align: left;
+}
+
+.registration-col-3 p {
+  font-family: "Albert Sans", sans-serif;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1rem;
+}
+
+.registration-col-3 div {
+  font-family: "Albert Sans", sans-serif;
+  color: white;
+  display: flex;
+  gap: 1rem;
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.number-count {
+  background-color: rgba(66, 66, 66, 0.5);
+  height: 80px;
+  width: 50px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow {
+  width: 180px;
+  height: 180px;
+  background: url("../img/arrow-down5.png") center/cover;
+  position: absolute;
+  right: 100px;
+}
+
+.total-container {
+  display: flex;
+  width: 84%;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 56px;
+  border-bottom: 16px solid #130209b2;
+}
