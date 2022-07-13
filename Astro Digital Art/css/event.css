@@ -1,0 +1,151 @@
+.event-container {
+  height: 70vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  align-items: center;
+  justify-content: center;
+}
+
+.event-container-left {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 20% 80%;
+  align-items: center;
+  color: rgb(255, 255, 255);
+}
+
+.event-col-1 {
+  text-align: center;
+  font-family: "Albert Sans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  transform: rotate(-90deg);
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1rem;
+}
+
+.event-col-2 {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 6vh;
+  height: 100%;
+  font-family: "Albert Sans", sans-serif;
+  border-top: 2px solid rgba(255, 255, 255, 0.5);
+  padding-top: 16px;
+}
+
+.event-col-2 h2 {
+  font-family: "Prata", serif;
+  font-size: 4rem;
+}
+
+.week-event button {
+  padding: 32px 0 16px 0;
+}
+
+.event-col-2 button {
+  text-align: left;
+}
+
+.h3-main {
+  font-family: "Prata", serif;
+  font-size: 2rem;
+  border-bottom: 2px solid #470721;
+  width: 80%;
+}
+
+.h3-grey {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Prata", serif;
+  font-size: 1.4rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  width: 80%;
+}
+
+.event-col-3 {
+  height: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.slider-container {
+  height: 82%;
+  width: 200%;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: none;
+}
+
+.cards-container {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 2rem;
+  padding: 32px;
+}
+
+.card {
+  height: 400px;
+  width: 300px;
+  position: relative;
+  -webkit-box-shadow: 4px 2px 15px 3px rgba(20, 20, 20, 0.5);
+  box-shadow: 4px 2px 15px 3px rgba(20, 20, 20, 0.5);
+}
+
+#card1 {
+  background: url("../img/AstroDigitalArt2.jpg") no-repeat center/cover;
+}
+
+#card2 {
+  background: url("../img/AstroDigitalArt3.jpg") no-repeat center/cover;
+}
+
+#card3 {
+  background: url("../img/AstroDigitalArt4.jpg") no-repeat center/cover;
+}
+
+.nav-div {
+  display: flex;
+  gap: 1rem;
+  padding: 4px 0;
+}
+
+.nav-div div {
+  width: 36px;
+  height: 4px;
+  background-color: #040003;
+  border-radius: 8px;
+}
+
+.nav-div a :hover {
+  background-color: #470721;
+}
+
+.event-card-selector {
+  display: flex;
+  align-items: flex-end;
+  width: 50%;
+  justify-content: start;
+  padding: 0 32px;
+  gap: 3rem;
+}
+
+#location-event {
+  color: rgb(255, 255, 255);
+  font-size: 0.9rem;
+  font-family: "Albert Sans", sans-serif;
+}
+
+#time-event {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+  font-family: "Albert Sans", sans-serif;
+  padding: 4px 0;
+}

@@ -25,4 +25,5 @@ body {
   background-image: url("../img/1x/bg-gradient.png");
   position: relative;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
