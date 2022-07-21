@@ -15,42 +15,82 @@
   </head>
 
   <header>
+    <div class="header-title">
+      <img src="img/Pokeball-PNG-Photos.png" alt="pokeball" />
+      <h1>Pokedex</h1>
+    </div>
     <nav>
-      <ul>
-        <a href="#"> <li>Pokémon</li></a>
-        <a href="#"> <li>Tous les pokémons</li></a>
-      </ul>
+      <div>
+        <input
+          type="radio"
+          name="tabs"
+          id="tab1"
+          class="tablinks"
+          onclick="openTab(event,'pokedex')"
+          checked
+        />
+        <label for="tab1">Pokédex</label>
+      </div>
+      <div>
+        <input
+          type="radio"
+          name="tabs"
+          id="tab2"
+          class="tablinks"
+          onclick="openTab(event,'pokeList')"
+        />
+        <label for="tab2">Liste</label>
+      </div>
     </nav>
   </header>
   <body>
-    <h1>Pokedex</h1>
-
-    <div>
-      <h2 id="pokeName"></h2>
-      <img src="" alt="Image du pokemon" id="pokeImg" />
-      <p id="pokeId"></p>
-      <img src="" alt="type du pokemon" id="pokeType" />
-      <img src="" alt="type du pokemon" id="pokeType2" />
+    <div class="tab" id="pokedex">
       <div>
-        <p id="pokePreEvol"></p>
-        <img src="" alt="evolution du pokemon" id="pokePreEvolImg" />
-      </div>
-      <div>
-        <p id="pokeEvol"></p>
-        <img src="" alt="evolution du pokemon" id="pokeEvolImg" />
-      </div>
-    </div>
+        <div class="infoPokemon">
+          <h2 id="pokeName"></h2>
+          <p id="pokeId"></p>
+          <div class="back-skew"></div>
+        </div>
+        <img src="" alt="Image du pokemon" id="pokeImg" />
 
-    <div class="container-pokedex">
-      <div class="container-content">
-        <div>
-          <div id="screenName"><p>Nom du pokemon</p></div>
-          <div class="pokedex-btn">
-            <button type="button">Pre</button
-            ><button type="button">Next</button>
+        <div class="pokeTypes">
+          <img src="" alt="type du pokemon" id="pokeType" />
+          <img src="" alt="type du pokemon" id="pokeType2" />
+        </div>
+
+        <div class="containerPokeEvol">
+          <div class="EvolContent">
+            <img src="" alt="evolution du pokemon" id="pokePreEvolImg" />
+            <p id="pokePreEvol"></p>
+          </div>
+          <div class="EvolContent">
+            <img src="" alt="evolution du pokemon" id="pokeEvolImg" />
+            <p id="pokeEvol"></p>
+          </div>
+        </div>
+
+        <div class="container-pokedex">
+          <div class="container-content">
+            <div>
+              <div id="screenName">
+                <p id="pokeNameRadar">Nom du pokemon</p>
+              </div>
+              <div class="pokedex-btn">
+                <button type="button">Pre</button
+                ><button type="button">Next</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="tab" id="pokeList">
+      <ul>
+        <li>1</li>
+        <li>23</li>
+        <li>4</li>
+      </ul>
     </div>
     <script src="main.js"></script>
   </body>
