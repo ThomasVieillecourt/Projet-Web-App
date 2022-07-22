@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
       media="screen"
       href="https://fontlibrary.org//face/dogica"
       type="text/css"
@@ -75,9 +81,23 @@
               <div id="screenName">
                 <p id="pokeNameRadar">Nom du pokemon</p>
               </div>
-              <div class="pokedex-btn">
-                <button type="button">Pre</button
-                ><button type="button">Next</button>
+              <div class="pokedex-btn-container">
+                <div class="pokedex-btn">
+                  <button>
+                    <i class="fa-solid fa-angle-left"></i>
+                  </button>
+                  <button type="button">
+                    <i class="fa-solid fa-angle-right"></i>
+                  </button>
+                </div>
+                <div class="pokedex-btn-right">
+                  <button id="up">
+                    <i class="fa-solid fa-a"></i>
+                  </button>
+                  <button type="button" id="down">
+                    <i class="fa-solid fa-b"></i>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -87,11 +107,15 @@
 
     <div class="tab" id="pokeList">
       <ul>
-        <li>1</li>
+        <li>1<i class="fa-solid fa-right"></i></li>
         <li>23</li>
         <li>4</li>
       </ul>
     </div>
+    <script
+      src="https://kit.fontawesome.com/cb2939ea48.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="main.js"></script>
   </body>
 </html>
