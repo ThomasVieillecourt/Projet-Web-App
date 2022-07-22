@@ -41,6 +41,9 @@ fetch("https://pokebuildapi.fr/api/v1/pokemon")
       pokeEvol.textContent = "";
       pokeEvolImg.style.display = "none";
     }
+
+    pokedex.style.background =
+      "url('img/bg-" + pokeData.apiTypes[0].name + ".png') no-repeat top/cover";
   });
 
 function openTab(evt, tabName) {
