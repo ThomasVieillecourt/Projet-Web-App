@@ -17,8 +17,14 @@ a {
 
 body {
   width: 100%;
-  height: 100vh;
   font-family: "Lato", sans-serif;
+}
+
+header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 2;
 }
 
 #pokedex {
@@ -26,12 +32,16 @@ body {
   overflow-x: hidden;
   font-family: "Lato", sans-serif;
   color: white;
+  margin: 96px 0 0 0;
+  height: 500px;
+  z-index: 1;
 }
 
 #pokeList {
   display: none;
   background: url("img/pokemon-ball-isole-sur-fond-gris-ha69rh\ \(1\).jpg")
     no-repeat fixed center/cover;
+  margin: 96px 0 0 0;
 }
 
 .header-title {
@@ -72,6 +82,8 @@ label {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Lato", sans-serif;
+  font-size: 1.2rem;
 }
 
 input + label {
@@ -79,7 +91,6 @@ input + label {
   background-color: #e0e0e0;
   padding: auto 100%;
   width: 100%;
-  font-family: "Lato", sans-serif;
 }
 
 input:checked + label {
@@ -157,6 +168,7 @@ input:checked + label {
   align-items: center;
   position: absolute;
   bottom: 0;
+  z-index: 2;
 }
 
 .container-content {
@@ -189,11 +201,6 @@ input:checked + label {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-#pokedex {
-  height: 500px;
-  background-color: #242424;
 }
 
 .pokedex-btn-container {
@@ -278,4 +285,61 @@ i {
   position: absolute;
   z-index: -1;
   border-radius: 12px;
+}
+
+.loader-wrapper {
+  width: 100%;
+  height: 80%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #242f3f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.pokemon {
+  position: relative;
+  height: 80px;
+  width: 80px;
+  background: linear-gradient(to bottom, rgb(254, 0, 1) 50%, white 50%);
+  border-radius: 50%;
+  border: 7px solid black;
+  animation: spin 4s linear infinite;
+}
+
+.pokemon::before {
+  content: "";
+  position: absolute;
+  height: 6px;
+  width: 68px;
+  background: black;
+  top: 50px;
+  transform: translateY(-320%);
+}
+
+.pokemon::after {
+  content: "";
+  position: absolute;
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  background: white;
+  top: 50px;
+  left: 50px;
+  transform: translate(-120%, -116%);
+  box-shadow: inset 0 0 0 6px black, inset 0 0 0 8px white,
+    inset 0 0 0 10px black;
+}
+
+/* Spin Animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

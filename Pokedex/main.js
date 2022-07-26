@@ -14,23 +14,7 @@ async function pokeFetch() {
 pokeFetch();
 
 function displayFetch() {
-  const containerCards = document.getElementById("container_cards");
-
-  containerCards.innerHTML = pokeData
-    .map(
-      (pokeCard) =>
-        `
-      <div class="card">
-        <img src=${pokeCard.image} alt=${pokeCard.name} id="card_poke">
-        <h2>${pokeCard.name}</h2>
-        <img src="img/bg-${pokeCard.apiTypes[0].name}.png" alt=${pokeCard.name} id="card_bg">
-
-      </div>
-
-      `
-    )
-
-    .join("");
+  listPokedex();
 
   pokeData = pokeData[Math.floor(Math.random() * pokeData.length)];
 
@@ -71,6 +55,8 @@ function displayFetch() {
 
   pokedex.style.background =
     "url('img/bg-" + pokeData.apiTypes[0].name + ".png') no-repeat top/cover";
+
+  loadEvent();
 }
 
 function openTab(evt, tabName) {
@@ -87,4 +73,42 @@ function openTab(evt, tabName) {
 
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
+}
+
+const loader = document.querySelector(".loader-wrapper");
+
+function loadEvent() {
+  if (pokeData.apiEvolutions.length == 1) {
+    pokeEvolImg.addEventListener("load", () => {
+      loader.style.display = "none";
+    });
+  } else if (pokeData.apiPreEvolution != "none") {
+    pokePreEvolImg.addEventListener("load", () => {
+      loader.style.display = "none";
+    });
+  } else {
+    pokeImg.addEventListener("load", () => {
+      loader.style.display = "none";
+    });
+  }
+}
+
+function listPokedex() {
+  const containerCards = document.getElementById("container_cards");
+
+  containerCards.innerHTML = pokeData
+    .map(
+      (pokeCard) =>
+        `
+      <div class="card">
+        <img src=${pokeCard.image} alt=${pokeCard.name} id="card_poke">
+        <h2>${pokeCard.name}</h2>
+        <img src="img/bg-${pokeCard.apiTypes[0].name}.png" alt=${pokeCard.name} id="card_bg">
+
+      </div>
+
+      `
+    )
+
+    .join("");
 }
