@@ -28,6 +28,12 @@ body {
   color: white;
 }
 
+#pokeList {
+  display: none;
+  background: url("img/pokemon-ball-isole-sur-fond-gris-ha69rh\ \(1\).jpg")
+    no-repeat fixed center/cover;
+}
+
 .header-title {
   display: flex;
   align-items: center;
@@ -73,6 +79,7 @@ input + label {
   background-color: #e0e0e0;
   padding: auto 100%;
   width: 100%;
+  font-family: "Lato", sans-serif;
 }
 
 input:checked + label {
@@ -117,10 +124,6 @@ input:checked + label {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-}
-
-#pokeList {
-  display: none;
 }
 
 #pokeImg {
@@ -190,6 +193,7 @@ input:checked + label {
 
 #pokedex {
   height: 500px;
+  background-color: #242424;
 }
 
 .pokedex-btn-container {
@@ -240,4 +244,38 @@ i {
 
 .pokedex-btn-right button i {
   font-size: 1.4rem;
+}
+
+.card {
+  width: 80%;
+  height: 150px;
+  border-radius: 12px;
+  margin: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+#container_cards {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-items: center;
+  padding: 24px 0 0 0;
+}
+
+#card_poke {
+  width: 70%;
+}
+
+#card_bg {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  position: absolute;
+  z-index: -1;
+  border-radius: 12px;
 }
