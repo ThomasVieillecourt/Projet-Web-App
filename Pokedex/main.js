@@ -1,6 +1,6 @@
 // https://pokebuildapi.fr/api/v1/pokemon
-data = [];
 let pokeData = [];
+let dataBase;
 
 async function pokeFetch() {
   await fetch("https://pokebuildapi.fr/api/v1/pokemon")
@@ -8,15 +8,15 @@ async function pokeFetch() {
     .then((data) => (pokeData = data));
 
   console.log(pokeData);
+  dataBase = pokeData;
+  listPokedex();
   displayFetch();
 }
 
 pokeFetch();
 
 function displayFetch() {
-  listPokedex();
-
-  pokeData = pokeData[Math.floor(Math.random() * pokeData.length)];
+  randomizer();
 
   pokeName.textContent = pokeData.name;
   pokeImg.src = pokeData.image;
@@ -26,6 +26,7 @@ function displayFetch() {
   if (pokeData.apiTypes.length > 1) {
     pokeType.src = pokeData.apiTypes[0].image;
     pokeType2.src = pokeData.apiTypes[1].image;
+    pokeType2.style.display = "";
   } else {
     pokeType.src = pokeData.apiTypes[0].image;
     pokeType2.style.display = "none";
@@ -37,6 +38,7 @@ function displayFetch() {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" +
       pokeData.apiPreEvolution.pokedexIdd +
       ".png";
+    pokePreEvolImg.style.display = "";
   } else {
     pokePreEvol.textContent = "";
     pokePreEvolImg.style.display = "none";
@@ -48,6 +50,7 @@ function displayFetch() {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" +
       pokeData.apiEvolutions[0].pokedexId +
       ".png";
+    pokeEvolImg.style.display = "";
   } else {
     pokeEvol.textContent = "";
     pokeEvolImg.style.display = "none";
@@ -55,7 +58,6 @@ function displayFetch() {
 
   pokedex.style.background =
     "url('img/bg-" + pokeData.apiTypes[0].name + ".png') no-repeat top/cover";
-
   loadEvent();
 }
 
@@ -112,3 +114,12 @@ function listPokedex() {
 
     .join("");
 }
+
+function randomizer() {
+  pokeData = pokeData[Math.floor(Math.random() * pokeData.length)];
+}
+
+up.addEventListener("click", () => {
+  pokeData = dataBase;
+  displayFetch();
+});
