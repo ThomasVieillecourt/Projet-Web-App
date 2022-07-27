@@ -73,8 +73,14 @@ function openTab(evt, tabName) {
     tabLinks[i].className = tabLinks[i].className.replace(" active", "");
   }
 
-  document.getElementById(tabName).style.display = "block";
+  document.getElementById(tabName).style.display = "";
   evt.currentTarget.className += " active";
+
+  if (pokedex.style.display == "none") {
+    pokeList.style.display = "block";
+  } else {
+    document.getElementById(tabName).style.display = "";
+  }
 }
 
 const loader = document.querySelector(".loader-wrapper");

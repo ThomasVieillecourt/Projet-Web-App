@@ -53,6 +53,8 @@
   </header>
   <body>
     <div class="tab" id="pokedex">
+      <div></div>
+    
       <div class="background">
         <div class="infoPokemon">
           <h2 id="pokeName"></h2>
@@ -79,34 +81,35 @@
         <div class="loader-wrapper">
           <span class="pokemon"><span class="loader-inner"></span></span>
         </div>
+      </div>
 
-        <div class="container-pokedex">
-          <div class="container-content">
-            <div>
-              <div id="screenName">
-                <p id="pokeNameRadar">Nom du pokemon</p>
+      <div class="container-pokedex">
+        <div class="container-content">
+          <div>
+            <div id="screenName">
+              <p id="pokeNameRadar">Nom du pokemon</p>
+            </div>
+            <div class="pokedex-btn-container">
+              <div class="pokedex-btn">
+                <button type="button" id="previous-btn">
+                  <i class="fa-solid fa-angle-left"></i>
+                </button>
+                <button type="button">
+                  <i class="fa-solid fa-angle-right"></i>
+                </button>
               </div>
-              <div class="pokedex-btn-container">
-                <div class="pokedex-btn">
-                  <button type="button" id="previous-btn">
-                    <i class="fa-solid fa-angle-left"></i>
-                  </button>
-                  <button type="button">
-                    <i class="fa-solid fa-angle-right"></i>
-                  </button>
-                </div>
-                <div class="pokedex-btn-right">
-                  <button id="up">
-                    <i class="fa-solid fa-a"></i>
-                  </button>
-                  <button type="button" id="down">
-                    <i class="fa-solid fa-b"></i>
-                  </button>
-                </div>
+              <div class="pokedex-btn-right">
+                <button id="up">
+                  <i class="fa-solid fa-a"></i>
+                </button>
+                <button type="button" id="down">
+                  <i class="fa-solid fa-b"></i>
+                </button>
               </div>
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
 

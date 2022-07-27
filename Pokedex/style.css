@@ -23,6 +23,7 @@ body {
 header {
   position: absolute;
   width: 100%;
+  height: 12vh;
   top: 0;
   z-index: 2;
 }
@@ -32,9 +33,14 @@ header {
   overflow-x: hidden;
   font-family: "Lato", sans-serif;
   color: white;
-  margin: 96px 0 0 0;
-  height: 500px;
+  height: 100vh;
   z-index: 1;
+  display: grid;
+  grid-template-rows: 12% 66% 1fr;
+}
+
+.background {
+  padding: 24px 0 0 0;
 }
 
 #pokeList {
@@ -50,7 +56,7 @@ header {
   justify-content: center;
   gap: 8px;
   background-color: #dc0a2f;
-  height: 56px;
+  height: 50%;
 }
 
 .header-title img {
@@ -58,7 +64,7 @@ header {
 }
 nav {
   width: 100%;
-  height: 50px;
+  height: 50%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -78,7 +84,7 @@ input {
 }
 
 label {
-  height: 50px;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -135,6 +141,7 @@ input:checked + label {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  margin: 8px 0;
 }
 
 #pokeImg {
@@ -162,25 +169,25 @@ input:checked + label {
 .container-pokedex {
   background-color: #dc0a2f;
   width: 100%;
-  height: 28%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  bottom: 0;
-  z-index: 2;
 }
 
 .container-content {
-  width: 90%;
-  height: 90%;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .containerPokeEvol {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 24px 0;
+  margin: 12px 0 0 0;
 }
 
 .EvolContent {
@@ -194,7 +201,7 @@ input:checked + label {
 #screenName {
   background-color: #55ac61;
   border: 2px solid #242424;
-  height: 100px;
+  height: 60px;
   width: 80%;
   margin: 0 auto;
   font-family: "DogicaPixelRegular";
@@ -207,7 +214,7 @@ input:checked + label {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height: 112px;
+  height: 70%;
 }
 
 .pokedex-btn {
@@ -289,7 +296,7 @@ i {
 
 .loader-wrapper {
   width: 100%;
-  height: 80%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -344,6 +351,11 @@ i {
   }
 }
 
-.background {
-  padding: 12px 0 0 0;
+@media screen and (max-height: 670px) {
+  #pokeImg {
+    width: 40%;
+  }
+  .pokedex-btn-container {
+    height: 60%;
+  }
 }
