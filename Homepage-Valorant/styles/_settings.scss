@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "Tungsten";
+  src: url("../fonts/Tungsten-Bold.ttf");
+}
+
+@font-face {
+  font-family: "DINNextW1G";
+  src: url("../fonts/DINNextW1G-Bold.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+$colorRed: #ff4655;
+$colorWhite: #ece8e1;
+$colorDarkBlue: #0d1820;
+$colorBlack: #000000;
+$colorGrey: #292929;
+$font1: "DINNextW1G";
+$font2: "Tungsten";

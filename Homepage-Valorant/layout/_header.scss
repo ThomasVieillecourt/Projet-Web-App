@@ -1,0 +1,136 @@
+header .nav-container {
+  background-color: $colorBlack;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    list-style: none;
+
+    .left-nav {
+      display: flex;
+      align-items: center;
+
+      #riotLogo {
+        width: 70px;
+        cursor: pointer;
+        margin: 0 16px;
+      }
+
+      #valorantLogo {
+        width: 70px;
+        cursor: pointer;
+        margin: 0 16px;
+      }
+
+      #list-medium {
+        display: none;
+      }
+
+      #list-small {
+        display: none;
+      }
+
+      .list-container {
+        display: flex;
+        align-items: center;
+        gap: 2.2rem;
+        padding: 0px 16px;
+
+        a {
+          text-decoration: none;
+          padding: 2px 12px;
+          border-radius: 6px;
+          position: relative;
+
+          &:hover {
+            background-color: $colorGrey;
+
+            .underline {
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              transform: translateY(400%);
+              width: 100%;
+              height: 4px;
+              background-color: $colorRed;
+              border-radius: 4px;
+            }
+          }
+
+          li {
+            list-style: none;
+            color: $colorWhite;
+            font-family: $font1;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            font-size: 0.9rem;
+            padding: 8px 0px;
+
+            &:hover {
+              background-color: $colorGrey;
+            }
+          }
+        }
+      }
+      @media screen and (max-width: 1600px) {
+        #list-full {
+          display: none;
+        }
+
+        #list-medium {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 1.4rem;
+        }
+      }
+
+      @media screen and (max-width: 1300px) {
+        #list-medium {
+          display: none;
+        }
+        #list-small {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 1.4rem;
+        }
+      }
+    }
+
+    .right-nav {
+      display: flex;
+
+      .list-container {
+        display: flex;
+        align-items: center;
+        gap: 2.2rem;
+        padding: 0px 16px;
+
+        a {
+          text-decoration: none;
+          padding: 2px 12px;
+          border-radius: 6px;
+          position: relative;
+
+          li {
+            list-style: none;
+            color: $colorWhite;
+            font-family: $font1;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            font-size: 0.9rem;
+            padding: 8px 0px;
+          }
+        }
+      }
+    }
+
+    #globe {
+      width: 20px;
+    }
+  }
+}

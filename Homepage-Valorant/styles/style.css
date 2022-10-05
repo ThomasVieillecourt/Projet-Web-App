@@ -1,0 +1,169 @@
+@font-face {
+  font-family: "Tungsten";
+  src: url("../fonts/Tungsten-Bold.ttf");
+}
+@font-face {
+  font-family: "DINNextW1G";
+  src: url("../fonts/DINNextW1G-Bold.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header .nav-container {
+  background-color: #000000;
+}
+header .nav-container nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 80px;
+  list-style: none;
+}
+header .nav-container nav .left-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header .nav-container nav .left-nav #riotLogo {
+  width: 70px;
+  cursor: pointer;
+  margin: 0 16px;
+}
+header .nav-container nav .left-nav #valorantLogo {
+  width: 70px;
+  cursor: pointer;
+  margin: 0 16px;
+}
+header .nav-container nav .left-nav #list-medium {
+  display: none;
+}
+header .nav-container nav .left-nav #list-small {
+  display: none;
+}
+header .nav-container nav .left-nav .list-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2.2rem;
+  padding: 0px 16px;
+}
+header .nav-container nav .left-nav .list-container a {
+  text-decoration: none;
+  padding: 2px 12px;
+  border-radius: 6px;
+  position: relative;
+}
+header .nav-container nav .left-nav .list-container a:hover {
+  background-color: #292929;
+}
+header .nav-container nav .left-nav .list-container a:hover .underline {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  -webkit-transform: translateY(400%);
+          transform: translateY(400%);
+  width: 100%;
+  height: 4px;
+  background-color: #ff4655;
+  border-radius: 4px;
+}
+header .nav-container nav .left-nav .list-container a li {
+  list-style: none;
+  color: #ece8e1;
+  font-family: "DINNextW1G";
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 0.9rem;
+  padding: 8px 0px;
+}
+header .nav-container nav .left-nav .list-container a li:hover {
+  background-color: #292929;
+}
+@media screen and (max-width: 1600px) {
+  header .nav-container nav .left-nav #list-full {
+    display: none;
+  }
+  header .nav-container nav .left-nav #list-medium {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1.4rem;
+  }
+}
+@media screen and (max-width: 1300px) {
+  header .nav-container nav .left-nav #list-medium {
+    display: none;
+  }
+  header .nav-container nav .left-nav #list-small {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1.4rem;
+  }
+}
+header .nav-container nav .right-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+header .nav-container nav .right-nav .list-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2.2rem;
+  padding: 0px 16px;
+}
+header .nav-container nav .right-nav .list-container a {
+  text-decoration: none;
+  padding: 2px 12px;
+  border-radius: 6px;
+  position: relative;
+}
+header .nav-container nav .right-nav .list-container a li {
+  list-style: none;
+  color: #ece8e1;
+  font-family: "DINNextW1G";
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 0.9rem;
+  padding: 8px 0px;
+}
+header .nav-container nav #globe {
+  width: 20px;
+}/*# sourceMappingURL=style.css.map */
