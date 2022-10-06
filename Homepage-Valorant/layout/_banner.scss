@@ -1,0 +1,113 @@
+.container-banner {
+  height: 80vh;
+  position: relative;
+
+  #myVideo {
+    position: fixed;
+    display: block;
+    top: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 0;
+    transform: translateY(-10%);
+  }
+
+  .banner {
+    height: 80vh;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 30% 45% 25%;
+    position: relative;
+    padding-top: 20px;
+
+    .carroussel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: auto;
+      z-index: 1;
+
+      .agent_name {
+        font-family: $font2;
+        font-size: 7rem;
+        color: $colorWhite;
+        text-transform: uppercase;
+        cursor: pointer;
+        position: relative;
+        transform: translateY(120%);
+      }
+    }
+
+    .imgSlider {
+      height: 85%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        max-height: 740px;
+        object-fit: cover;
+        position: absolute;
+        z-index: 10;
+        transition: 0.5s;
+        transform: translateY(10%);
+      }
+    }
+
+    .description-container {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      font-family: $font1;
+      color: $colorWhite;
+      position: relative;
+
+      h3 {
+        font-size: 0.9rem;
+      }
+
+      #role-text {
+        font-size: 4rem;
+        margin-bottom: 2rem;
+        animation: textAnim 0.8s linear 1;
+      }
+
+      #description-text {
+        margin-top: 1rem;
+        font-family: $font1;
+        line-height: 1.3rem;
+        letter-spacing: 0.02rem;
+        word-spacing: 0.2rem;
+        animation: textAnim 0.8s linear 1;
+      }
+
+      #white-line {
+        height: 1px;
+        border-radius: 2px;
+        background-color: $colorWhite;
+        width: 100%;
+        position: relative;
+        transform: translateY(60px);
+      }
+    }
+  }
+  @keyframes textAnim {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+.video {
+  background-color: brown;
+  height: 40vh;
+  position: relative;
+  z-index: 5;
+}

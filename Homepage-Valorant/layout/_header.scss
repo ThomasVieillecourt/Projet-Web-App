@@ -1,5 +1,8 @@
 header .nav-container {
   background-color: $colorBlack;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
 
   nav {
     display: flex;

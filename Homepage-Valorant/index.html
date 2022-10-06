@@ -15,6 +15,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick-theme.css"/>
+
   </head>
 
   <body>
@@ -126,5 +129,109 @@
         </nav>
       </div>
     </header>
+
+
+<main>
+
+  <section class="container-banner">
+    <video autoplay muted loop id="myVideo">
+      <source src="media/videos/agent-background-generic.mp4" type="video/mp4">
+    </video>
+    <div class="banner flux">
+    <div class="carroussel">
+      <h2 class="agent_name" id="jett">Jett</h2>
+      <h2 class="agent_name" id="raze">Raze</h2>
+      <h2 class="agent_name" id="breach">Breach</h2>
+      <h2 class="agent_name" id="omen">Omen</h2>
+      <h2 class="agent_name" id="brimstone">Brimstone</h2>
+      <h2 class="agent_name" id="phoenix">Phoenix</h2>
+      <h2 class="agent_name" id="sage">Sage</h2>
+      <h2 class="agent_name" id="sova">Sova</h2>
+      <h2 class="agent_name" id="viper">Viper</h2>
+      <h2 class="agent_name" id="cypher">Cypher</h2>
+      <h2 class="agent_name" id="reyna">Reyna</h2>
+      <h2 class="agent_name" id="killjoy">Killjoy</h2>
+      <h2 class="agent_name" id="skye">Skye</h2>
+      <h2 class="agent_name" id="yoru">Yoru</h2>
+      <h2 class="agent_name" id="astra">Astra</h2>
+      <h2 class="agent_name" id="kay/o">Kay/o</h2>
+      <h2 class="agent_name" id="chamber">Chamber</h2>
+      <h2 class="agent_name" id="neon">Neon</h2>
+      <h2 class="agent_name" id="fade">Fade</h2>
+    </div>
+    <div class="imgSlider"></div>
+    <div class="description-container">
+      <h3>// RÔLE</h3>
+      <p id="role-text"></p>
+      <h3>// BIOGRAPHIE</h3>
+      <p id="description-text"></p>
+      <span id="white-line"></span>
+    </div>
+      
+      
+
+
+    </div>
+
+
+   
+  </section>
+
+  <section class="video"></section>
+
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick-1.8.1/slick/slick.js"></script>
+<script src="index.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+
+    $('.carroussel').slick({
+    autoplay: false,
+    arrows: false,
+    dots: false,
+    centerPadding: "10px 0px 10px",
+    draggable: false,
+    infinite: false,
+    pauseOnHover: false,
+    focusOnSelect: true,
+    pauseOnFocus: false,
+    slidesToScroll:1,
+    asNavfor: '.imgSlider',
+    swipe: false,
+    touchMove: false,
+    vertical: true,
+    speed: 1000,
+    slidesToShow: 5,
+    autoplaySpeed: 2000,
+    useTransform: true,
+    centerMode: true,
+    infinite:true,
+
+    cssEase: "cubic-bezier(0.645, 0.045, 0.355, 1.000)",
+    adaptiveHeight: false,    });
+
+   
+  });
+</script>
+
   </body>
 </html>
