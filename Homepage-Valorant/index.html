@@ -21,6 +21,7 @@
   </head>
 
   <body>
+    
     <header>
       <div class="nav-container">
         <nav>
@@ -133,31 +134,33 @@
 
 <main>
 
+  <span class="line-dark"></span>
+
   <section class="container-banner">
     <video autoplay muted loop id="myVideo">
       <source src="media/videos/agent-background-generic.mp4" type="video/mp4">
     </video>
     <div class="banner flux">
     <div class="carroussel">
-      <h2 class="agent_name" id="jett">Jett</h2>
-      <h2 class="agent_name" id="raze">Raze</h2>
-      <h2 class="agent_name" id="breach">Breach</h2>
-      <h2 class="agent_name" id="omen">Omen</h2>
-      <h2 class="agent_name" id="brimstone">Brimstone</h2>
-      <h2 class="agent_name" id="phoenix">Phoenix</h2>
-      <h2 class="agent_name" id="sage">Sage</h2>
-      <h2 class="agent_name" id="sova">Sova</h2>
-      <h2 class="agent_name" id="viper">Viper</h2>
-      <h2 class="agent_name" id="cypher">Cypher</h2>
-      <h2 class="agent_name" id="reyna">Reyna</h2>
-      <h2 class="agent_name" id="killjoy">Killjoy</h2>
-      <h2 class="agent_name" id="skye">Skye</h2>
-      <h2 class="agent_name" id="yoru">Yoru</h2>
-      <h2 class="agent_name" id="astra">Astra</h2>
-      <h2 class="agent_name" id="kay/o">Kay/o</h2>
-      <h2 class="agent_name" id="chamber">Chamber</h2>
-      <h2 class="agent_name" id="neon">Neon</h2>
-      <h2 class="agent_name" id="fade">Fade</h2>
+      <h2 class="agent_name" id="jett"><span>1</span>Jett </h2>
+      <h2 class="agent_name" id="raze"><span>2</span>Raze</h2>
+      <h2 class="agent_name" id="breach"><span>3</span>Breach</h2>
+      <h2 class="agent_name" id="omen"><span>4</span>Omen</h2>
+      <h2 class="agent_name" id="brimstone"><span>5</span>Brimstone</h2>
+      <h2 class="agent_name" id="phoenix"><span>6</span>Phoenix</h2>
+      <h2 class="agent_name" id="sage"><span>7</span>Sage</h2>
+      <h2 class="agent_name" id="sova"><span>8</span>Sova</h2>
+      <h2 class="agent_name" id="viper"><span>9</span>Viper</h2>
+      <h2 class="agent_name" id="cypher"><span>10</span>Cypher</h2>
+      <h2 class="agent_name" id="reyna"><span>11</span>Reyna</h2>
+      <h2 class="agent_name" id="killjoy"><span>12</span>Killjoy</h2>
+      <h2 class="agent_name" id="skye"><span>13</span>Skye</h2>
+      <h2 class="agent_name" id="yoru"><span>14</span>Yoru</h2>
+      <h2 class="agent_name" id="astra"><span>15</span>Astra</h2>
+      <h2 class="agent_name" id="kay/o"><span>16</span>Kay/o</h2>
+      <h2 class="agent_name" id="chamber"><span>17</span>Chamber</h2>
+      <h2 class="agent_name" id="neon"><span>18</span>Neon</h2>
+      <h2 class="agent_name" id="fade"><span>19</span>Fade</h2>
     </div>
     <div class="imgSlider"></div>
     <div class="description-container">
@@ -207,24 +210,25 @@
     $('.carroussel').slick({
     autoplay: false,
     arrows: false,
+
     dots: false,
-    centerPadding: "10px 0px 10px",
+    centerPadding: "0px",
     draggable: false,
-    infinite: false,
     pauseOnHover: false,
     focusOnSelect: true,
     pauseOnFocus: false,
     slidesToScroll:1,
-    asNavfor: '.imgSlider',
     swipe: false,
     touchMove: false,
     vertical: true,
     speed: 1000,
-    slidesToShow: 5,
+    slidesToShow: 7,
     autoplaySpeed: 2000,
     useTransform: true,
     centerMode: true,
     infinite:true,
+    useTransform: true,
+
 
     cssEase: "cubic-bezier(0.645, 0.045, 0.355, 1.000)",
     adaptiveHeight: false,    });

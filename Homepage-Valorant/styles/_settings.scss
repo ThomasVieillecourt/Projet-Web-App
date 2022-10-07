@@ -18,6 +18,17 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  height: auto;
+  position: relative;
+  overflow-x: hidden;
+}
+
+h2 {
+  padding: 0;
+  margin: 0;
+}
+
 $colorRed: #ff4655;
 $colorWhite: #ece8e1;
 $colorDarkBlue: #0d1820;
@@ -28,7 +39,7 @@ $font2: "Tungsten";
 
 .flux {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1300px;
   margin-left: auto;
   margin-right: auto;
 }

@@ -16,9 +16,20 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  height: auto;
+  position: relative;
+  overflow-x: hidden;
+}
+
+h2 {
+  padding: 0;
+  margin: 0;
+}
+
 .flux {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1300px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -149,7 +160,7 @@ header .nav-container nav #globe {
   position: relative;
 }
 .container-banner #myVideo {
-  position: fixed;
+  position: absolute;
   display: block;
   top: 0;
   min-width: 100%;
@@ -161,7 +172,8 @@ header .nav-container nav #globe {
   height: 80vh;
   display: grid;
   align-items: center;
-  grid-template-columns: 30% 45% 25%;
+  justify-content: center;
+  grid-template-columns: 35% 40% 25%;
   position: relative;
   padding-top: 20px;
 }
@@ -170,7 +182,7 @@ header .nav-container nav #globe {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: auto;
+  height: 80vh;
   z-index: 1;
 }
 .container-banner .banner .carroussel .agent_name {
@@ -178,9 +190,18 @@ header .nav-container nav #globe {
   font-size: 7rem;
   color: #ece8e1;
   text-transform: uppercase;
-  cursor: pointer;
   position: relative;
-  transform: translateY(120%);
+  cursor: pointer;
+  height: 100px;
+}
+.container-banner .banner .carroussel .agent_name span {
+  font-family: "Tungsten";
+  color: #ece8e1;
+  font-size: 1.5rem;
+  position: relative;
+  z-index: 10;
+  margin-right: 12px;
+  bottom: 60px;
 }
 .container-banner .banner .imgSlider {
   height: 85%;
@@ -193,9 +214,9 @@ header .nav-container nav #globe {
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;
+  bottom: -80px;
   z-index: 10;
   transition: 0.5s;
-  transform: translateY(10%);
 }
 .container-banner .banner .description-container {
   display: flex;
@@ -211,8 +232,6 @@ header .nav-container nav #globe {
 .container-banner .banner .description-container #role-text {
   font-size: 4rem;
   margin-bottom: 2rem;
-  -webkit-animation: textAnim 0.8s linear 1;
-          animation: textAnim 0.8s linear 1;
 }
 .container-banner .banner .description-container #description-text {
   margin-top: 1rem;
@@ -220,8 +239,6 @@ header .nav-container nav #globe {
   line-height: 1.3rem;
   letter-spacing: 0.02rem;
   word-spacing: 0.2rem;
-  -webkit-animation: textAnim 0.8s linear 1;
-          animation: textAnim 0.8s linear 1;
 }
 .container-banner .banner .description-container #white-line {
   height: 1px;
@@ -251,9 +268,31 @@ header .nav-container nav #globe {
     opacity: 1;
   }
 }
+@-webkit-keyframes hoverAnim {
+  0% {
+    left: 0px;
+  }
+  70% {
+    left: 10px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+@keyframes hoverAnim {
+  0% {
+    left: 0px;
+  }
+  70% {
+    left: 10px;
+  }
+  100% {
+    left: 0px;
+  }
+}
 
 .video {
-  background-color: brown;
+  background-color: rgb(61, 42, 165);
   height: 40vh;
   position: relative;
   z-index: 5;

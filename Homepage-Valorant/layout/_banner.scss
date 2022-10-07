@@ -3,7 +3,7 @@
   position: relative;
 
   #myVideo {
-    position: fixed;
+    position: absolute;
     display: block;
     top: 0;
     min-width: 100%;
@@ -16,7 +16,8 @@
     height: 80vh;
     display: grid;
     align-items: center;
-    grid-template-columns: 30% 45% 25%;
+    justify-content: center;
+    grid-template-columns: 35% 40% 25%;
     position: relative;
     padding-top: 20px;
 
@@ -25,7 +26,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: auto;
+      height: 80vh;
       z-index: 1;
 
       .agent_name {
@@ -33,9 +34,19 @@
         font-size: 7rem;
         color: $colorWhite;
         text-transform: uppercase;
-        cursor: pointer;
         position: relative;
-        transform: translateY(120%);
+        cursor: pointer;
+        height: 100px;
+
+        span {
+          font-family: $font2;
+          color: $colorWhite;
+          font-size: 1.5rem;
+          position: relative;
+          z-index: 10;
+          margin-right: 12px;
+          bottom: 60px;
+        }
       }
     }
 
@@ -49,9 +60,9 @@
         max-height: 740px;
         object-fit: cover;
         position: absolute;
+        bottom: -80px;
         z-index: 10;
         transition: 0.5s;
-        transform: translateY(10%);
       }
     }
 
@@ -70,7 +81,6 @@
       #role-text {
         font-size: 4rem;
         margin-bottom: 2rem;
-        animation: textAnim 0.8s linear 1;
       }
 
       #description-text {
@@ -79,7 +89,6 @@
         line-height: 1.3rem;
         letter-spacing: 0.02rem;
         word-spacing: 0.2rem;
-        animation: textAnim 0.8s linear 1;
       }
 
       #white-line {
@@ -103,10 +112,23 @@
       opacity: 1;
     }
   }
+
+  @keyframes hoverAnim {
+    0% {
+      left: 0px;
+    }
+
+    70% {
+      left: 10px;
+    }
+    100% {
+      left: 0px;
+    }
+  }
 }
 
 .video {
-  background-color: brown;
+  background-color: rgb(61, 42, 165);
   height: 40vh;
   position: relative;
   z-index: 5;

@@ -2,6 +2,7 @@ const imgSlider = document.querySelector(".imgSlider");
 const sliderAgent = document.querySelector(".carroussel");
 const descriptionText = document.querySelector("#description-text");
 const roleText = document.querySelector("#role-text");
+const h2Agent = document.querySelectorAll(".agent_name");
 let agentId;
 
 let arrayCharacters = [
@@ -150,7 +151,42 @@ const agentRoll = () => {
   descriptionText.innerHTML = agent.description;
 };
 
+const anim = () => {
+  roleText.style.animation = "textAnim 0.8s linear 1";
+  descriptionText.style.animation = "textAnim 0.8s linear 1";
+};
+
+const animReset = () => {
+  roleText.style.animation = "";
+  descriptionText.style.animation = "";
+};
+
 sliderAgent.addEventListener("click", (e) => {
   agentId = e.target.id;
   agentRoll();
+  anim();
+  setTimeout(animReset, 2000);
+});
+
+h2Agent.forEach((titleAgent) => {
+  titleAgent.addEventListener("mouseover", () => {
+    titleAgent.style.transition = "0.4s";
+    titleAgent.style.left = "14px";
+  });
+
+  titleAgent.addEventListener("mouseout", () => {
+    titleAgent.style.left = "0px";
+  });
+
+  const slideAgent = document.querySelectorAll(".slick-active");
+
+  slideAgent.forEach((slide) => {
+    slide.classList.contains("slick-center")
+      ? (titleAgent.classList.add = "ok")
+      : "";
+  });
+
+  // titleAgent.addEventListener("click", () => {
+  //   titleAgent.style.color = "#ff4655";
+  // });
 });
