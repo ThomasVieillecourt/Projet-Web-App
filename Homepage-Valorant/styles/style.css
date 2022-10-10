@@ -96,7 +96,7 @@ header .nav-container nav .left-nav .list-container a:hover .underline {
 header .nav-container nav .left-nav .list-container a li {
   list-style: none;
   color: #ece8e1;
-  font-family: "DINNextW1G";
+  font-family: "DINNextW1G", arial, georgia, sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   font-size: 0.9rem;
@@ -145,7 +145,7 @@ header .nav-container nav .right-nav .list-container a {
 header .nav-container nav .right-nav .list-container a li {
   list-style: none;
   color: #ece8e1;
-  font-family: "DINNextW1G";
+  font-family: "DINNextW1G", arial, georgia, sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   font-size: 0.9rem;
@@ -163,10 +163,19 @@ header .nav-container nav #globe {
   position: absolute;
   display: block;
   top: 0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: 0;
-  transform: translateY(-10%);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  z-index: -1;
+}
+.container-banner #custom-cursor {
+  width: 80px;
+  position: fixed;
+  transform: translateX(-50%) translateY(-50%);
+  pointer-events: none;
+  z-index: 100;
+  opacity: 0;
+  transform: 0.3s;
 }
 .container-banner .banner {
   height: 80vh;
@@ -175,31 +184,31 @@ header .nav-container nav #globe {
   justify-content: center;
   grid-template-columns: 35% 40% 25%;
   position: relative;
-  padding-top: 20px;
 }
 .container-banner .banner .carroussel {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   height: 80vh;
+  flex-direction: column;
   z-index: 1;
 }
+.container-banner .banner .carroussel .active {
+  color: #ff4655 !important;
+}
 .container-banner .banner .carroussel .agent_name {
-  font-family: "Tungsten";
+  font-family: "Tungsten", arial, georgia, sans-serif;
   font-size: 7rem;
   color: #ece8e1;
   text-transform: uppercase;
   position: relative;
-  cursor: pointer;
+  cursor: -webkit-grab;
+  cursor: grab;
   height: 100px;
+  transform: translateY(220px);
 }
 .container-banner .banner .carroussel .agent_name span {
-  font-family: "Tungsten";
-  color: #ece8e1;
+  font-family: "Tungsten", arial, georgia, sans-serif;
   font-size: 1.5rem;
   position: relative;
-  z-index: 10;
   margin-right: 12px;
   bottom: 60px;
 }
@@ -208,21 +217,21 @@ header .nav-container nav #globe {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .container-banner .banner .imgSlider img {
   max-height: 740px;
-  -o-object-fit: cover;
-     object-fit: cover;
   position: absolute;
-  bottom: -80px;
-  z-index: 10;
-  transition: 0.5s;
+  top: 30px;
+  left: 0;
+  z-index: 5;
+  pointer-events: none;
 }
 .container-banner .banner .description-container {
   display: flex;
   flex-direction: column;
   text-align: left;
-  font-family: "DINNextW1G";
+  font-family: "DINNextW1G", arial, georgia, sans-serif;
   color: #ece8e1;
   position: relative;
 }
@@ -232,10 +241,15 @@ header .nav-container nav #globe {
 .container-banner .banner .description-container #role-text {
   font-size: 4rem;
   margin-bottom: 2rem;
+  font-family: "Tungsten", arial, georgia, sans-serif;
+}
+.container-banner .banner .description-container #role-text img {
+  width: 30px;
+  transform: translateY(-50%) translateX(10px);
 }
 .container-banner .banner .description-container #description-text {
   margin-top: 1rem;
-  font-family: "DINNextW1G";
+  font-family: "DINNextW1G", arial, georgia, sans-serif;
   line-height: 1.3rem;
   letter-spacing: 0.02rem;
   word-spacing: 0.2rem;
@@ -290,10 +304,28 @@ header .nav-container nav #globe {
     left: 0px;
   }
 }
+@-webkit-keyframes displayImg {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes displayImg {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 
 .video {
   background-color: rgb(61, 42, 165);
   height: 40vh;
-  position: relative;
-  z-index: 5;
 }/*# sourceMappingURL=style.css.map */
