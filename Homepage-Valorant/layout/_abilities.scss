@@ -1,0 +1,113 @@
+.container_abilities {
+  height: 100vh;
+  background-color: $colorWhite;
+
+  .abilities {
+    padding-top: 10px;
+    width: 100%;
+    position: relative;
+
+    .limits {
+      font-family: $font1;
+      color: $colorGrey;
+      opacity: 0.6;
+      text-transform: uppercase;
+      position: absolute;
+      right: 0;
+      transform: translateY(100px) rotate(90deg);
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: 40% 60%;
+      padding-top: 220px;
+      height: 100vh;
+
+      .skill_text {
+        h3 {
+          font-family: $font2;
+          font-size: 4rem;
+          text-transform: uppercase;
+        }
+
+        .line-skills {
+          height: 1px;
+          width: 100%;
+          background-color: $colorLightGrey;
+          position: absolute;
+          top: 42.5%;
+        }
+
+        ul {
+          display: flex;
+          justify-content: space-evenly;
+          list-style: none;
+          margin: 4rem 0;
+          position: relative;
+          z-index: 3;
+
+          li {
+            border: 1px solid $colorLightGrey;
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $colorBlack;
+
+            &:hover {
+              background-color: $colorRed;
+            }
+
+            img {
+              width: 40px;
+            }
+          }
+        }
+        .text_skills {
+          display: flex;
+          flex-direction: column;
+          list-style: none;
+          text-align: left;
+          padding: 0 8rem 0 3.6rem;
+
+          h5 {
+            font-family: $font1;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            color: $colorGrey;
+            padding: 8px 0 16px 0;
+          }
+
+          p {
+            font-family: $font1;
+            color: $colorLightGrey;
+            font-size: 1.1rem;
+          }
+        }
+      }
+
+      .skill_video {
+        width: auto;
+        position: relative;
+
+        video {
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 2;
+        }
+        .grey_bar {
+          width: 80%;
+          height: 40px;
+          position: relative;
+          transform: translateX(24.9%) translateY(1080%);
+
+          background-color: $colorLightGrey;
+        }
+      }
+    }
+  }
+}

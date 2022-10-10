@@ -15,13 +15,15 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick-theme.css"/>
-
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="slick-1.8.1/slick/slick-theme.css"
+    />
   </head>
 
   <body>
-    
     <header>
       <div class="nav-container">
         <nav>
@@ -97,23 +99,24 @@
             </ul>
 
             <ul class="list-container" id="list-small">
-                <a href="#"
-                  ><li>Présentation</li>
-                  <div class="underline"></div></a
-                ><a href="#"
-                  ><li>Médias</li>
-                  <div class="underline"></div></a
-                ><a href="#"
-                  ><li>Actualités</li>
-                  <div class="underline"></div></a
-                ><a href="#"
-                  ><li>Classement</li>
-                  <div class="underline"></div
-                ><a href="#"
-                  ><li>Plus</li>
-                  <div class="underline"></div
-                ></a>
-              </ul>
+              <a href="#"
+                ><li>Présentation</li>
+                <div class="underline"></div></a
+              ><a href="#"
+                ><li>Médias</li>
+                <div class="underline"></div></a
+              ><a href="#"
+                ><li>Actualités</li>
+                <div class="underline"></div></a
+              ><a href="#"
+                ><li>Classement</li>
+                <div class="underline"></div
+              ></a>
+              <a href="#">
+                <li>Plus</li>
+                <div class="underline"></div>
+              </a>
+            </ul>
           </div>
           <div class="right-nav">
             <ul class="list-container">
@@ -131,114 +134,153 @@
       </div>
     </header>
 
+    <main>
+      <span class="line-dark"></span>
 
-<main>
-  
+      <section class="container-banner">
+        <img src="media/img/decagon.png" alt="cursor" id="custom-cursor" />
+        <video autoplay muted loop id="myVideo">
+          <source
+            src="media/videos/agent-background-generic.mp4"
+            type="video/mp4"
+          />
+        </video>
 
-  <span class="line-dark"></span>
+        <div class="banner flux">
+          <div class="carroussel">
+            <h2 class="agent_name" id="jett"><span>01</span>Jett</h2>
+            <h2 class="agent_name" id="raze"><span>02</span>Raze</h2>
+            <h2 class="agent_name" id="breach"><span>03</span>Breach</h2>
+            <h2 class="agent_name" id="omen"><span>04</span>Omen</h2>
+            <h2 class="agent_name" id="brimstone"><span>05</span>Brimstone</h2>
+            <h2 class="agent_name" id="phoenix"><span>06</span>Phoenix</h2>
+            <h2 class="agent_name" id="sage"><span>07</span>Sage</h2>
+            <h2 class="agent_name" id="sova"><span>08</span>Sova</h2>
+            <h2 class="agent_name" id="viper"><span>09</span>Viper</h2>
+            <h2 class="agent_name" id="cypher"><span>10</span>Cypher</h2>
+            <h2 class="agent_name" id="reyna"><span>11</span>Reyna</h2>
+            <h2 class="agent_name" id="killjoy"><span>12</span>Killjoy</h2>
+            <h2 class="agent_name" id="skye"><span>13</span>Skye</h2>
+            <h2 class="agent_name" id="yoru"><span>14</span>Yoru</h2>
+            <h2 class="agent_name" id="astra"><span>15</span>Astra</h2>
+            <h2 class="agent_name" id="kay/o"><span>16</span>Kay/o</h2>
+            <h2 class="agent_name" id="chamber"><span>17</span>Chamber</h2>
+            <h2 class="agent_name" id="neon"><span>18</span>Neon</h2>
+            <h2 class="agent_name" id="fade"><span>19</span>Fade</h2>
+          </div>
+          <div class="imgSlider"></div>
+          <div class="description-container">
+            <h3>// RÔLE</h3>
+            <p id="role-text"></p>
+            <h3>// BIOGRAPHIE</h3>
+            <p id="description-text"></p>
+            <span id="white-line"></span>
+          </div>
+        </div>
+      </section>
 
-  <section class="container-banner">
-    <img src="media/img/decagon.png" alt="cursor" id="custom-cursor">
-    <video autoplay muted loop id="myVideo">
-      <source src="media/videos/agent-background-generic.mp4" type="video/mp4">
-    </video>
+      <section class="container_abilities">
+        <div class="abilities flux">
+          <p class="limits">Repoussez les <br />limites</p>
 
-    <div class="banner flux">
-    <div class="carroussel">
-      <h2 class="agent_name" id="jett"><span>1</span>Jett </h2>
-      <h2 class="agent_name" id="raze"><span>2</span>Raze</h2>
-      <h2 class="agent_name" id="breach"><span>3</span>Breach</h2>
-      <h2 class="agent_name" id="omen"><span>4</span>Omen</h2>
-      <h2 class="agent_name" id="brimstone"><span>5</span>Brimstone</h2>
-      <h2 class="agent_name" id="phoenix"><span>6</span>Phoenix</h2>
-      <h2 class="agent_name" id="sage"><span>7</span>Sage</h2>
-      <h2 class="agent_name" id="sova"><span>8</span>Sova</h2>
-      <h2 class="agent_name" id="viper"><span>9</span>Viper</h2>
-      <h2 class="agent_name" id="cypher"><span>10</span>Cypher</h2>
-      <h2 class="agent_name" id="reyna"><span>11</span>Reyna</h2>
-      <h2 class="agent_name" id="killjoy"><span>12</span>Killjoy</h2>
-      <h2 class="agent_name" id="skye"><span>13</span>Skye</h2>
-      <h2 class="agent_name" id="yoru"><span>14</span>Yoru</h2>
-      <h2 class="agent_name" id="astra"><span>15</span>Astra</h2>
-      <h2 class="agent_name" id="kay/o"><span>16</span>Kay/o</h2>
-      <h2 class="agent_name" id="chamber"><span>17</span>Chamber</h2>
-      <h2 class="agent_name" id="neon"><span>18</span>Neon</h2>
-      <h2 class="agent_name" id="fade"><span>19</span>Fade</h2>
-    </div>
-    <div class="imgSlider"></div>
-    <div class="description-container">
-      <h3>// RÔLE</h3>
-      <p id="role-text"></p>
-      <h3>// BIOGRAPHIE</h3>
-      <p id="description-text"></p>
-      <span id="white-line"></span>
-    </div>
-      
-      
+          <div class="skills">
+            <div class="skill_text">
+              <h3>Compétences spéciales</h3>
+              <div class="line-skills"></div>
+              <div class="skills-icons">
+                <ul>
+                  <li>
+                    <img
+                      src="media/videos/Viper/TX_Viper_Q.png"
+                      alt="Viper Q"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="media/videos/Viper/TX_Viper_C.png"
+                      alt="Viper C"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="media/videos/Viper/TX_Viper_E.png"
+                      alt="Viper E"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="media/videos/Viper/TX_Viper_X.png"
+                      alt="Viper X"
+                    />
+                  </li>
+                </ul>
+              </div>
+              <div class="text_skills">
+                <h5>A - Nuage de poison</h5>
+                <p>
+                  ÉQUIPEZ-vous d'un diffuseur de gaz. TIREZ pour lancer le
+                  diffuseur, qui reste présent jusqu'à la fin de la manche.
+                  RÉUTILISEZ la compétence pour créer un nuage de fumée toxique
+                  qui consomme du carburant. Cette compétence peut être
+                  RÉUTILISÉE plus d'une fois et le diffuseur peut être ramassé
+                  pour être REDÉPLOYÉ.
+                </p>
+              </div>
+            </div>
+            <div class="skill_video">
+              <video
+                src="media/videos/Viper/Viper_Q_v001_web.mp4"
+                autoplay
+                loop
+                poster
+                playsinline
+              ></video>
+              <div class="grey_bar"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script type="text/javascript" src="slick-1.8.1/slick/slick.js"></script>
+    <script src="index.js"></script>
 
-    </div>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".carroussel").slick({
+          autoplay: false,
+          arrows: false,
 
+          dots: false,
+          centerPadding: "0px",
+          draggable: false,
+          pauseOnHover: false,
+          focusOnSelect: true,
+          pauseOnFocus: false,
+          slidesToScroll: 1,
+          swipe: false,
+          touchMove: false,
+          vertical: true,
+          speed: 1000,
+          slidesToShow: 7,
+          autoplaySpeed: 2000,
+          useTransform: true,
+          centerMode: true,
+          infinite: true,
+          useTransform: true,
 
-
-  </section>
-
-  <section class="video"></section>
-
-
-</main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="slick-1.8.1/slick/slick.js"></script>
-<script src="index.js"></script>
-
-<script type="text/javascript">
-  $(document).ready(function(){
-
-    $('.carroussel').slick({
-    autoplay: false,
-    arrows: false,
-
-    dots: false,
-    centerPadding: "0px",
-    draggable: false,
-    pauseOnHover: false,
-    focusOnSelect: true,
-    pauseOnFocus: false,
-    slidesToScroll:1,
-    swipe: false,
-    touchMove: false,
-    vertical: true,
-    speed: 1000,
-    slidesToShow: 7,
-    autoplaySpeed: 2000,
-    useTransform: true,
-    centerMode: true,
-    infinite:true,
-    useTransform: true,
-
-
-    cssEase: "cubic-bezier(0.645, 0.045, 0.355, 1.000)",
-    adaptiveHeight: false,    });
-
-   
-  });
-</script>
-
+          cssEase: "cubic-bezier(0.645, 0.045, 0.355, 1.000)",
+          adaptiveHeight: false,
+        });
+      });
+    </script>
   </body>
 </html>

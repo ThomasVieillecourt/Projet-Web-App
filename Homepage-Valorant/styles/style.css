@@ -32,6 +32,7 @@ h2 {
   max-width: 1300px;
   margin-left: auto;
   margin-right: auto;
+  border-left: 1px solid #8b978f;
 }
 
 header .nav-container {
@@ -325,7 +326,100 @@ header .nav-container nav #globe {
   }
 }
 
-.video {
-  background-color: rgb(61, 42, 165);
-  height: 40vh;
+.container_abilities {
+  height: 100vh;
+  background-color: #ece8e1;
+}
+.container_abilities .abilities {
+  padding-top: 10px;
+  width: 100%;
+  position: relative;
+}
+.container_abilities .abilities .limits {
+  font-family: "DINNextW1G", arial, georgia, sans-serif;
+  color: #292929;
+  opacity: 0.6;
+  text-transform: uppercase;
+  position: absolute;
+  right: 0;
+  transform: translateY(100px) rotate(90deg);
+}
+.container_abilities .abilities .skills {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  padding-top: 220px;
+  height: 100vh;
+}
+.container_abilities .abilities .skills .skill_text h3 {
+  font-family: "Tungsten", arial, georgia, sans-serif;
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+.container_abilities .abilities .skills .skill_text .line-skills {
+  height: 1px;
+  width: 100%;
+  background-color: #8b978f;
+  position: absolute;
+  top: 42.5%;
+}
+.container_abilities .abilities .skills .skill_text ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  margin: 4rem 0;
+  position: relative;
+  z-index: 3;
+}
+.container_abilities .abilities .skills .skill_text ul li {
+  border: 1px solid #8b978f;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+}
+.container_abilities .abilities .skills .skill_text ul li:hover {
+  background-color: #ff4655;
+}
+.container_abilities .abilities .skills .skill_text ul li img {
+  width: 40px;
+}
+.container_abilities .abilities .skills .skill_text .text_skills {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  text-align: left;
+  padding: 0 8rem 0 3.6rem;
+}
+.container_abilities .abilities .skills .skill_text .text_skills h5 {
+  font-family: "DINNextW1G", arial, georgia, sans-serif;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: #292929;
+  padding: 8px 0 16px 0;
+}
+.container_abilities .abilities .skills .skill_text .text_skills p {
+  font-family: "DINNextW1G", arial, georgia, sans-serif;
+  color: #8b978f;
+  font-size: 1.1rem;
+}
+.container_abilities .abilities .skills .skill_video {
+  width: auto;
+  position: relative;
+}
+.container_abilities .abilities .skills .skill_video video {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.container_abilities .abilities .skills .skill_video .grey_bar {
+  width: 80%;
+  height: 40px;
+  position: relative;
+  transform: translateX(24.9%) translateY(1080%);
+  background-color: #8b978f;
 }/*# sourceMappingURL=style.css.map */

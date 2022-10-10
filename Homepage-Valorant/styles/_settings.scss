@@ -34,7 +34,7 @@ $colorWhite: #ece8e1;
 $colorDarkBlue: #0d1820;
 $colorBlack: #000000;
 $colorGrey: #292929;
-$color-slider: #ece8e1;
+$colorLightGrey: #8b978f;
 $font1: "DINNextW1G", arial, georgia, sans-serif;
 $font2: "Tungsten", arial, georgia, sans-serif;
 
@@ -43,4 +43,5 @@ $font2: "Tungsten", arial, georgia, sans-serif;
   max-width: 1300px;
   margin-left: auto;
   margin-right: auto;
+  border-left: 1px solid $colorLightGrey;
 }
