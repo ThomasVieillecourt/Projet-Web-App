@@ -168,18 +168,37 @@
             <h2 class="agent_name" id="neon"><span>18</span>Neon</h2>
             <h2 class="agent_name" id="fade"><span>19</span>Fade</h2>
           </div>
-          <div class="imgSlider"></div>
+          <div class="imgSlider">
+            <img src="media/img/Jett.png" alt="Jett" />
+          </div>
           <div class="description-container">
             <h3>// RÔLE</h3>
-            <p id="role-text"></p>
+            <p id="role-text">
+              DUELLISTE<img
+                src="media/img/icons_role/Duelist.png"
+                alt="logo dueliste"
+              />
+            </p>
             <h3>// BIOGRAPHIE</h3>
-            <p id="description-text"></p>
+            <p id="description-text">
+              Représentante de sa patrie, la Corée du Sud, Jett dispose d'un
+              style de combat basé sur l'agilité et l'esquive, qui lui permet de
+              prendre des risques qu'elle seule peut se permettre de prendre.
+              Elle tourne autour des affrontements et découpe ses ennemis avant
+              même qu'ils ne s'en rendent compte.
+            </p>
             <span id="white-line"></span>
           </div>
         </div>
       </section>
 
       <section class="container_abilities">
+        <div class="div_col_left">
+          <span>.</span>
+          <img src="media/img/valorant-logo-1.png" alt="" />
+          <span>.</span>
+          <img src="media/img/tag.png" alt="" />
+        </div>
         <div class="abilities flux">
           <p class="limits">Repoussez les <br />limites</p>
 
@@ -187,53 +206,39 @@
             <div class="skill_text">
               <h3>Compétences spéciales</h3>
               <div class="line-skills"></div>
+              <span class="line-dark2"></span>
               <div class="skills-icons">
                 <ul>
-                  <li>
-                    <img
-                      src="media/videos/Viper/TX_Viper_Q.png"
-                      alt="Viper Q"
-                    />
+                  <li id="skill1" class="click_video">
+                    <img src="media/img/Jett/TX_Jett_Q.png" alt="Jett Q" />
                   </li>
-                  <li>
-                    <img
-                      src="media/videos/Viper/TX_Viper_C.png"
-                      alt="Viper C"
-                    />
+                  <li id="skill2" class="click_video">
+                    <img src="media/img/Jett/TX_Jett_E.png" alt="Jett C" />
                   </li>
-                  <li>
-                    <img
-                      src="media/videos/Viper/TX_Viper_E.png"
-                      alt="Viper E"
-                    />
+                  <li id="skill3" class="click_video">
+                    <img src="media/img/Jett/TX_Jett_C.png" alt="Jett E" />
                   </li>
-                  <li>
-                    <img
-                      src="media/videos/Viper/TX_Viper_X.png"
-                      alt="Viper X"
-                    />
+                  <li id="skill4" class="click_video">
+                    <img src="media/img/Jett/TX_Jett_X.png" alt="Jett X" />
                   </li>
                 </ul>
               </div>
               <div class="text_skills">
-                <h5>A - Nuage de poison</h5>
-                <p>
-                  ÉQUIPEZ-vous d'un diffuseur de gaz. TIREZ pour lancer le
-                  diffuseur, qui reste présent jusqu'à la fin de la manche.
-                  RÉUTILISEZ la compétence pour créer un nuage de fumée toxique
-                  qui consomme du carburant. Cette compétence peut être
-                  RÉUTILISÉE plus d'une fois et le diffuseur peut être ramassé
-                  pour être REDÉPLOYÉ.
+                <h5 id="skillTitle">A - COURANT ASCENDANT</h5>
+                <p id="skillContent">
+                  Vous vous propulsez INSTANTANÉMENT dans les airs.
                 </p>
               </div>
             </div>
             <div class="skill_video">
               <video
-                src="media/videos/Viper/Viper_Q_v001_web.mp4"
+                src="media/videos/jett/skill1.mp4"
                 autoplay
                 loop
                 poster
                 playsinline
+                muted
+                id="videoSkillX"
               ></video>
               <div class="grey_bar"></div>
             </div>
@@ -276,7 +281,7 @@
           centerMode: true,
           infinite: true,
           useTransform: true,
-
+          initialSlide: 1,
           cssEase: "cubic-bezier(0.645, 0.045, 0.355, 1.000)",
           adaptiveHeight: false,
         });

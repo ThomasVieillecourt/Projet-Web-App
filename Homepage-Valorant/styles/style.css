@@ -329,6 +329,23 @@ header .nav-container nav #globe {
 .container_abilities {
   height: 100vh;
   background-color: #ece8e1;
+  position: relative;
+}
+.container_abilities .div_col_left {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  left: 8rem;
+  height: 60%;
+  pointer-events: none;
+}
+.container_abilities .div_col_left img {
+  width: 30px;
+  opacity: 50%;
+}
+.container_abilities .div_col_left span {
+  font-size: 2rem;
 }
 .container_abilities .abilities {
   padding-top: 10px;
@@ -342,7 +359,7 @@ header .nav-container nav #globe {
   text-transform: uppercase;
   position: absolute;
   right: 0;
-  transform: translateY(100px) rotate(90deg);
+  transform: translateX(40px) translateY(100px) rotate(90deg);
 }
 .container_abilities .abilities .skills {
   display: grid;
@@ -362,6 +379,14 @@ header .nav-container nav #globe {
   position: absolute;
   top: 42.5%;
 }
+.container_abilities .abilities .skills .skill_text .line-dark2 {
+  height: 300px;
+  width: 1px;
+  background-color: #8b978f;
+  position: absolute;
+  top: 0;
+  right: 300px;
+}
 .container_abilities .abilities .skills .skill_text ul {
   display: flex;
   justify-content: space-evenly;
@@ -372,8 +397,8 @@ header .nav-container nav #globe {
 }
 .container_abilities .abilities .skills .skill_text ul li {
   border: 1px solid #8b978f;
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -410,16 +435,16 @@ header .nav-container nav #globe {
   position: relative;
 }
 .container_abilities .abilities .skills .skill_video video {
-  width: 100%;
+  width: 90%;
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   z-index: 2;
 }
 .container_abilities .abilities .skills .skill_video .grey_bar {
   width: 80%;
   height: 40px;
   position: relative;
-  transform: translateX(24.9%) translateY(1080%);
+  transform: translateX(24.9%) translateY(960%);
   background-color: #8b978f;
 }/*# sourceMappingURL=style.css.map */
