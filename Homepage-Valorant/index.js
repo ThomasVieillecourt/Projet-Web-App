@@ -10,6 +10,7 @@ const skill2 = document.getElementById("skill2");
 const skill3 = document.getElementById("skill3");
 const skill4 = document.getElementById("skill4");
 const skillVideo = document.querySelectorAll(".click_video");
+const dots = document.querySelector(".slick-dots");
 let agentId = "jett";
 let videoId = "skill1";
 
@@ -23,6 +24,19 @@ sliderAgent.addEventListener("mouseover", () => {
 });
 
 sliderAgent.addEventListener("mouseleave", () => {
+  customCursor.style.opacity = 0;
+});
+
+list_article.addEventListener("mousemove", (e) => {
+  customCursor.style.left = e.clientX + "px";
+  customCursor.style.top = e.clientY + "px";
+});
+
+list_article.addEventListener("mouseover", () => {
+  customCursor.style.opacity = 1;
+});
+
+list_article.addEventListener("mouseleave", () => {
   customCursor.style.opacity = 0;
 });
 

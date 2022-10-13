@@ -1,0 +1,119 @@
+footer {
+  height: 50vh;
+  position: relative;
+  z-index: 3;
+
+  .download-container {
+    background-color: $colorGrey;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    button {
+      border: none;
+      background-color: $colorGrey;
+      font-size: 1rem;
+      font-family: $font1;
+      text-transform: uppercase;
+      color: $colorWhite;
+      cursor: pointer;
+      padding: 6px 12px;
+      border-radius: 8px;
+
+      &:hover {
+        background-color: rgba(128, 128, 128, 0.3);
+      }
+    }
+  }
+
+  .link-container {
+    height: 100%;
+    background-color: $colorDarkBlue;
+
+    .social_container ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      gap: 1rem;
+      padding: 20px 0;
+
+      li {
+        color: $colorWhite;
+        background-color: $colorGrey;
+        text-align: center;
+        border-radius: 10px;
+        padding: 8px;
+        width: 34px;
+
+        a {
+          text-decoration: none;
+          color: $colorWhite;
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    .logo_riot {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 24px 0 20px;
+      width: 100%;
+
+      img {
+        width: 6rem;
+      }
+    }
+
+    p {
+      color: $colorLightGrey;
+      font-family: $font1;
+      width: 100%;
+      max-width: 640px;
+      margin: 0 auto;
+      pointer-events: none;
+    }
+
+    .cgi-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      padding: 24px 0 28px;
+
+      button {
+        border: none;
+        background-color: $colorDarkBlue;
+        font-size: 1rem;
+        font-family: $font1;
+        text-transform: uppercase;
+        color: $colorWhite;
+        cursor: pointer;
+        padding: 6px 12px;
+        border-radius: 8px;
+
+        &:hover {
+          background-color: rgba(128, 128, 128, 0.3);
+        }
+      }
+    }
+
+    .pegi-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      div {
+        background-color: $colorGrey;
+        padding: 10px;
+        border-radius: 6px;
+        img {
+          height: 100px;
+        }
+      }
+    }
+  }
+}
