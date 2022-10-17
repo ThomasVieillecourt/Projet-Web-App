@@ -738,3 +738,13 @@ listSkills.forEach((listSkill) => {
     listSkill.classList.add("active_skill");
   });
 });
+
+const burgerBtn = document.getElementById("burger_icon");
+
+burgerBtn.addEventListener("click", () => {
+  listMobile.style.transform = "translateX(0px)";
+});
+
+cross_icon.addEventListener("click", () => {
+  listMobile.style.transform = "translateX(100%)";
+});

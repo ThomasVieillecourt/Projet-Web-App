@@ -38,6 +38,30 @@ $colorLightGrey: #8b978f;
 $font1: "DINNextW1G", arial, georgia, sans-serif;
 $font2: "Tungsten", arial, georgia, sans-serif;
 
+$largeDesktop: 1920px;
+$desktop: 1600px;
+$laptop: 1280px;
+$tablet: 800px;
+$mobile: 375px;
+
+@mixin large {
+  @media (max-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (max-width: $laptop) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
 .flux {
   width: 100%;
   max-width: 1300px;
