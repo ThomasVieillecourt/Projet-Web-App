@@ -12,193 +12,206 @@
     opacity: 0;
   }
 
-  .article_banner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    z-index: 1;
+  .container-article {
+    height: 100%;
 
-    h3 {
-      font-family: $font2;
-      font-size: 4rem;
-      text-transform: uppercase;
-    }
-
-    .limits {
-      font-family: $font1;
-      color: $colorLightGrey;
-      opacity: 0.6;
-      text-transform: uppercase;
-      position: absolute;
-      right: 0;
-      top: 0;
-      transform: translateX(40px) translateY(40px) rotate(90deg);
-    }
-  }
-
-  .text_bg {
-    position: absolute;
-    top: 0;
-    z-index: 0;
-
-    span {
-      text-transform: uppercase;
-      font-size: 22rem;
-      color: $colorWhite;
-      font-family: $font1;
-      pointer-events: none;
-      -webkit-text-stroke: 1px $colorLightGrey;
-      text-stroke: 1px $colorLightGrey;
-      opacity: 0.2;
-      white-space: nowrap;
-      line-height: 1;
-    }
-  }
-
-  ul {
-    list-style: none;
-    display: flex;
-    margin: 4rem 0;
-    position: relative;
-    z-index: 1;
-
-    .slick-slide {
+    .article_banner {
       display: flex;
-      margin-right: 2rem;
-      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 1;
 
-      .card {
-        flex: 0 0 22%;
-        min-width: 22%;
-        background-color: $colorWhite;
-        border: 1px solid $colorLightGrey;
-        cursor: pointer;
+      h3 {
+        font-family: $font2;
+        font-size: 4rem;
+        text-transform: uppercase;
+      }
 
-        a {
-          text-decoration: none;
-          color: $colorGrey;
+      .limits {
+        font-family: $font1;
+        color: $colorLightGrey;
+        opacity: 0.6;
+        text-transform: uppercase;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translateX(40px) translateY(40px) rotate(90deg);
+      }
+    }
 
-          article {
-            position: relative;
-            z-index: 5;
+    .text_bg {
+      position: absolute;
+      top: 0;
+      z-index: 0;
 
-            .img_container {
-              width: 100%;
+      span {
+        text-transform: uppercase;
+        font-size: 22rem;
+        color: $colorWhite;
+        font-family: $font1;
+        pointer-events: none;
+        -webkit-text-stroke: 1px $colorLightGrey;
+        text-stroke: 1px $colorLightGrey;
+        opacity: 0.2;
+        white-space: nowrap;
+        line-height: 1;
+      }
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      margin: 4rem 0;
+      position: relative;
+      z-index: 1;
+
+      .slick-slide {
+        display: flex;
+        margin-right: 2rem;
+        flex-wrap: nowrap;
+
+        .card {
+          flex: 0 0 22%;
+          min-width: 22%;
+          background-color: $colorWhite;
+          border: 1px solid $colorLightGrey;
+          cursor: pointer;
+
+          a {
+            text-decoration: none;
+            color: $colorGrey;
+
+            article {
               position: relative;
-              object-fit: cover;
-              overflow: hidden;
+              z-index: 5;
 
-              &::before {
-                content: "";
-                display: block;
-                position: absolute;
-                height: 100%;
+              .img_container {
                 width: 100%;
-                top: 0px;
-                bottom: 0px;
-                background-color: rgb(255, 70, 85);
-                mix-blend-mode: multiply;
-                z-index: 1;
-                transition: transform 0.3s ease-out 0s;
-                transform: translateX(-100%) skewX(-10deg);
-                visibility: hidden;
+                position: relative;
+                object-fit: cover;
+                overflow: hidden;
+
+                &::before {
+                  content: "";
+                  display: block;
+                  position: absolute;
+                  height: 100%;
+                  width: 100%;
+                  top: 0px;
+                  bottom: 0px;
+                  background-color: rgb(255, 70, 85);
+                  mix-blend-mode: multiply;
+                  z-index: 1;
+                  transition: transform 0.3s ease-out 0s;
+                  transform: translateX(-100%) skewX(-10deg);
+                  visibility: hidden;
+                }
+
+                &:hover::before {
+                  transition: transform 0.3s ease-out 0s;
+                  transform: translateX(0);
+                  visibility: visible;
+                }
+
+                img {
+                  width: 100%;
+                }
               }
 
-              &:hover::before {
-                transition: transform 0.3s ease-out 0s;
-                transform: translateX(0);
-                visibility: visible;
-              }
+              .article_text {
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                text-align: left;
+                padding: 20px 20px 20px 40px;
+                position: relative;
 
-              img {
-                width: 100%;
+                span {
+                  position: absolute;
+                  left: 0;
+                  transform: rotate(-90deg);
+                  font-family: $font1;
+                  font-size: 1.4rem;
+                }
+
+                .article_date {
+                  color: $colorLightGrey;
+                  font-family: $font1;
+                  font-size: 0.8rem;
+                }
+
+                .article_title {
+                  color: $colorGrey;
+                  font-family: $font1;
+                  font-size: 1rem;
+                }
+
+                .red_point {
+                  position: absolute;
+                  height: 5px;
+                  width: 5px;
+                  background-color: $colorRed;
+                  bottom: 0;
+                  left: 0;
+                }
               }
             }
+          }
 
+          &:hover {
             .article_text {
-              display: flex;
-              flex-direction: column;
-              align-content: center;
-              text-align: left;
-              padding: 20px 20px 20px 40px;
-              position: relative;
+              background-color: $colorDarkBlue;
+              transition: 0.6s;
 
               span {
-                position: absolute;
-                left: 0;
-                transform: rotate(-90deg);
-                font-family: $font1;
-                font-size: 1.4rem;
+                color: $colorWhite;
+                transition: 0.6s;
               }
 
               .article_date {
-                color: $colorLightGrey;
-                font-family: $font1;
-                font-size: 0.8rem;
+                color: $colorRed;
+                transition: 0.6s;
               }
 
               .article_title {
-                color: $colorGrey;
-                font-family: $font1;
-                font-size: 1rem;
+                color: $colorWhite;
+                transition: 0.6s;
               }
             }
           }
         }
+      }
 
-        &:hover {
-          .article_text {
-            background-color: $colorDarkBlue;
-            transition: 0.6s;
+      .slick-dots {
+        margin: 0;
+        position: absolute;
+        top: -60px;
+        left: 0;
+        list-style-type: none;
+        width: auto;
+        height: 20px;
+        z-index: 0;
 
-            span {
-              color: $colorWhite;
-              transition: 0.6s;
-            }
-
-            .article_date {
-              color: $colorRed;
-              transition: 0.6s;
-            }
-
-            .article_title {
-              color: $colorWhite;
-              transition: 0.6s;
-            }
-          }
+        li {
+          margin-right: 2rem;
         }
-      }
-    }
 
-    .slick-dots {
-      margin: 0;
-      position: absolute;
-      top: -60px;
-      left: 0;
-      list-style-type: none;
-      width: auto;
-      height: 20px;
-      z-index: 0;
+        button {
+          display: block;
+          width: 50px;
+          height: 4px;
 
-      li {
-        margin-right: 2rem;
-      }
+          border: 1px solid $colorLightGrey;
+          background-color: $colorWhite;
 
-      button {
-        display: block;
-        width: 50px;
-        height: 4px;
+          text-indent: -9999px;
+        }
 
-        border: 1px solid $colorLightGrey;
-        background-color: $colorWhite;
-
-        text-indent: -9999px;
-      }
-
-      li.slick-active button {
-        background-color: $colorRed;
-        border: 1px solid $colorRed;
+        li.slick-active button {
+          background-color: $colorRed;
+          border: 1px solid $colorRed;
+        }
       }
     }
   }

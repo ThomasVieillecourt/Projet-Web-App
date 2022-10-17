@@ -11,6 +11,9 @@ const skill3 = document.getElementById("skill3");
 const skill4 = document.getElementById("skill4");
 const skillVideo = document.querySelectorAll(".click_video");
 const dots = document.querySelector(".slick-dots");
+const listSkills = document.querySelectorAll(".list_skills");
+const containerBanner = document.querySelector(".container-banner");
+
 let agentId = "jett";
 let videoId = "skill1";
 
@@ -641,6 +644,7 @@ const agentRoll = () => {
   );
 
   imgSlider.innerHTML = agent.image;
+
   roleText.innerHTML = agent.role;
   descriptionText.innerHTML = agent.description;
   roleText.innerHTML += agent.roleImg;
@@ -719,5 +723,18 @@ h2Agent.forEach((titleAgent) => {
   titleAgent.addEventListener("click", () => {
     removeActiveClasses();
     titleAgent.classList.add("active");
+  });
+});
+
+const removeActiveListClasses = () => {
+  listSkills.forEach((listSkill) => {
+    listSkill.classList.remove("active_skill");
+  });
+};
+
+listSkills.forEach((listSkill) => {
+  listSkill.addEventListener("click", () => {
+    removeActiveListClasses();
+    listSkill.classList.add("active_skill");
   });
 });
