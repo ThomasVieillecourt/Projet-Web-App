@@ -3,6 +3,10 @@
   background-color: $colorWhite;
   position: relative;
 
+  @include mobile {
+    height: auto;
+  }
+
   #custom-cursor {
     width: 80px;
     position: fixed;
@@ -15,6 +19,10 @@
   .container-article {
     height: 100%;
 
+    @include lg-mobile {
+      padding: 1rem;
+    }
+
     .article_banner {
       display: flex;
       justify-content: space-between;
@@ -26,6 +34,14 @@
         font-family: $font2;
         font-size: 4rem;
         text-transform: uppercase;
+
+        @include lg-mobile {
+          font-size: 2.8rem;
+        }
+
+        @include mobile {
+          font-size: 2.4rem;
+        }
       }
 
       .limits {

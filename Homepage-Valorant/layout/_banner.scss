@@ -6,6 +6,10 @@
     height: auto;
   }
 
+  @include mobile {
+    height: auto;
+  }
+
   #myVideo {
     position: absolute;
     display: block;
@@ -35,11 +39,18 @@
 
     @include laptop {
       grid-template-columns: 50% 50%;
+
       padding: 0 2rem;
     }
 
     @include tablet {
       grid-template-columns: 50% 50%;
+      padding: 0;
+    }
+
+    @include lg-mobile {
+      grid-template-columns: 100%;
+      grid-template-rows: 20% 60% 20%;
       padding: 0;
     }
 
@@ -52,6 +63,18 @@
       @include tablet {
         justify-content: flex-start;
         align-items: flex-start;
+      }
+      @include lg-mobile {
+        flex-direction: row;
+        justify-content: center;
+        padding-top: 150px;
+        z-index: 10;
+      }
+
+      .slick-list {
+        @include lg-mobile {
+          height: 100%;
+        }
       }
 
       .active {
@@ -70,6 +93,10 @@
 
         @include tablet {
           font-size: 5rem;
+        }
+
+        @include lg-mobile {
+          transform: translateY(220px);
         }
 
         span {
@@ -100,6 +127,12 @@
         z-index: 0;
       }
 
+      @include lg-mobile {
+        display: block;
+        margin: 0 auto;
+        z-index: 10;
+      }
+
       img {
         max-height: 740px;
         position: absolute;
@@ -119,8 +152,22 @@
       @include tablet {
         img {
           max-height: 540px;
-
           z-index: 0;
+        }
+      }
+      @include lg-mobile {
+        img {
+          max-height: 540px;
+          z-index: 10;
+          top: 10px;
+        }
+      }
+
+      @include mobile {
+        img {
+          max-height: 440px;
+          z-index: 10;
+          top: 10px;
         }
       }
     }
@@ -168,7 +215,7 @@
       @include laptop {
         background-color: $colorWhite;
         z-index: 1;
-        width: 90vw;
+        width: 200%;
         padding: 32px 0;
         border-bottom: 1px solid $colorGrey;
 
@@ -194,6 +241,15 @@
         #white-line {
           display: none;
         }
+      }
+
+      @include lg-mobile {
+        position: relative;
+        transform: translateY(80%);
+        padding: 12px;
+        display: block;
+        margin: 0 auto;
+        width: 100%;
       }
     }
   }

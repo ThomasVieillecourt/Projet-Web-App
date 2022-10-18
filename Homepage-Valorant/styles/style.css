@@ -45,6 +45,11 @@ h2 {
     max-width: 650px;
   }
 }
+@media (max-width: 550px) {
+  .flux {
+    max-width: auto;
+  }
+}
 
 header .nav-container {
   background-color: #000000;
@@ -359,6 +364,11 @@ header .nav-container nav #globe {
     height: auto;
   }
 }
+@media (max-width: 375px) {
+  .container-banner {
+    height: auto;
+  }
+}
 .container-banner #myVideo {
   position: absolute;
   display: block;
@@ -398,6 +408,13 @@ header .nav-container nav #globe {
     padding: 0;
   }
 }
+@media (max-width: 550px) {
+  .container-banner .banner {
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 60% 20%;
+    padding: 0;
+  }
+}
 .container-banner .banner .carroussel {
   display: flex;
   height: 80vh;
@@ -408,6 +425,19 @@ header .nav-container nav #globe {
   .container-banner .banner .carroussel {
     justify-content: flex-start;
     align-items: flex-start;
+  }
+}
+@media (max-width: 550px) {
+  .container-banner .banner .carroussel {
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 150px;
+    z-index: 10;
+  }
+}
+@media (max-width: 550px) {
+  .container-banner .banner .carroussel .slick-list {
+    height: 100%;
   }
 }
 .container-banner .banner .carroussel .active {
@@ -427,6 +457,11 @@ header .nav-container nav #globe {
 @media (max-width: 800px) {
   .container-banner .banner .carroussel .agent_name {
     font-size: 5rem;
+  }
+}
+@media (max-width: 550px) {
+  .container-banner .banner .carroussel .agent_name {
+    transform: translateY(220px);
   }
 }
 .container-banner .banner .carroussel .agent_name span {
@@ -456,6 +491,13 @@ header .nav-container nav #globe {
     z-index: 0;
   }
 }
+@media (max-width: 550px) {
+  .container-banner .banner .imgSlider {
+    display: block;
+    margin: 0 auto;
+    z-index: 10;
+  }
+}
 .container-banner .banner .imgSlider img {
   max-height: 740px;
   position: absolute;
@@ -474,6 +516,20 @@ header .nav-container nav #globe {
   .container-banner .banner .imgSlider img {
     max-height: 540px;
     z-index: 0;
+  }
+}
+@media (max-width: 550px) {
+  .container-banner .banner .imgSlider img {
+    max-height: 540px;
+    z-index: 10;
+    top: 10px;
+  }
+}
+@media (max-width: 375px) {
+  .container-banner .banner .imgSlider img {
+    max-height: 440px;
+    z-index: 10;
+    top: 10px;
   }
 }
 .container-banner .banner .description-container {
@@ -515,7 +571,7 @@ header .nav-container nav #globe {
   .container-banner .banner .description-container {
     background-color: #ece8e1;
     z-index: 1;
-    width: 90vw;
+    width: 200%;
     padding: 32px 0;
     border-bottom: 1px solid #292929;
   }
@@ -538,6 +594,16 @@ header .nav-container nav #globe {
   }
   .container-banner .banner .description-container #white-line {
     display: none;
+  }
+}
+@media (max-width: 550px) {
+  .container-banner .banner .description-container {
+    position: relative;
+    transform: translateY(80%);
+    padding: 12px;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
   }
 }
 @-webkit-keyframes textAnim {
@@ -611,12 +677,17 @@ header .nav-container nav #globe {
 @media (max-width: 1280px) {
   .container_abilities {
     padding-top: 0;
-    height: 120vh;
+    height: 110vh;
   }
 }
 @media (max-width: 800px) {
   .container_abilities {
     padding-top: 0;
+    height: 110vh;
+  }
+}
+@media (max-width: 375px) {
+  .container_abilities {
     height: 120vh;
   }
 }
@@ -691,6 +762,8 @@ header .nav-container nav #globe {
     padding-top: 300px;
     display: flex;
     flex-direction: column;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 @media (max-width: 800px) {
@@ -700,10 +773,35 @@ header .nav-container nav #globe {
     flex-direction: column;
   }
 }
+@media (max-width: 550px) {
+  .container_abilities .abilities .skills {
+    padding-top: 320px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (max-width: 375px) {
+  .container_abilities .abilities .skills {
+    padding-top: 360px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 .container_abilities .abilities .skills .skill_text h3 {
   font-family: "Tungsten", arial, georgia, sans-serif;
   font-size: 4rem;
   text-transform: uppercase;
+}
+@media (max-width: 550px) {
+  .container_abilities .abilities .skills .skill_text h3 {
+    font-size: 2.8rem;
+    padding: 0 1rem;
+  }
+}
+@media (max-width: 375px) {
+  .container_abilities .abilities .skills .skill_text h3 {
+    font-size: 2.4rem;
+  }
 }
 .container_abilities .abilities .skills .skill_text .line-skills {
   height: 1px;
@@ -714,12 +812,24 @@ header .nav-container nav #globe {
 }
 @media (max-width: 1280px) {
   .container_abilities .abilities .skills .skill_text .line-skills {
-    top: 41%;
+    top: 44%;
+    transform: translateX(-20%);
+    width: 150%;
   }
 }
 @media (max-width: 800px) {
   .container_abilities .abilities .skills .skill_text .line-skills {
-    top: 48%;
+    top: 44%;
+  }
+}
+@media (max-width: 550px) {
+  .container_abilities .abilities .skills .skill_text .line-skills {
+    top: 42%;
+  }
+}
+@media (max-width: 375px) {
+  .container_abilities .abilities .skills .skill_text .line-skills {
+    top: 42.5%;
   }
 }
 .container_abilities .abilities .skills .skill_text .line-dark2 {
@@ -758,6 +868,7 @@ header .nav-container nav #globe {
 @media (max-width: 800px) {
   .container_abilities .abilities .skills .skill_text ul {
     margin: 2rem 0;
+    gap: 1rem;
   }
 }
 .container_abilities .abilities .skills .skill_text ul li {
@@ -773,6 +884,12 @@ header .nav-container nav #globe {
      object-fit: cover;
   overflow: hidden;
   background-color: #ece8e1;
+}
+@media (max-width: 550px) {
+  .container_abilities .abilities .skills .skill_text ul li {
+    width: 60px;
+    height: 60px;
+  }
 }
 .container_abilities .abilities .skills .skill_text ul li::after {
   content: "";
@@ -901,6 +1018,11 @@ header .nav-container nav #globe {
   background-color: #ece8e1;
   position: relative;
 }
+@media (max-width: 375px) {
+  .third_container {
+    height: auto;
+  }
+}
 .third_container #custom-cursor {
   width: 80px;
   position: fixed;
@@ -911,6 +1033,11 @@ header .nav-container nav #globe {
 }
 .third_container .container-article {
   height: 100%;
+}
+@media (max-width: 550px) {
+  .third_container .container-article {
+    padding: 1rem;
+  }
 }
 .third_container .container-article .article_banner {
   display: flex;
@@ -923,6 +1050,16 @@ header .nav-container nav #globe {
   font-family: "Tungsten", arial, georgia, sans-serif;
   font-size: 4rem;
   text-transform: uppercase;
+}
+@media (max-width: 550px) {
+  .third_container .container-article .article_banner h3 {
+    font-size: 2.8rem;
+  }
+}
+@media (max-width: 375px) {
+  .third_container .container-article .article_banner h3 {
+    font-size: 2.4rem;
+  }
 }
 .third_container .container-article .article_banner .limits {
   font-family: "DINNextW1G", arial, georgia, sans-serif;
@@ -1088,6 +1225,11 @@ footer {
   position: relative;
   z-index: 3;
 }
+@media (max-width: 550px) {
+  footer {
+    height: auto;
+  }
+}
 footer .download-container {
   background-color: #292929;
   height: 10vh;
@@ -1157,12 +1299,23 @@ footer .link-container p {
   margin: 0 auto;
   pointer-events: none;
 }
+@media (max-width: 550px) {
+  footer .link-container p {
+    padding: 1rem;
+    text-align: center;
+  }
+}
 footer .link-container .cgi-container {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
   padding: 24px 0 28px;
+}
+@media (max-width: 550px) {
+  footer .link-container .cgi-container {
+    flex-direction: column;
+  }
 }
 footer .link-container .cgi-container button {
   border: none;
@@ -1183,10 +1336,21 @@ footer .link-container .pegi-container {
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 550px) {
+  footer .link-container .pegi-container {
+    flex-wrap: wrap;
+    padding: 0 2rem;
+  }
+}
 footer .link-container .pegi-container div {
   background-color: #292929;
   padding: 10px;
   border-radius: 6px;
+}
+@media (max-width: 550px) {
+  footer .link-container .pegi-container div {
+    margin: 8px;
+  }
 }
 footer .link-container .pegi-container div img {
   height: 100px;
