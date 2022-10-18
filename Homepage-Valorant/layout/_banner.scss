@@ -2,6 +2,10 @@
   height: 80vh;
   position: relative;
 
+  @include laptop {
+    height: auto;
+  }
+
   #myVideo {
     position: absolute;
     display: block;
@@ -22,17 +26,33 @@
 
   .banner {
     height: 80vh;
+    width: 100%;
     display: grid;
     align-items: center;
     justify-content: center;
     grid-template-columns: 35% 40% 25%;
     position: relative;
 
+    @include laptop {
+      grid-template-columns: 50% 50%;
+      padding: 0 2rem;
+    }
+
+    @include tablet {
+      grid-template-columns: 50% 50%;
+      padding: 0;
+    }
+
     .carroussel {
       display: flex;
       height: 80vh;
       flex-direction: column;
       z-index: 1;
+
+      @include tablet {
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
 
       .active {
         color: #ff4655 !important;
@@ -48,12 +68,20 @@
         height: 100px;
         transform: translateY(220px);
 
+        @include tablet {
+          font-size: 5rem;
+        }
+
         span {
           font-family: $font2;
           font-size: 1.5rem;
           position: relative;
           margin-right: 12px;
           bottom: 60px;
+
+          @include tablet {
+            bottom: 38px;
+          }
         }
       }
     }
@@ -66,6 +94,12 @@
       position: relative;
       z-index: 10;
 
+      @include tablet {
+        justify-content: flex-start;
+        align-items: flex-start;
+        z-index: 0;
+      }
+
       img {
         max-height: 740px;
         position: absolute;
@@ -73,6 +107,21 @@
         left: 0;
         z-index: 10;
         pointer-events: none;
+      }
+
+      @include laptop {
+        img {
+          position: relative;
+          top: 80px;
+        }
+      }
+
+      @include tablet {
+        img {
+          max-height: 540px;
+
+          z-index: 0;
+        }
       }
     }
 
@@ -114,6 +163,37 @@
         width: 100%;
         position: relative;
         transform: translateY(60px);
+      }
+
+      @include laptop {
+        background-color: $colorWhite;
+        z-index: 1;
+        width: 90vw;
+        padding: 32px 0;
+        border-bottom: 1px solid $colorGrey;
+
+        h3 {
+          color: $colorDarkBlue;
+        }
+        #role-text {
+          font-size: 4rem;
+          margin-bottom: 1rem;
+          font-family: $font2;
+          color: $colorDarkBlue;
+
+          img {
+            width: 30px;
+            transform: translateY(-50%) translateX(10px);
+            filter: brightness(0);
+          }
+        }
+        #description-text {
+          color: $colorGrey;
+        }
+
+        #white-line {
+          display: none;
+        }
       }
     }
   }
