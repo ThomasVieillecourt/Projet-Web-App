@@ -1,5 +1,6 @@
 .container-banner {
   height: 80vh;
+  width: 100%;
   position: relative;
 
   @include laptop {
@@ -11,11 +12,21 @@
   }
 
   #myVideo {
-    position: absolute;
+    position: fixed;
     display: block;
     top: 0;
-    height: fit-content;
     z-index: -1;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+
+    @include laptop {
+      height: 100%;
+    }
+
+    @include lg-mobile {
+      width: 100%;
+    }
   }
 
   #custom-cursor {
@@ -26,6 +37,10 @@
     z-index: 100;
     opacity: 0.5;
     transform: 0.3s;
+
+    @include lg-mobile {
+      display: none;
+    }
   }
 
   .banner {
@@ -67,7 +82,7 @@
       @include lg-mobile {
         flex-direction: row;
         justify-content: center;
-        padding-top: 150px;
+        padding-top: 130px;
         z-index: 10;
       }
 
@@ -96,7 +111,8 @@
         }
 
         @include lg-mobile {
-          transform: translateY(220px);
+          transform: translateY(180px);
+          cursor: initial;
         }
 
         span {

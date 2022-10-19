@@ -225,7 +225,7 @@ let arrayCharacters = [
     skill4: `<img src="media/img/Astra/Astra_Ability_Icons_X_CosmicDividev2.png" alt="Astra X" />`,
   },
   {
-    id: "kay/o",
+    id: "kayo",
     image: `<img src="media/img/Kayo.png" alt="Kayo" />`,
     role: "INITIATEUR",
     roleImg: `<img src="media/img/icons_role/Initiator.png" alt="logo initiateur" />`,

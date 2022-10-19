@@ -2,14 +2,15 @@
   height: 90vh;
   background-color: $colorWhite;
   position: relative;
+
   @include laptop {
     padding-top: 0;
-    height: 110vh;
+    height: 125vh;
   }
 
   @include tablet {
     padding-top: 0;
-    height: 110vh;
+    height: 120vh;
   }
 
   @include mobile {
@@ -91,6 +92,9 @@
         padding-top: 300px;
         display: flex;
         flex-direction: column;
+        height: auto;
+        padding-left: 2rem;
+        padding-right: 2rem;
       }
 
       @include lg-mobile {
@@ -113,7 +117,7 @@
 
           @include lg-mobile {
             font-size: 2.8rem;
-            padding: 0 1rem;
+            padding: 1rem 1rem;
           }
 
           @include mobile {
@@ -129,21 +133,26 @@
           top: 42.5%;
 
           @include laptop {
-            top: 44%;
+            top: 40%;
             transform: translateX(-20%);
             width: 150%;
           }
 
           @include tablet {
-            top: 44%;
+            transform: none;
+            width: 120%;
+            transform: translateX(-20%);
+            top: 41%;
+            padding: 0;
           }
 
           @include lg-mobile {
-            top: 42%;
+            transform: translateX(0%);
+            top: 41.5%;
           }
 
           @include mobile {
-            top: 42.5%;
+            top: 49%;
           }
         }
 
@@ -180,6 +189,11 @@
 
           @include tablet {
             margin: 2rem 0;
+            gap: 1rem;
+          }
+
+          @include lg-mobile {
+            margin: 1rem 0;
             gap: 1rem;
           }
 
@@ -275,12 +289,17 @@
           @include tablet {
             padding: 1rem 2rem 0 1rem;
           }
+
+          @include lg-mobile {
+            padding: 2rem 1rem;
+          }
         }
       }
 
       .skill_video {
         width: auto;
         position: relative;
+        height: auto;
 
         @include laptop {
           padding: 24px 0 24px 0;
@@ -288,6 +307,11 @@
 
         @include tablet {
           padding: 24px 0 24px 0;
+        }
+
+        @include lg-mobile {
+          padding: 0 12px;
+          height: 100%;
         }
 
         video {
@@ -310,13 +334,21 @@
             width: 100%;
             z-index: 0;
           }
+
+          @include lg-mobile {
+            height: 100%;
+            -o-object-fit: cover;
+            object-fit: cover;
+            -o-object-position: center;
+            object-position: center;
+            width: 100%;
+          }
         }
         .grey_bar {
           width: 80%;
           height: 40px;
           position: relative;
           transform: translateX(24.9%) translateY(960%);
-
           background-color: $colorLightGrey;
 
           @include laptop {
@@ -325,6 +357,17 @@
 
           @include tablet {
             display: none;
+          }
+
+          @include lg-mobile {
+            display: block;
+            z-index: 1;
+            height: 20px;
+            transform: translateY(0);
+
+            position: absolute;
+            right: 0;
+            margin-right: 12px;
           }
         }
       }

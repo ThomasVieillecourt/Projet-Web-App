@@ -18,9 +18,11 @@
 
   .container-article {
     height: 100%;
+    position: relative;
+    overflow: hidden;
 
     @include lg-mobile {
-      padding: 1rem;
+      padding: 1rem 1rem 1rem 1rem;
     }
 
     .article_banner {
@@ -72,6 +74,10 @@
         opacity: 0.2;
         white-space: nowrap;
         line-height: 1;
+
+        @include lg-mobile {
+          font-size: 10rem;
+        }
       }
     }
 

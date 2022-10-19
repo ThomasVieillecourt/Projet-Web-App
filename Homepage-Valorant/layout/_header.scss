@@ -1,145 +1,58 @@
-header .nav-container {
-  background-color: $colorBlack;
-  position: fixed;
+header {
   width: 100%;
+  height: 100%;
+  position: relative;
   z-index: 100;
 
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  .nav-container {
+    background-color: $colorBlack;
+    position: relative;
     width: 100%;
-    height: 80px;
-    list-style: none;
 
-    .left-nav {
+    nav {
       display: flex;
+      justify-content: space-between;
       align-items: center;
+      width: 100%;
+      height: 80px;
+      list-style: none;
 
-      #riotLogo {
-        width: 70px;
-        cursor: pointer;
-        margin: 0 16px;
-      }
-
-      #valorantLogo {
-        width: 70px;
-        cursor: pointer;
-        margin: 0 16px;
-      }
-      #listMobile {
-        display: none;
-      }
-
-      #list-medium {
-        display: none;
-      }
-
-      #list-small {
-        display: none;
-      }
-
-      .list-container {
+      .left-nav {
         display: flex;
         align-items: center;
-        gap: 1.4rem;
-        padding: 0px 16px;
-
-        #cross_icon {
-          display: none;
-        }
-
-        a {
-          text-decoration: none;
-          padding: 2px 12px;
-          border-radius: 6px;
-          position: relative;
-
-          &:hover {
-            background-color: $colorGrey;
-
-            .underline {
-              position: absolute;
-              left: 0;
-              bottom: 0;
-              transform: translateY(400%);
-              width: 100%;
-              height: 4px;
-              background-color: $colorRed;
-              border-radius: 4px;
-            }
-          }
-
-          li {
-            list-style: none;
-            color: $colorWhite;
-            font-family: $font1;
-            text-transform: uppercase;
-            letter-spacing: 0.1rem;
-            font-size: 0.9rem;
-            padding: 8px 0px;
-
-            &:hover {
-              background-color: $colorGrey;
-            }
-          }
-        }
-      }
-
-      @include large {
-        #listMobile {
-          display: none;
-        }
-        #listFull {
-          display: none;
-        }
-
-        #list-small {
-          display: none;
-        }
-
-        #list-medium {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          gap: 1.4rem;
-        }
-
-        #burger_icon {
-          width: 40px;
-          display: none;
-        }
-      }
-
-      @include laptop {
-        #listMobile {
-          display: none;
-        }
-        #list-medium {
-          display: none;
-        }
-        #list-small {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        #burger_icon {
-          width: 40px;
-          display: none;
-        }
 
         #riotLogo {
-          width: 50px;
-          margin: 0 12px;
+          width: 70px;
+          cursor: pointer;
+          margin: 0 16px;
         }
 
         #valorantLogo {
-          width: 50px;
-          margin: 0 12px;
+          width: 70px;
+          cursor: pointer;
+          margin: 0 16px;
         }
+        #listMobile {
+          display: none;
+        }
+
+        #list-medium {
+          display: none;
+        }
+
+        #list-small {
+          display: none;
+        }
+
         .list-container {
-          gap: 0rem;
-          padding: 0px 12px;
+          display: flex;
+          align-items: center;
+          gap: 1.4rem;
+          padding: 0px 16px;
+
+          #cross_icon {
+            display: none;
+          }
 
           a {
             text-decoration: none;
@@ -168,7 +81,7 @@ header .nav-container {
               font-family: $font1;
               text-transform: uppercase;
               letter-spacing: 0.1rem;
-              font-size: 0.8rem;
+              font-size: 0.9rem;
               padding: 8px 0px;
 
               &:hover {
@@ -177,147 +90,103 @@ header .nav-container {
             }
           }
         }
-      }
-    }
 
-    .right-nav {
-      display: flex;
-
-      .list-container {
-        display: flex;
-        align-items: center;
-        gap: 2rem;
-        padding: 0px 16px;
-
-        #burger_icon {
-          width: 40px;
-          display: none;
-        }
-
-        a {
-          text-decoration: none;
-          padding: 2px 12px;
-          border-radius: 6px;
-          position: relative;
-
-          li {
-            list-style: none;
-            color: $colorWhite;
-            font-family: $font1;
-            text-transform: uppercase;
-            letter-spacing: 0.1rem;
-            font-size: 0.9rem;
-            padding: 8px 0px;
+        @include large {
+          #listMobile {
+            display: none;
           }
-        }
-      }
-
-      @include laptop {
-        .list-container {
-          gap: 0rem;
-          padding: 0px 6px;
-
-          a {
-            text-decoration: none;
-            padding: 2px 12px;
-            border-radius: 6px;
-            position: relative;
-
-            li {
-              font-size: 0.8rem;
-            }
-          }
-        }
-      }
-    }
-
-    #globe {
-      width: 20px;
-    }
-  }
-
-  @include tablet {
-    nav {
-      height: 60px;
-
-      .left-nav {
-        #list-medium {
-          display: none;
-        }
-
-        #list-small {
-          display: none;
-        }
-
-        #listFull {
-          display: none;
-        }
-
-        #riotLogo {
-          width: 50px;
-        }
-
-        #valorantLogo {
-          width: 50px;
-        }
-
-        #listMobile {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          gap: 2rem;
-          height: 100vh;
-          width: 50vw;
-          padding: 50px 40px;
-          background-color: $colorGrey;
-          position: absolute;
-          right: 0;
-          top: 0;
-          transform: translateX(100%);
-          transition: 0.4s;
-          z-index: 12;
-
-          #cross_icon {
-            display: block;
-            width: 30px;
-            position: absolute;
-            top: 16px;
-            right: 16px;
-            cursor: pointer;
+          #listFull {
+            display: none;
           }
 
-          a {
-            text-decoration: none;
-            padding: 2px 8px;
-            border-radius: 6px;
-            position: relative;
+          #list-small {
+            display: none;
+          }
 
-            &:hover {
-              background-color: none;
+          #list-medium {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.4rem;
+          }
 
-              .underline {
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                transform: translateY(300%);
-                width: 100%;
-                height: 4px;
-                background-color: $colorRed;
-                border-radius: 4px;
-              }
+          #burger_icon {
+            width: 40px;
+            display: none;
+          }
+        }
+
+        @include laptop {
+          #listMobile {
+            display: none;
+          }
+          #list-medium {
+            display: none;
+          }
+          #list-small {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          #burger_icon {
+            width: 40px;
+            display: none;
+          }
+
+          #riotLogo {
+            width: 50px;
+            margin: 0 12px;
+
+            @include lg-mobile {
+              display: none;
             }
 
-            li {
-              list-style: none;
-              color: $colorWhite;
-              font-family: $font1;
-              text-transform: uppercase;
-              letter-spacing: 0.1rem;
-              font-size: 1rem;
-              padding: 8px 0px;
+            @include mobile {
+              display: none;
+            }
+          }
+
+          #valorantLogo {
+            width: 50px;
+            margin: 0 12px;
+          }
+          .list-container {
+            gap: 0rem;
+            padding: 0px 12px;
+
+            a {
+              text-decoration: none;
+              padding: 2px 12px;
+              border-radius: 6px;
+              position: relative;
 
               &:hover {
-                background-color: none;
+                background-color: $colorGrey;
+
+                .underline {
+                  position: absolute;
+                  left: 0;
+                  bottom: 0;
+                  transform: translateY(400%);
+                  width: 100%;
+                  height: 4px;
+                  background-color: $colorRed;
+                  border-radius: 4px;
+                }
+              }
+
+              li {
+                list-style: none;
+                color: $colorWhite;
+                font-family: $font1;
+                text-transform: uppercase;
+                letter-spacing: 0.1rem;
+                font-size: 0.8rem;
+                padding: 8px 0px;
+
+                &:hover {
+                  background-color: $colorGrey;
+                }
               }
             }
           }
@@ -325,14 +194,17 @@ header .nav-container {
       }
 
       .right-nav {
+        display: flex;
+
         .list-container {
-          gap: 1.2rem;
-          padding: 0px 12px;
+          display: flex;
+          align-items: center;
+          gap: 2rem;
+          padding: 0px 16px;
 
           #burger_icon {
             width: 40px;
-            display: block;
-            cursor: pointer;
+            display: none;
           }
 
           a {
@@ -350,6 +222,229 @@ header .nav-container {
               font-size: 0.9rem;
               padding: 8px 0px;
             }
+          }
+        }
+
+        @include laptop {
+          .list-container {
+            gap: 0rem;
+            padding: 0px 6px;
+
+            a {
+              text-decoration: none;
+              padding: 2px 12px;
+              border-radius: 6px;
+              position: relative;
+
+              li {
+                font-size: 0.8rem;
+              }
+            }
+          }
+        }
+      }
+
+      #globe {
+        width: 20px;
+      }
+    }
+
+    @include tablet {
+      nav {
+        height: 60px;
+        width: 100%;
+
+        .left-nav {
+          #list-medium {
+            display: none;
+          }
+
+          #list-small {
+            display: none;
+          }
+
+          #listFull {
+            display: none;
+          }
+
+          #riotLogo {
+            width: 50px;
+          }
+
+          #valorantLogo {
+            width: 50px;
+          }
+
+          #listMobile {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 2rem;
+            height: 100vh;
+            width: 50vw;
+            padding: 50px 40px;
+            background-color: $colorGrey;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transform: translateX(100%);
+            transition: 0.4s;
+            z-index: 12;
+
+            #cross_icon {
+              display: block;
+              width: 30px;
+              position: absolute;
+              top: 16px;
+              right: 16px;
+              cursor: pointer;
+            }
+
+            a {
+              text-decoration: none;
+              padding: 2px 8px;
+              border-radius: 6px;
+              position: relative;
+
+              &:hover {
+                background-color: none;
+
+                .underline {
+                  position: absolute;
+                  left: 0;
+                  bottom: 0;
+                  transform: translateY(300%);
+                  width: 100%;
+                  height: 4px;
+                  background-color: $colorRed;
+                  border-radius: 4px;
+                }
+              }
+
+              li {
+                list-style: none;
+                color: $colorWhite;
+                font-family: $font1;
+                text-transform: uppercase;
+                letter-spacing: 0.1rem;
+                font-size: 1rem;
+                padding: 8px 0px;
+
+                &:hover {
+                  background-color: none;
+                }
+              }
+            }
+          }
+        }
+
+        .right-nav {
+          .list-container {
+            gap: 1.2rem;
+            padding: 0px 12px;
+
+            #burger_icon {
+              width: 40px;
+              display: block;
+              cursor: pointer;
+            }
+
+            a {
+              text-decoration: none;
+              padding: 2px 12px;
+              border-radius: 6px;
+              position: relative;
+
+              li {
+                list-style: none;
+                color: $colorWhite;
+                font-family: $font1;
+                text-transform: uppercase;
+                letter-spacing: 0.1rem;
+                font-size: 0.9rem;
+                padding: 8px 0px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @include lg-mobile {
+      nav {
+        position: sticky;
+        top: 0;
+
+        .left-nav {
+          #list-medium {
+            display: none;
+          }
+
+          #list-small {
+            display: none;
+          }
+
+          #listFull {
+            display: none;
+          }
+
+          #valorantLogo {
+            width: 50px;
+          }
+
+          #listMobile {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 2rem;
+            height: 100vh;
+            width: 80vw;
+            padding: 50px 40px;
+            background-color: $colorGrey;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transform: translateX(100%);
+            transition: 0.4s;
+            z-index: 12;
+
+            #cross_icon {
+              display: block;
+              width: 30px;
+              position: absolute;
+              top: 16px;
+              right: 16px;
+              cursor: pointer;
+            }
+
+            a {
+              text-decoration: none;
+              padding: 2px 8px;
+              border-radius: 6px;
+              position: relative;
+
+              &:hover {
+                background-color: none;
+
+                .underline {
+                  position: absolute;
+                  left: 0;
+                  bottom: 0;
+                  transform: translateY(300%);
+                  width: 100%;
+                  height: 4px;
+                  background-color: $colorRed;
+                  border-radius: 4px;
+                }
+              }
+            }
+          }
+        }
+
+        .right-nav {
+          .list-container {
+            gap: 0.4rem;
+            padding: 0px 12px;
           }
         }
       }

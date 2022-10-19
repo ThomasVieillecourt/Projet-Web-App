@@ -16,12 +16,13 @@
 
 html {
   scroll-behavior: smooth;
+  position: relative;
+  overflow-x: hidden;
 }
 
 body {
   height: auto;
   position: relative;
-  overflow-x: hidden;
 }
 
 h2 {

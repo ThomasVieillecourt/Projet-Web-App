@@ -9,11 +9,16 @@ footer {
 
   .download-container {
     background-color: $colorGrey;
-    height: 10vh;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    padding: 12px 0;
+
+    @include lg-mobile {
+      flex-direction: column;
+    }
 
     button {
       border: none;
