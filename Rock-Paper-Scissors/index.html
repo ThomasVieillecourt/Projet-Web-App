@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock / Paper / Scissors</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game_container">
+      <div class="game_head">
+        <p class="game_player-name">Player 1</p>
+        <div class="HP_container">
+          <div class="health_bar" id="HP1">
+            <div class="health_bar-pv" id="PV1"></div>
+          </div>
+          <div class="health_bar" id="HP2">
+            <div class="health_bar-pv" id="PV2"></div>
+          </div>
+        </div>
+
+        <div class="game_score">
+          <span class="game_score_player" id="score_player">0</span>
+          <p class="game_score_display">Score</p>
+          <span class="game_score_player" id="score_computer">0</span>
+        </div>
+        <p class="game_player-name">Computer</p>
+      </div>
+
+      <div class="game_content">
+        <div class="game_content_choices">
+          <img src="" id="iframe_W" />
+          <img src="" alt="" id="choice_player" />
+        </div>
+        <p class="game_vs_display">VS</p>
+        <div class="game_content_choices" id="choice_computer">
+          <img src="" id="iframe_L" />
+          <img src="" alt="" id="choice_pc" />
+        </div>
+      </div>
+
+      <div class="game_choices">
+        <button class="choices">
+          <img src="img/rock.png" alt="" class="btn_sign" id="rock" />
+        </button>
+        <button class="choices">
+          <img src="img/paper.png" alt="" class="btn_sign" id="paper" />
+        </button>
+        <button class="choices">
+          <img src="img/scissors.png" alt="" class="btn_sign" id="scissors" />
+        </button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal">
+      <div class="modal-back"></div>
+      <div class="modal-container">
+        <p id="endGame_text"></p>
+        <button id="reboot">REJOUER</button>
+      </div>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
