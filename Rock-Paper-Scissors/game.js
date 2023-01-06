@@ -2,7 +2,7 @@
 // Propriétés score / choicePlayer / Choice Computer
 // Fonctionnalités : Start / End / Win / Loose / logique jeu / Next round
 
-const main = document.querySelector(".game_container");
+const main = document.querySelector(".game-container__content");
 
 const choicePlayer = document.querySelector("#choice_player");
 const choicePc = document.querySelector("#choice_pc");
@@ -83,7 +83,7 @@ function playing() {
   endGame();
 }
 
-document.querySelectorAll(".choices").forEach((btn) => {
+document.querySelectorAll(".choices-btn__sign").forEach((btn) => {
   btn.addEventListener("click", (e) => {
     playerChoise = e.target.id;
     console.log(playerChoise);

@@ -16,7 +16,7 @@ body {
   font-family: "VT323", monospace;
 }
 
-.game_container {
+.game-container {
   background: no-repeat url("img/bg_fight.gif") center/cover;
   width: 800px;
   height: 600px;
@@ -25,24 +25,25 @@ body {
   display: grid;
   grid-template-rows: 80px 1fr 30%;
   position: relative;
+  border: 2px black solid;
 }
 
-.game_head {
+.game-container__head {
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 80px;
 }
 
-.game_player-name {
+.game-container__player-name {
   font-size: 2rem;
 }
 
-.game_score_display {
+.game-container__score-display {
   font-size: 1.4rem;
 }
 
-.game_score {
+.game-container__score {
   display: flex;
   align-items: center;
   font-size: 4rem;
@@ -52,17 +53,17 @@ body {
   font-size: 4rem;
 }
 
-.game_score_player {
+.game-container__score-player {
   margin: 0 12px;
 }
 
-.game_content {
+.game-container__content {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 
-.game_content_choices {
+.game-container__content-choices {
   width: 80%;
   height: 80%;
   display: flex;
@@ -70,25 +71,25 @@ body {
   justify-content: center;
 }
 
-.game_choices {
+.game-container__choices {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 
-.choices {
+.game-container__choices-btn {
   cursor: pointer;
   border-radius: 12px;
 }
 
-.btn_sign {
+.choices-btn__sign {
   width: 120px;
 }
 
-.modal {
+.game-container__modal {
   display: none;
 }
-.modal-back {
+.game-container__modal-bg {
   position: fixed;
   top: 0;
   left: 0;
@@ -96,7 +97,7 @@ body {
   bottom: 0;
   background: rgba(0, 0, 0, 0.25);
 }
-.modal-container {
+.game-container__modal-container {
   width: 600px;
   height: 320px;
   position: fixed;
@@ -161,7 +162,7 @@ body {
   width: 300px;
 }
 
-.HP_container {
+.game-container__HP-container {
   width: 100%;
   position: absolute;
   display: flex;
@@ -170,14 +171,14 @@ body {
   align-items: center;
 }
 
-.health_bar {
+.HP-container__health-bar {
   width: 240px;
   height: 20px;
   background-color: darkslategray;
   border-radius: 2px;
 }
 
-.health_bar-pv {
+.HP-container__health-bar-pv {
   height: 20px;
   background-color: red;
 }

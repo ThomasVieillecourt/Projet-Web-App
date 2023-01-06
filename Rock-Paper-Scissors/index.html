@@ -12,54 +12,66 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="game_container">
-      <div class="game_head">
-        <p class="game_player-name">Player 1</p>
-        <div class="HP_container">
-          <div class="health_bar" id="HP1">
-            <div class="health_bar-pv" id="PV1"></div>
+    <div class="game-container">
+      <div class="game-container__head">
+        <p class="game-container__player-name">Player 1</p>
+        <div class="game-container__HP-container">
+          <div class="HP-container__health-bar" id="HP1">
+            <div class="HP-container__health-bar-pv" id="PV1"></div>
           </div>
-          <div class="health_bar" id="HP2">
-            <div class="health_bar-pv" id="PV2"></div>
+          <div class="HP-container__health-bar" id="HP2">
+            <div class="HP-container__health-bar-pv" id="PV2"></div>
           </div>
         </div>
 
-        <div class="game_score">
-          <span class="game_score_player" id="score_player">0</span>
-          <p class="game_score_display">Score</p>
-          <span class="game_score_player" id="score_computer">0</span>
+        <div class="game-container__score">
+          <span class="game-container__score-player" id="score_player">0</span>
+          <p class="game-container__score-display">Score</p>
+          <span class="game-container__score-player" id="score_computer"
+            >0</span
+          >
         </div>
-        <p class="game_player-name">Computer</p>
+        <p class="game-container__player-name">Computer</p>
       </div>
 
-      <div class="game_content">
-        <div class="game_content_choices">
+      <div class="game-container__content">
+        <div class="game-container__content-choices">
           <img src="" id="iframe_W" />
           <img src="" alt="" id="choice_player" />
         </div>
         <p class="game_vs_display">VS</p>
-        <div class="game_content_choices" id="choice_computer">
+        <div class="game-container__content-choices" id="choice_computer">
           <img src="" id="iframe_L" />
           <img src="" alt="" id="choice_pc" />
         </div>
       </div>
 
-      <div class="game_choices">
-        <button class="choices">
-          <img src="img/rock.png" alt="" class="btn_sign" id="rock" />
+      <div class="game-container__choices">
+        <button class="game-container__choices-btn">
+          <img src="img/rock.png" alt="" class="choices-btn__sign" id="rock" />
         </button>
-        <button class="choices">
-          <img src="img/paper.png" alt="" class="btn_sign" id="paper" />
+        <button class="game-container__choices-btn">
+          <img
+            src="img/paper.png"
+            alt=""
+            class="choices-btn__sign"
+            id="paper"
+          />
         </button>
-        <button class="choices">
-          <img src="img/scissors.png" alt="" class="btn_sign" id="scissors" />
+        <button class="game-container__choices-btn">
+          <img
+            src="img/scissors.png"
+            alt=""
+            class="choices-btn__sign"
+            id="scissors"
+          />
         </button>
       </div>
     </div>
 
-    <div class="modal" id="modal">
-      <div class="modal-back"></div>
-      <div class="modal-container">
+    <div class="game-container__modal" id="modal">
+      <div class="game-container__modal-bg"></div>
+      <div class="game-container__modal-container">
         <p id="endGame_text"></p>
         <button id="reboot">REJOUER</button>
       </div>
