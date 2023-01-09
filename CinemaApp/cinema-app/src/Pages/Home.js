@@ -1,22 +1,20 @@
-import React, { useEffect } from "react";
-import axios from "axios";
+import React from "react";
+import Trending from "../Components/Trending";
+import TopRated from "../Components/TopRated";
 import Navigation from "../Components/Navigation";
+import Header from "../Components/Header";
 
 const Home = () => {
-  const getData = () => {
-    const apiKey = "0fd1886a37cbb0e6634bebf211def7ec";
-
-    axios
-      .get("https://api.themoviedb.org/3/trending/movie/week?api_key=" + apiKey)
-      .then((res) => console.log(res.data.results));
-  };
-  useEffect(() => getData());
-
   return (
     <div className="container">
       <Navigation />
-      <div>
-        <h1>contenu</h1>
+      <div id="separator-header"></div>
+      <div className="content">
+        <Header />
+
+        <Trending />
+        {/* On appelle ici le composant trending qui lui-même map des Cards */}
+        <TopRated />
       </div>
     </div>
   );

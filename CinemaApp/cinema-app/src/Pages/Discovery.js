@@ -5,8 +5,8 @@ const Discovery = () => {
   return (
     <div className="container">
       <Navigation />
-      <div>
-        <h1>discover</h1>
+      <div className="content">
+        <h1>Discovery</h1>
       </div>
     </div>
   );

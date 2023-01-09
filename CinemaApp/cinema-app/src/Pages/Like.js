@@ -5,7 +5,7 @@ const Like = () => {
   return (
     <div className="container">
       <Navigation />
-      <div>
+      <div className="content">
         <h1>Bookmarked</h1>
       </div>
     </div>

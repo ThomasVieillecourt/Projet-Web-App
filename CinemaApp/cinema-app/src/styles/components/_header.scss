@@ -1,0 +1,38 @@
+header {
+  font-family: $font-1;
+  font-weight: 500;
+  font-size: 1.1rem;
+  height: 80px;
+  grid-column: 1 / span 12;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+
+  .header-nav-left {
+    @include flexRow;
+    height: 100%;
+
+    li {
+      color: $lightGrey;
+      font-size: 1.2rem;
+    }
+  }
+
+  .header-nav-right {
+    @include flexRow;
+
+    li {
+      color: $lightGrey;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+#separator-header {
+  position: absolute;
+  top: 80px;
+  height: 1px;
+  width: 100%;
+  background-color: $grey;
+  padding: 0;
+}
