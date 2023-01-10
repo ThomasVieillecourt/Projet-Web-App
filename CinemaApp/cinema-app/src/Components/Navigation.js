@@ -15,10 +15,7 @@ const Navigation = () => {
     <div className="navigation">
       <ul className="navigation__content">
         <h3>MENU</h3>
-        <NavLink
-          to="/home"
-          className={(nav) => (nav.isActive ? "nav-active" : "")}
-        >
+        <NavLink to="/" className={(nav) => (nav.isActive ? "nav-active" : "")}>
           <li className="navigation__content-list">
             <FontAwesomeIcon icon={faHouse} className="nav-icon" />
             <p>Home</p>

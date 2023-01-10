@@ -1,12 +1,13 @@
 import React from "react";
 import Navigation from "../Components/Navigation";
+import SearchResult from "../Components/SearchResult";
 
 const Discovery = () => {
   return (
     <div className="container">
       <Navigation />
       <div className="content">
-        <h1>Discovery</h1>
+        <SearchResult />
       </div>
     </div>
   );

@@ -4,13 +4,13 @@ import TopRatedCard from "./TopRatedCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
-const Movies = () => {
+const Movies = ({ homeData }) => {
   const [data, setData] = useState([]);
   const getData = () => {
     const apiKey = "0fd1886a37cbb0e6634bebf211def7ec";
 
     axios
-      .get("https://api.themoviedb.org/3/trending/movie/week?api_key=" + apiKey)
+      .get("https://api.themoviedb.org/3/" + homeData + "?api_key=" + apiKey)
       .then((res) => setData(res.data.results));
   };
 

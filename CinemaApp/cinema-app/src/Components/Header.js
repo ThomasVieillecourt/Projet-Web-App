@@ -1,14 +1,35 @@
-import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWifi, faBell, faGear } from "@fortawesome/free-solid-svg-icons";
 
-const Header = () => {
+const Header = ({ modifysetIdData }) => {
+  let typeData;
+
   return (
     <header>
       <ul className="header-nav-left">
-        <li id="movie">Movies</li>
-        <li id="serie">Series</li>
-        <li>TV Shows</li>
+        <li
+          id="movie"
+          onClick={(e) => {
+            typeData = e.target.id;
+            console.log(e);
+            if ((typeData = "serie")) {
+              modifysetIdData("trending/movie/week");
+            }
+          }}
+        >
+          Movies
+        </li>
+        <li
+          id="serie"
+          onClick={(e) => {
+            typeData = e.target.id;
+            if ((typeData = "serie")) {
+              modifysetIdData("tv/popular");
+            }
+          }}
+        >
+          Series
+        </li>
       </ul>
       <ul className="header-nav-right">
         <li>

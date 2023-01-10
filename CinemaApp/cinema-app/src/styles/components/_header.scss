@@ -15,6 +15,15 @@ header {
     li {
       color: $lightGrey;
       font-size: 1.2rem;
+      cursor: pointer;
+
+      &:hover {
+        color: $white;
+      }
+
+      .li-active {
+        color: $red;
+      }
     }
   }
 

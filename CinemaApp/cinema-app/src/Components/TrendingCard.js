@@ -2,11 +2,12 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
-const TrendingCard = ({ trend }) => {
+const TrendingCard = ({ trend, cardData }) => {
   const dateFormater = (release_date) => {
     let newDate = new Date(release_date).toLocaleDateString("fr-FR", {
       year: "numeric",
     });
+
     return newDate;
   };
 
@@ -22,11 +23,31 @@ const TrendingCard = ({ trend }) => {
     >
       <div className="card__content">
         <p id="tc_title" className="tc-content">
-          {trend.title}
+          {cardData === "tv/popular" ? trend.name : trend.title}
         </p>
+
+        {/* {
+          (cardData = "tv/popular" && (
+            <p id="tc_title" className="tc-content">
+              {trend.name}
+            </p>
+          ))
+        } */}
+
         <p id="tc_date" className="tc-content">
-          {dateFormater(trend.release_date)}
+          {cardData === "tv/popular"
+            ? dateFormater(trend.first_air_date)
+            : dateFormater(trend.release_date)}
         </p>
+
+        {/* {
+          (cardData = "tv/popular" && (
+            <p id="tc_date" className="tc-content">
+              {dateFormater(trend.first_air_date)}
+            </p>
+          ))
+        } */}
+
         <p id="tc_rate" className="tc-content">
           {trend.vote_average.toFixed(1) + " "}
           <FontAwesomeIcon icon={faStar} style={{ color: "#FFD700	" }} />
