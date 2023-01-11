@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar, faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faStar, faPlus, faCheck } from "@fortawesome/free-solid-svg-icons";
+import axios from "axios";
 
 const TrendingCard = ({ trend, cardData }) => {
+  const [bgCard, setBgCard] = useState(trend.poster_path);
+  const [titleCard, setTitleCard] = useState(trend.title);
+
+  const [isActive, setActive] = useState();
+
+  const ToggleBtn = () => {
+    setActive(!isActive);
+  };
+
   const dateFormater = (release_date) => {
     let newDate = new Date(release_date).toLocaleDateString("fr-FR", {
       year: "numeric",
@@ -10,6 +20,14 @@ const TrendingCard = ({ trend, cardData }) => {
 
     return newDate;
   };
+
+  function getBookmarkData() {
+    let dataDB = {
+      titleDB: titleCard,
+      backgroundDB: bgCard,
+    };
+    axios.post("http://localhost:3003/bookmarked", dataDB);
+  }
 
   return (
     <li
@@ -42,8 +60,21 @@ const TrendingCard = ({ trend, cardData }) => {
             <button type="button" id="watchBtn">
               WATCH NOW
             </button>
-            <button type="button" id="addBtn">
-              <FontAwesomeIcon icon={faPlus} style={{ color: "$white" }} />
+            <button
+              type="button"
+              onClick={() => {
+                setTitleCard(trend.title);
+                setBgCard(trend.poster_path);
+                getBookmarkData();
+                ToggleBtn();
+              }}
+              className={isActive ? "activeBtn" : "addBtn"}
+            >
+              {isActive ? (
+                <FontAwesomeIcon icon={faCheck} style={{ color: "$white" }} />
+              ) : (
+                <FontAwesomeIcon icon={faPlus} style={{ color: "$white" }} />
+              )}
             </button>
           </div>
         </div>
