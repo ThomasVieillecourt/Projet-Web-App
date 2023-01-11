@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ResultCard from "./ResultCard";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 const SearchResult = () => {
   const [dataSearch, setDataSearch] = useState([]);
@@ -22,7 +24,10 @@ const SearchResult = () => {
 
   return (
     <div className="content-search">
-      <div className="content-search__input-container">
+      <form
+        className="content-search__input-container"
+        onSubmit={(e) => e.preventDefault()}
+      >
         <input
           type="search"
           onChange={(e) => setQuery(e.target.value)}
@@ -30,7 +35,10 @@ const SearchResult = () => {
           placeholder="Search Movies, Series, TV shows"
           style={{ fontFamily: "$font1" }}
         />
-      </div>
+        <button type="submit">
+          <FontAwesomeIcon icon={faSearch} style={{ fontSize: "1rem" }} />
+        </button>
+      </form>
       <div>
         <ul className="searchCard-container">
           {dataSearch

@@ -1,0 +1,34 @@
+.content-discover__cards {
+  ul {
+    padding: 1rem 0;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(7, 1fr);
+    cursor: pointer;
+  }
+
+  .tr-card {
+    height: 320px;
+    border-radius: 12px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+
+    .card__content {
+      bottom: 0;
+      width: 100%;
+      height: 40%;
+      padding: 0 1em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .tc-content {
+        color: $white;
+        font-family: $font-1;
+        font-weight: 600;
+        padding: 2px 0;
+      }
+    }
+  }
+}

@@ -3,6 +3,7 @@ import Trending from "../Components/Trending";
 import TopRated from "../Components/TopRated";
 import Navigation from "../Components/Navigation";
 import Header from "../Components/Header";
+import Discover from "../Components/Discover";
 
 const Home = () => {
   const [idData, setIdData] = useState("trending/movie/week");
@@ -17,6 +18,7 @@ const Home = () => {
         <Trending homeData={idData} />
         {/* On appelle ici le composant trending qui lui-même map des Cards */}
         <TopRated homeData={idData} />
+        <Discover homeData={idData} />
       </div>
     </div>
   );

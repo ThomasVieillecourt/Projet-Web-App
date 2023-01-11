@@ -1,8 +1,5 @@
 .content {
   .content-trending {
-    grid-column: 1 / span 12;
-    padding: 2rem 0;
-
     .content-topRated__cards {
       ul {
         padding: 1rem 0;
@@ -31,8 +28,7 @@
           .tc-content {
             color: $white;
             font-family: $font-1;
-            font-weight: 600;
-            padding: 2px 0;
+            font-weight: 500;
           }
 
           #tr_rate {
