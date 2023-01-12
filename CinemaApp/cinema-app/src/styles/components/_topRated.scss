@@ -7,6 +7,20 @@
         gap: 1rem;
         grid-template-columns: repeat(7, 1fr);
         cursor: pointer;
+
+        @media screen and (max-width: map-get($breakpoints , max-desktop)) {
+          grid-template-columns: repeat(6, 1fr);
+        }
+
+        @media screen and (max-width: map-get($breakpoints , lg-desktop)) {
+          grid-template-columns: repeat(5, 1fr);
+        }
+        @media screen and (max-width: map-get($breakpoints , sm-desktop)) {
+          grid-template-columns: repeat(4, 1fr);
+        }
+        @media screen and (max-width: map-get($breakpoints , lg-tablet)) {
+          grid-template-columns: repeat(3, 1fr);
+        }
       }
 
       .tr-card {
@@ -16,14 +30,23 @@
         display: flex;
         align-items: flex-end;
 
+        &:hover {
+          #watchBtn {
+            opacity: 1;
+          }
+        }
+
         .card__content {
-          bottom: 0;
           width: 100%;
-          height: 40%;
-          padding: 0 1em;
+          height: 20%;
           display: flex;
-          flex-direction: column;
-          justify-content: center;
+          align-items: center;
+
+          .tr-card-btn_container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+          }
 
           .tc-content {
             color: $white;
@@ -36,9 +59,9 @@
             background-color: $black;
             font-size: 1rem;
             position: absolute;
-            top: 0;
+            top: 0.6em;
+            left: 0.6em;
             padding: 4px 8px;
-            margin-top: 1rem;
           }
         }
       }

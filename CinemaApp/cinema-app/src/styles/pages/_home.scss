@@ -16,6 +16,10 @@
         gap: 1.2rem;
         grid-template-columns: repeat(3, 1fr);
         cursor: pointer;
+
+        @media screen and (max-width: map-get($breakpoints , lg-desktop)) {
+          grid-template-columns: repeat(2, 1fr);
+        }
       }
 
       .trending-card {
@@ -88,6 +92,7 @@
               font-size: 1rem;
               cursor: pointer;
               margin-right: 0.6em;
+              opacity: 1;
 
               &:hover {
                 background-color: $red;

@@ -7,6 +7,17 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 const Trending = ({ homeData }) => {
   const [data, setData] = useState([]);
   let cardData = homeData;
+  let cardDisplay = 0;
+
+  const getScreenWidth = () => {
+    if (window.innerWidth >= 1551) {
+      cardDisplay = 3;
+    } else if (window.innerWidth <= 1550) {
+      cardDisplay = 2;
+    } else if (window.innerWidth <= 1000) {
+      cardDisplay = 1;
+    }
+  };
 
   const getDataFilms = () => {
     const apiKey = "0fd1886a37cbb0e6634bebf211def7ec";
@@ -18,6 +29,8 @@ const Trending = ({ homeData }) => {
     // .then((res) => setData(res.data.results));
   };
   useEffect(() => getDataFilms());
+
+  getScreenWidth();
 
   return (
     <div className="content-trending">
@@ -36,7 +49,7 @@ const Trending = ({ homeData }) => {
         <ul>
           {data
             .sort((a, b) => b.release_date - a.release_date)
-            .slice(0, 3)
+            .slice(0, cardDisplay)
             .map((trend) => (
               <TrendingCard key={trend.id} trend={trend} cardData={cardData} />
             ))}

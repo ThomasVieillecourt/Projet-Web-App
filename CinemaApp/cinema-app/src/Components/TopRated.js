@@ -6,6 +6,22 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 const Movies = ({ homeData }) => {
   const [data, setData] = useState([]);
+  let trendingCardDisplay = 7;
+
+  // const getScreenWidth = () => {
+  //   if (window.innerWidth >= 1700) {
+  //     trendingCardDisplay = 7;
+  //   } else if (window.innerWidth == 1700) {
+  //     trendingCardDisplay = 6;
+  //   } else if (window.innerWidth == 1550) {
+  //     trendingCardDisplay = 5;
+  //   } else if (window.innerWidth == 1350) {
+  //     trendingCardDisplay = 4;
+  //     // } else if (window.innerWidth <= 1115) {
+  //     //   trendingCardDisplay = 6;
+  //   }
+  // };
+
   const getData = () => {
     const apiKey = "0fd1886a37cbb0e6634bebf211def7ec";
 
@@ -15,6 +31,7 @@ const Movies = ({ homeData }) => {
   };
 
   useEffect(() => getData());
+  // getScreenWidth();
 
   return (
     <div className="content-trending">
@@ -29,7 +46,7 @@ const Movies = ({ homeData }) => {
         <ul>
           {data
             .sort((a, b) => b.vote_average - a.vote_average)
-            .slice(0, 7)
+            .slice(0, trendingCardDisplay)
             .map((trend) => (
               <TopRatedCard key={trend.id} trend={trend} />
             ))}
