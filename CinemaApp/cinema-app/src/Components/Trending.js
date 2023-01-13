@@ -4,9 +4,11 @@ import TrendingCard from "./TrendingCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import Header from "./Header";
+import Focus from "./Focus";
 
 const Trending = ({ homeData }) => {
   const [data, setData] = useState([]);
+  const [focusData, setFocusData] = useState([]);
   let cardData = homeData;
   let cardDisplay = 0;
 
@@ -37,6 +39,7 @@ const Trending = ({ homeData }) => {
 
   return (
     <div className="content-trending">
+      <Focus focusDataCard={focusData} />
       <div className="content-trending__text">
         <h2>
           {" "}
@@ -54,7 +57,12 @@ const Trending = ({ homeData }) => {
             .sort((a, b) => b.release_date - a.release_date)
             .slice(0, cardDisplay)
             .map((trend) => (
-              <TrendingCard key={trend.id} trend={trend} cardData={cardData} />
+              <TrendingCard
+                key={trend.id}
+                trend={trend}
+                cardData={cardData}
+                focus={setFocusData}
+              />
             ))}
         </ul>
       </div>

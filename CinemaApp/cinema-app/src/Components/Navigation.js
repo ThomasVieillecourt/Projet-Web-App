@@ -8,9 +8,11 @@ import {
   faClock,
   faUsers,
   faStar,
+  faSun,
+  faMoon,
 } from "@fortawesome/free-solid-svg-icons";
 
-const Navigation = () => {
+const Navigation = ({}) => {
   return (
     <div className="navigation">
       <ul className="navigation__content">
@@ -54,6 +56,15 @@ const Navigation = () => {
           <FontAwesomeIcon icon={faUsers} className="nav-icon" />
           <p>Community</p>
         </li>
+
+        <div className="toggle-mode">
+          <input type="checkbox" class="checkbox" id="checkbox" />
+          <label for="checkbox" class="label">
+            <FontAwesomeIcon icon={faSun} className="nav-icon" />
+            <FontAwesomeIcon icon={faMoon} className="nav-icon" />
+            <div class="ball"></div>
+          </label>
+        </div>
       </ul>
     </div>
   );

@@ -3,9 +3,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faPlus, faCheck } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 
-const TrendingCard = ({ trend, cardData }) => {
+const TrendingCard = ({ trend, cardData, focus }) => {
   const [bgCard, setBgCard] = useState(trend.poster_path);
   const [titleCard, setTitleCard] = useState(trend.title);
+  const focusContainer = document.querySelector(".focus-container");
 
   const [isActive, setActive] = useState();
 
@@ -32,6 +33,10 @@ const TrendingCard = ({ trend, cardData }) => {
   return (
     <li
       className="trending-card"
+      onClick={() => {
+        focus(trend);
+        focusContainer.className = "active";
+      }}
       style={{
         background:
           "url('https://image.tmdb.org/t/p/original/" +
@@ -61,6 +66,8 @@ const TrendingCard = ({ trend, cardData }) => {
               WATCH NOW
             </button>
             <button
+              title="Add a bookmark"
+              arrow
               type="button"
               onClick={() => {
                 setTitleCard(trend.title);

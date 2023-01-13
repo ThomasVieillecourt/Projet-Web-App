@@ -19,7 +19,12 @@ const BookmarkCard = ({ mark }) => {
           "') center/cover no-repeat",
       }}
     >
-      <button className="deleteBtn" onClick={() => handleDelete()}>
+      <button
+        title="Delete from bookmark"
+        arrow
+        className="deleteBtn"
+        onClick={() => handleDelete()}
+      >
         <FontAwesomeIcon icon={faXmark} style={{ color: "$white" }} />
       </button>
     </li>

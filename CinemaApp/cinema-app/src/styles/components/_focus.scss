@@ -1,0 +1,49 @@
+.focus-container {
+  display: none;
+
+  &__content {
+    border-radius: 12px;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    text-align: left;
+    padding: 0 2em;
+
+    h2 {
+      padding: 0.8em 0;
+    }
+
+    p {
+      padding: 0.4em 0;
+
+      strong {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  &__background {
+    border-radius: 12px;
+    &::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 50%;
+      background: rgb(13, 13, 15);
+      background: linear-gradient(
+        90deg,
+        rgba(13, 13, 15, 1) 0%,
+        rgba(13, 13, 15, 0.6) 34%,
+        rgba(13, 13, 15, 0) 80%
+      );
+    }
+  }
+}
+.active {
+  height: 40vh;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  border-radius: 12px;
+}
