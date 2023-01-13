@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import TrendingCard from "./TrendingCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import Header from "./Header";
 
 const Trending = ({ homeData }) => {
   const [data, setData] = useState([]);
@@ -28,7 +29,9 @@ const Trending = ({ homeData }) => {
     // .get("https://api.themoviedb.org/3/tv/popular?api_key=" + apiKey) SERIES
     // .then((res) => setData(res.data.results));
   };
-  useEffect(() => getDataFilms());
+  useEffect(() => {
+    getDataFilms();
+  }, [<Header />]);
 
   getScreenWidth();
 

@@ -5,6 +5,20 @@
     gap: 1rem;
     grid-template-columns: repeat(7, 1fr);
     cursor: pointer;
+
+    @media screen and (max-width: map-get($breakpoints , max-desktop)) {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    @media screen and (max-width: 1550px) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+    @media screen and (max-width: map-get($breakpoints , sm-desktop)) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @media screen and (max-width: map-get($breakpoints , lg-tablet)) {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 
   .tr-card {

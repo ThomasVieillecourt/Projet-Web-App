@@ -1,26 +1,13 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import TopRatedCard from "./TopRatedCard";
+import Header from "./Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 const Movies = ({ homeData }) => {
   const [data, setData] = useState([]);
-  let trendingCardDisplay = 7;
-
-  // const getScreenWidth = () => {
-  //   if (window.innerWidth >= 1700) {
-  //     trendingCardDisplay = 7;
-  //   } else if (window.innerWidth == 1700) {
-  //     trendingCardDisplay = 6;
-  //   } else if (window.innerWidth == 1550) {
-  //     trendingCardDisplay = 5;
-  //   } else if (window.innerWidth == 1350) {
-  //     trendingCardDisplay = 4;
-  //     // } else if (window.innerWidth <= 1115) {
-  //     //   trendingCardDisplay = 6;
-  //   }
-  // };
+  let trendingCardDisplay = 14;
 
   const getData = () => {
     const apiKey = "0fd1886a37cbb0e6634bebf211def7ec";
@@ -30,8 +17,9 @@ const Movies = ({ homeData }) => {
       .then((res) => setData(res.data.results));
   };
 
-  useEffect(() => getData());
-  // getScreenWidth();
+  useEffect(() => {
+    getData();
+  }, [<Header />]);
 
   return (
     <div className="content-trending">

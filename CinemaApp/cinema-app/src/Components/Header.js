@@ -11,7 +11,6 @@ const Header = ({ modifysetIdData }) => {
           id="movie"
           onClick={(e) => {
             typeData = e.target.id;
-            console.log(e);
             if ((typeData = "serie")) {
               modifysetIdData("trending/movie/week");
             }

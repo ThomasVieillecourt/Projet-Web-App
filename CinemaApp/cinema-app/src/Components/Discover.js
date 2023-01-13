@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import DiscoverCard from "./DiscoverCard";
+import Header from "./Header";
 
 const Discover = ({ homeData }) => {
   const [data, setData] = useState([]);
@@ -11,6 +12,12 @@ const Discover = ({ homeData }) => {
 
   const getDataFilms = () => {
     const apiKey = "0fd1886a37cbb0e6634bebf211def7ec";
+
+    if (homeData === "tv/popular") {
+      discoverData = "tv";
+    } else {
+      discoverData = "movie";
+    }
 
     axios
       .get(
@@ -23,13 +30,8 @@ const Discover = ({ homeData }) => {
       .then((res) => setData(res.data.results));
   };
   useEffect(() => {
-    if (homeData === "tv/popular") {
-      discoverData = "tv";
-    } else {
-      discoverData = "movie";
-    }
     getDataFilms();
-  });
+  }, [<Header />]);
 
   return (
     <div className="content-trending">
