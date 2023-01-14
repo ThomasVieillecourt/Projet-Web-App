@@ -33,7 +33,7 @@ const SearchResult = () => {
           onChange={(e) => setQuery(e.target.value)}
           //   defaultValue=""
           placeholder="Search Movies, Series, TV shows"
-          style={{ fontFamily: "$font1" }}
+          style={{ fontFamily: "$font1", position: "fixed" }}
         />
         <button type="submit">
           <FontAwesomeIcon icon={faSearch} style={{ fontSize: "1rem" }} />

@@ -28,9 +28,7 @@ const Focus = ({ focusDataCard }) => {
               focusDataCard.backdrop_path +
               "') center/cover",
           }}
-        >
-          ok
-        </div>
+        ></div>
       </div>
     </div>
   );

@@ -26,6 +26,9 @@
 
   &__background {
     border-radius: 12px;
+    height: 100%;
+    position: relative;
+
     &::before {
       content: "";
       position: absolute;

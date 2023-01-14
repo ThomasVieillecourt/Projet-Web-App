@@ -67,7 +67,7 @@ const TrendingCard = ({ trend, cardData, focus }) => {
             </button>
             <button
               title="Add a bookmark"
-              arrow
+              arrow="true"
               type="button"
               onClick={() => {
                 setTitleCard(trend.title);
