@@ -4,6 +4,10 @@
   grid-template-columns: 50% 50%;
   height: 62vh;
 
+  @media screen and (max-width: 880px) {
+    grid-template-columns: 100%;
+  }
+
   #archenar {
     position: absolute;
     top: 0;
@@ -27,6 +31,10 @@
         font-family: $fontTitle;
         color: $white;
         padding: 1rem 0;
+
+        @media screen and (max-width: 500px) {
+          font-size: 1.4rem;
+        }
       }
 
       #description {
@@ -74,6 +82,10 @@
   &__sphere {
     position: relative;
 
+    @media screen and (max-width: 880px) {
+      display: none;
+    }
+
     img {
       position: absolute;
       width: 82%;
@@ -81,6 +93,12 @@
       filter: drop-shadow(-30px 48px 200px #05052296);
       pointer-events: none;
       z-index: 0;
+
+      @media screen and (max-width: 1280px) {
+        right: -32%;
+        top: 10%;
+        width: 100%;
+      }
     }
   }
 }

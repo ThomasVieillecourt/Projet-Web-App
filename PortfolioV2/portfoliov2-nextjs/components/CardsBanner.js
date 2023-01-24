@@ -8,33 +8,30 @@ const CardsBanner = () => {
       <div className="cards-container">
         <div className="cards">
           <img src="../img/31.svg" alt="development icon" />
-          <h3>Développeur front-end</h3>
-          <p>
-            Autodidacte de 24 ans, je suis passionné par le développement web,
-            l'UI/UX et l'accessibilité depuis 4 Autodidacte de 24 ans, je suis
-            passionné par le développement web, l'UI/UX et l'accessibilité
-            depuis 4 ans.ans.
-          </p>
+          <div>
+            <h3>Développeur front-end</h3>
+            <p>Développement de site web, application web ou mobile.</p>
+          </div>
         </div>
         <div className="cards">
           <img src="../img/01.svg" alt="design icon" />
-          <h3>Expérience utilisateur & Design</h3>
-          <p>
-            Autodidacte de 24 ans, je suis passionné par le développement web,
-            l'UI/UX et l'accessibilité depuis 4 Autodidacte de 24 ans, je suis
-            passionné par le développement web, l'UI/UX et l'accessibilité
-            depuis 4 ans.ans.
-          </p>
+          <div>
+            <h3>Expérience utilisateur & Design</h3>
+            <p>
+              Le design et l'expérience des utilisateurs est au coeur de mes
+              créations.
+            </p>
+          </div>
         </div>
         <div className="cards">
           <img src="../img/30.svg" alt="accessibility icon" />
-          <h3>Accéssibilité</h3>
-          <p>
-            Autodidacte de 24 ans, je suis passionné par le développement web,
-            l'UI/UX et l'accessibilité depuis 4 Autodidacte de 24 ans, je suis
-            passionné par le développement web, l'UI/UX et l'accessibilité
-            depuis 4 ans.ans.
-          </p>
+          <div>
+            <h3>Accéssibilité</h3>
+            <p>
+              Développement de sites qui donne le droit à tout le monde
+              d'explorer le web sur un pied d'égalité.
+            </p>
+          </div>
         </div>
       </div>
     </div>

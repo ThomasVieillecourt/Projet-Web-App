@@ -13,6 +13,7 @@
     width: 80%;
     align-items: center;
     position: relative;
+    z-index: 2;
 
     ul {
       display: flex;
@@ -34,6 +35,7 @@
         gap: 2rem;
         padding: 20%;
         font-size: 1.4rem;
+        align-items: flex-start;
 
         .nav-close-btn {
           position: absolute;
@@ -70,5 +72,11 @@
   a {
     color: $white;
     border-bottom: 1px solid $white;
+    @media screen and (max-width: 640px) {
+      width: 120px;
+    }
+    @media screen and (max-width: 490px) {
+      width: 140px;
+    }
   }
 }
