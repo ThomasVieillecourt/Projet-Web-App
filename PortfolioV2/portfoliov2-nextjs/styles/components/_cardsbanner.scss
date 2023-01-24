@@ -1,0 +1,47 @@
+.cardBanner-container {
+  grid-column: 1 / span 12;
+  height: 50vh;
+
+  #line {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    transform: rotateY(180deg) translateY(-34%);
+  }
+
+  #elnath {
+    position: absolute;
+    left: 0;
+    z-index: -2;
+    transform: translateY(-20%);
+    pointer-events: none;
+  }
+
+  .cards-container {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .cards {
+      background-color: $black;
+      width: 360px;
+      height: 360px;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 24px;
+
+      &:hover {
+        border: 1px solid $white;
+      }
+
+      img {
+        width: 100px;
+      }
+    }
+  }
+}

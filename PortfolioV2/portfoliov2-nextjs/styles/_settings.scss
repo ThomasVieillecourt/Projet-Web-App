@@ -1,0 +1,83 @@
+@font-face {
+  font-family: "BergenSans";
+  src: url("../public/fonts/BergenSans-Regular.otf");
+}
+@font-face {
+  font-family: "NotoRegular";
+  src: url("../public/fonts/NotoSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "NotoLight";
+  src: url("../public/fonts/NotoSans-Light.ttf");
+}
+
+@font-face {
+  font-family: "NotoBold";
+  src: url("../public/fonts/NotoSans-SemiBold.ttf");
+}
+
+$fontTitle: "BergenSans", sans-serif;
+$fontText_Regular: "NotoRegular", sans-serif;
+$fontText_Light: "NotoLight", sans-serif;
+$fontText_Bold: "NotoBold", sans-serif;
+
+$black: #121212;
+$white: #d9d9d9;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $black;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: $fontTitle;
+  font-size: 4.5rem;
+  color: $white;
+}
+
+h2 {
+  font-size: 2rem;
+  font-family: $fontTitle;
+}
+
+h3 {
+  font-size: 1.6rem;
+  font-family: $fontTitle;
+  color: $white;
+}
+
+p {
+  font-size: 1rem;
+  font-family: $fontText_Regular;
+  color: $white;
+}
+
+a {
+  text-decoration: none;
+  font-family: $fontText_Regular;
+}
+
+li {
+  list-style: none;
+  font-family: $fontText_Regular;
+}
+
+button {
+  cursor: pointer;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin: 0 16%;
+  column-gap: 20px;
+  background-color: transparent;
+}
