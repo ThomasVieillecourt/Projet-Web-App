@@ -33,7 +33,7 @@
     gap: 4rem;
 
     .banner-container__text {
-      z-index: 0;
+      z-index: 2;
       #job {
         font-size: 2rem;
         font-family: $fontTitle;
@@ -53,10 +53,10 @@
     }
 
     .banner-container__btn-container {
+      z-index: 2;
       @include flexRow;
       height: auto;
       gap: 2rem;
-      z-index: 0;
 
       @media screen and (max-width: 580px) {
         justify-content: space-between;
@@ -70,7 +70,7 @@
 
       .btn-banner {
         width: 240px;
-        height: 54px;
+        padding: 18px 24px;
         border-radius: 6px;
         border: none;
         font-family: $fontText_Bold;

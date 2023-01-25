@@ -31,6 +31,11 @@
       left: 0;
       z-index: -1;
       max-width: 100%;
+
+      @media screen and (max-width: 1220px) {
+        max-height: 100%;
+        max-width: max-content;
+      }
     }
 
     .project-solo__container-text {

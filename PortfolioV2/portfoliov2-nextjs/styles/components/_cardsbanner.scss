@@ -12,7 +12,7 @@
     left: 0;
     z-index: -1;
     width: 100%;
-    transform: rotateY(180deg) translateY(-34%);
+    transform: translateY(10%);
   }
 
   #elnath {
@@ -41,12 +41,21 @@
     .cards {
       background-color: $black;
       width: 340px;
-      height: 300px;
+      height: 280px;
       border-radius: 6px;
       @include flexColumn;
-      justify-content: flex-start;
-      gap: 1rem;
-      padding: 24px;
+      align-items: center;
+      gap: 1em;
+      text-align: center;
+      padding: 40px;
+      cursor: pointer;
+
+      .cardBanner-icon {
+        font-size: 3rem;
+        color: $white;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
 
       @media screen and (max-width: 1550px) {
         width: 300px;
@@ -84,19 +93,16 @@
       }
 
       &:hover {
-        border: 1px solid $white;
+        outline: 1px solid $white;
+
+        .cardBanner-icon {
+          transition: 0.6s;
+          color: #347c9b;
+        }
       }
 
       h3 {
         padding-bottom: 1rem;
-      }
-
-      img {
-        width: 100px;
-
-        @media screen and (max-width: 800px) {
-          width: 90px;
-        }
       }
     }
   }

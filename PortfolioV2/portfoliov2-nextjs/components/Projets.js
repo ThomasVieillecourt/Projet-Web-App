@@ -14,10 +14,10 @@ const Projets = () => {
                 <img src={projet.image} alt="background project" id="imgBg" />
                 <div className="project-solo__container-text">
                   <h3>{projet.name}</h3>
-                  <Link href="/" id="plusBtn">
+                  <span id="plusBtn">
                     En savoir plus{" "}
                     <FaArrowRight style={{ transform: "translateY(3px)" }} />
-                  </Link>
+                  </span>
                 </div>
                 <div className="project-solo__logo-container">
                   <img src={projet.logo1} alt="" />

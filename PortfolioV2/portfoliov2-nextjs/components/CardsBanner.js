@@ -1,4 +1,5 @@
 import React from "react";
+import { FaHashtag, FaLayerGroup, FaHandshake } from "react-icons/fa";
 
 const CardsBanner = () => {
   return (
@@ -7,16 +8,18 @@ const CardsBanner = () => {
       <img src="../img/Elnath.png" alt="blur-gradient" id="elnath" />
       <div className="cards-container">
         <div className="cards">
-          <img src="../img/31.svg" alt="development icon" />
+          <FaHashtag className="cardBanner-icon" />
           <div>
             <h3>Développeur front-end</h3>
             <p>Développement de site web, application web ou mobile.</p>
           </div>
         </div>
         <div className="cards">
-          <img src="../img/01.svg" alt="design icon" />
+          <FaLayerGroup className="cardBanner-icon" />
           <div>
-            <h3>Expérience utilisateur & Design</h3>
+            <h3>
+              Expérience utilisateur <br />& Design
+            </h3>
             <p>
               Le design et l'expérience des utilisateurs est au coeur de mes
               créations.
@@ -24,7 +27,7 @@ const CardsBanner = () => {
           </div>
         </div>
         <div className="cards">
-          <img src="../img/30.svg" alt="accessibility icon" />
+          <FaHandshake className="cardBanner-icon" />
           <div>
             <h3 id="competences">Accéssibilité</h3>
             <p>
