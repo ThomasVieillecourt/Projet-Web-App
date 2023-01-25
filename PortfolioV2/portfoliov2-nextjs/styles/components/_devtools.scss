@@ -1,0 +1,80 @@
+.devtools-container {
+  display: grid;
+  grid-column-start: 3;
+  grid-column-end: 11;
+  width: 100%;
+  height: auto;
+  background-color: $black;
+  border-radius: 6px;
+  margin: 2em 0;
+
+  @media screen and (max-width: 500px) {
+    grid-column: 1 / span 6;
+  }
+
+  #competences {
+    background-color: $white;
+    color: $black;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+
+    h3 {
+      color: $black;
+    }
+
+    p {
+      color: $black;
+    }
+  }
+
+  .devtools__tech-container__each {
+    padding: 1em 0;
+    width: 100%;
+    @include flexColumn;
+    align-items: center;
+
+    h3 {
+      font-family: $fontText_Bold;
+      font-size: 1.2rem;
+    }
+
+    .devtools__tech-container {
+      @include flexRow;
+      align-items: flex-end;
+      gap: 3em;
+      padding: 1em 0;
+      text-align: center;
+
+      @media screen and (max-width: 1550px) {
+        gap: 2em;
+      }
+
+      @media screen and (max-width: 1280px) {
+      }
+
+      @media screen and (max-width: 1120px) {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      img {
+        width: 60px;
+        @media screen and (max-width: 1280px) {
+          width: 40px;
+        }
+      }
+
+      p {
+        padding-top: 4px;
+      }
+    }
+  }
+
+  #spica {
+    position: absolute;
+    right: 0;
+    top: 150%;
+    z-index: -1;
+    pointer-events: none;
+  }
+}

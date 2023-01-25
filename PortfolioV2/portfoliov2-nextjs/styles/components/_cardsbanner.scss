@@ -1,6 +1,11 @@
 .cardBanner-container {
   grid-column: 1 / span 12;
-  height: 50vh;
+  height: auto;
+  padding-bottom: 2em;
+
+  @media screen and (max-width: 500px) {
+    grid-column: 1 / span 6;
+  }
 
   #line {
     position: absolute;
@@ -16,14 +21,17 @@
     z-index: -2;
     transform: translateY(-20%);
     pointer-events: none;
+
+    @media screen and (max-width: 700px) {
+      left: -80%;
+    }
   }
 
   .cards-container {
     position: relative;
     height: auto;
-    display: flex;
+    @include flexRow;
     justify-content: space-between;
-    align-items: center;
 
     @media screen and (max-width: 1280px) {
       flex-direction: column;
@@ -35,21 +43,23 @@
       width: 340px;
       height: 300px;
       border-radius: 6px;
-      display: flex;
-      flex-direction: column;
+      @include flexColumn;
       justify-content: flex-start;
       gap: 1rem;
       padding: 24px;
 
       @media screen and (max-width: 1550px) {
-        width: 30%;
+        width: 300px;
         height: 320px;
+      }
+
+      @media screen and (max-width: 1380px) {
+        width: 280px;
       }
 
       @media screen and (max-width: 1280px) {
         width: 90%;
         height: 160px;
-
         gap: 2rem;
         align-items: center;
         justify-content: flex-start;
@@ -58,16 +68,17 @@
       }
 
       @media screen and (max-width: 800px) {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 16px;
-        height: 220px;
-
-        gap: 0;
+        padding: 16px 2rem;
+        height: 200px;
+        gap: 2rem;
         width: 100%;
       }
 
       @media screen and (max-width: 400px) {
+        flex-direction: column;
+        gap: 0;
+        padding: 24px;
+        text-align: center;
         width: 300px;
         height: 260px;
       }
@@ -84,7 +95,7 @@
         width: 100px;
 
         @media screen and (max-width: 800px) {
-          width: 80px;
+          width: 90px;
         }
       }
     }

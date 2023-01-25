@@ -1,25 +1,26 @@
 .nav-container {
   grid-column: 1 / span 12;
-  display: flex;
+  @include flexRow;
   justify-content: space-between;
-  align-items: center;
   height: 80px;
   width: 100%;
   background-color: transparent;
   z-index: 1;
 
+  @media screen and (max-width: 500px) {
+    grid-column: 1 / span 6;
+  }
+
   nav {
-    display: flex;
+    @include flexRow;
     width: 80%;
-    align-items: center;
     position: relative;
     z-index: 2;
 
     ul {
-      display: flex;
+      @include flexRow;
       width: 80%;
       justify-content: space-between;
-      align-items: center;
 
       @media screen and (max-width: 720px) {
         position: fixed;
@@ -46,6 +47,14 @@
 
       li {
         color: $white;
+
+        &:hover {
+          border-bottom: 1px solid $white;
+        }
+
+        a {
+          border: none;
+        }
       }
     }
   }

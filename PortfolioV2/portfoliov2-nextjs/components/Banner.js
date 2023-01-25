@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { FaGithub } from "react-icons/fa";
 
@@ -15,12 +16,16 @@ const Banner = () => {
           </p>
         </div>
         <div className="banner-container__btn-container">
-          <button className="btn-banner" id="contact-btn">
-            Me contacter
-          </button>
-          <button className="btn-banner" id="github">
-            <FaGithub style={{ transform: "translateY(2px)" }} /> Github
-          </button>
+          <Link href="https://github.com/ThomasVieillecourt" target="_blank">
+            <button className="btn-banner" id="contact-btn">
+              Me contacter
+            </button>
+          </Link>
+          <Link href="https://github.com/ThomasVieillecourt" target="_blank">
+            <button className="btn-banner" id="github">
+              <FaGithub style={{ transform: "translateY(2px)" }} /> Github
+            </button>
+          </Link>
         </div>
       </div>
       <div className="banner-container__sphere">

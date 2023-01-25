@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useRef } from "react";
 import { FaBars, FaTimes, FaArrowRight } from "react-icons/fa";
 
@@ -14,10 +15,24 @@ const Navbar = () => {
         <nav>
           <ul ref={navRef}>
             {/* Ajouter les Link pour faire des liens */}
-            <li>Accueil</li>
-            <li>Compétences</li>
-            <li>Projets</li>
-            <li>Expérience</li>
+            <li>
+              <Link href="/">Accueil</Link>
+            </li>
+            <li>
+              <Link href="#competences" scroll={false}>
+                Compétences
+              </Link>
+            </li>
+            <li>
+              <Link href="#projets" scroll={false}>
+                Projets
+              </Link>
+            </li>
+            <li>
+              <Link href="#experience" scroll={false}>
+                Expérience
+              </Link>
+            </li>
             <button className="nav-btn nav-close-btn" onClick={showNav}>
               <FaTimes />
             </button>

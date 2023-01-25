@@ -25,6 +25,16 @@ $fontText_Bold: "NotoBold", sans-serif;
 $black: #121212;
 $white: #d9d9d9;
 
+@mixin flexRow {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -33,7 +43,6 @@ $white: #d9d9d9;
 
 body {
   background-color: $black;
-  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
