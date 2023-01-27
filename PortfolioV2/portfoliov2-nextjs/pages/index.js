@@ -3,15 +3,18 @@ import CardsBanner from "@/components/CardsBanner";
 import Devtools from "@/components/Devtools";
 import Projets from "@/components/Projets";
 import React from "react";
+import Layout from "@/components/Layout";
 
 const index = () => {
   return (
-    <div className="main-container">
-      <Banner />
-      <CardsBanner />
-      <Devtools />
-      <Projets />
-    </div>
+    <Layout>
+      <div className="main-container">
+        <Banner />
+        <CardsBanner />
+        <Devtools />
+        <Projets />
+      </div>
+    </Layout>
   );
 };
 
