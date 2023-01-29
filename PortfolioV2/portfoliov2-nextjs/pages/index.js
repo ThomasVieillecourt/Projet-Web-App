@@ -4,6 +4,7 @@ import Devtools from "@/components/Devtools";
 import Projets from "@/components/Projets";
 import React from "react";
 import Layout from "@/components/Layout";
+import ExpPro from "@/components/ExpPro";
 
 const index = () => {
   return (
@@ -13,6 +14,7 @@ const index = () => {
         <CardsBanner />
         <Devtools />
         <Projets />
+        <ExpPro />
       </div>
     </Layout>
   );

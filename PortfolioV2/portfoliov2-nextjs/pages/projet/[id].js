@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import { project } from "@/projectDB";
 import Link from "next/link";
 import { FaChevronLeft } from "react-icons/fa";
@@ -5,7 +6,6 @@ import { FaChevronLeft } from "react-icons/fa";
 const projet = ({ projet }) => {
   return (
     <div className="main-container">
-      <img src="../img/procyon.png" alt="gradient background" id="procyon" />
       <div className="btn-container">
         <Link href={"/"} id="goBack-btn">
           <FaChevronLeft
@@ -16,6 +16,8 @@ const projet = ({ projet }) => {
         </Link>
       </div>
       <div className="projet-container">
+        <img src="../img/procyon.png" alt="gradient background" id="procyon" />
+
         <h1>{projet.name}</h1>
 
         <h3>{projet.concept}</h3>
@@ -43,6 +45,7 @@ const projet = ({ projet }) => {
           <p>{projet.tools}</p>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

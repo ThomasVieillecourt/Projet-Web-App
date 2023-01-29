@@ -1,0 +1,97 @@
+.footer-global-container {
+  grid-column: 1 / span 12;
+  background-color: $black;
+  height: auto;
+  margin-top: 2em;
+  padding: 2em 0 4em 0;
+  bottom: 0;
+  z-index: 5;
+
+  .footer-content-container {
+    width: 560px;
+    margin: 0 auto;
+    padding: 2em 1em;
+
+    h3 {
+      text-align: center;
+    }
+
+    .content__mailCC {
+      @include flexRow;
+      justify-content: space-between;
+      background-color: $black;
+      height: 42px;
+      border-radius: 6px;
+      padding: 1em;
+      margin: 2em 0;
+    }
+
+    form {
+      @include flexColumn;
+      color: $white;
+      font-family: $fontText_Regular;
+
+      label {
+        font-family: $fontText_Bold;
+        margin-top: 1em;
+      }
+
+      input {
+        height: 46px;
+        border-radius: 6px;
+        outline: none;
+        border: none;
+        padding-left: 12px;
+        font-family: $fontText_Regular;
+        margin-top: 1em;
+
+        &[type="submit"] {
+          width: 220px;
+          height: 52px;
+          margin: 2em auto;
+          padding: 0;
+          font-family: $fontText_Bold;
+          cursor: pointer;
+          transition: 0.4s;
+
+          &:hover {
+            transform: translateY(-4px);
+          }
+        }
+      }
+
+      textarea {
+        resize: none;
+        min-height: 124px;
+        border-radius: 6px;
+        outline: none;
+        border: none;
+        padding: 12px;
+        font-family: $fontText_Regular;
+        margin-top: 1em;
+      }
+    }
+    p {
+      text-align: center;
+    }
+    .footer-content__realisation {
+      @include flexRow;
+      gap: 0.5rem;
+      justify-content: center;
+      background-color: $white;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      padding: 2px 0;
+
+      p {
+        color: $black;
+      }
+
+      img {
+        width: 68px;
+      }
+    }
+  }
+}

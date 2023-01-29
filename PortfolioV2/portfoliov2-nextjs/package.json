@@ -9,8 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.11.6",
     "@next/font": "13.1.5",
+    "alertifyjs": "^1.13.1",
     "axios": "^1.2.4",
+    "dotenv": "^16.0.3",
+    "emailjs-com": "^3.2.0",
+    "env-cmd": "^10.1.0",
     "eslint": "8.32.0",
     "eslint-config-next": "13.1.5",
     "next": "13.1.5",

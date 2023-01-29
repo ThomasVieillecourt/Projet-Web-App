@@ -28,19 +28,20 @@
     }
   }
 }
-#procyon {
-  position: absolute;
-  left: -30%;
-  bottom: -20%;
-  z-index: -2;
-  pointer-events: none;
-}
 
 .projet-container {
   grid-column: 1 / span 12;
   margin-top: 60px;
   text-align: center;
   position: relative;
+
+  #procyon {
+    position: absolute;
+    left: -30%;
+    bottom: -20%;
+    z-index: -2;
+    pointer-events: none;
+  }
 
   .projet-container__tech-logo {
     display: flex;

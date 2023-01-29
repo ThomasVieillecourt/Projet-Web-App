@@ -1,0 +1,47 @@
+.exp-container {
+  grid-column: 2 / span 10;
+  position: relative;
+
+  @media screen and (max-width: 500px) {
+    grid-column: 1 / span 6;
+  }
+
+  .exp-container__content {
+    background-color: $black;
+    margin: 2em 0;
+    padding: 2em;
+    border-radius: 6px;
+    @include flexColumn;
+    gap: 80px;
+
+    .content--para {
+      @include flexColumn;
+      gap: 18px;
+
+      .para-date {
+        font-size: 0.8rem;
+      }
+
+      .para-text {
+      }
+    }
+  }
+
+  #gacrux {
+    position: absolute;
+    width: 180%;
+    left: -40%;
+    z-index: -2;
+    bottom: -50%;
+    pointer-events: none;
+    overflow: hidden;
+
+    @media screen and (max-width: 1355px) {
+      bottom: -20%;
+    }
+
+    @media screen and (max-width: 500px) {
+      bottom: -12%;
+    }
+  }
+}

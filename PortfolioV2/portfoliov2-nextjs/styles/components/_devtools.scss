@@ -7,6 +7,7 @@
   background-color: $black;
   border-radius: 6px;
   margin: 2em 0;
+  position: relative;
 
   @media screen and (max-width: 500px) {
     grid-column: 1 / span 6;
@@ -72,8 +73,8 @@
 
   #spica {
     position: absolute;
-    right: 0;
-    top: 150%;
+    right: -80%;
+    top: 0%;
     z-index: -1;
     pointer-events: none;
   }
