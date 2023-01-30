@@ -24,6 +24,7 @@ $fontText_Bold: "NotoBold", sans-serif;
 
 $black: #121212;
 $white: #d9d9d9;
+$green: #5ca960;
 
 @mixin flexRow {
   display: flex;
@@ -83,15 +84,27 @@ p {
 a {
   text-decoration: none;
   font-family: $fontText_Regular;
+
+  &:focus {
+    outline: 2px solid $green;
+  }
 }
 
 li {
   list-style: none;
   font-family: $fontText_Regular;
+
+  &:focus {
+    outline: 2px solid $green;
+  }
 }
 
 button {
   cursor: pointer;
+
+  &:focus {
+    outline: 2px solid $green;
+  }
 }
 
 .main-container {
@@ -100,6 +113,10 @@ button {
   margin: 0 16%;
   column-gap: 20px;
   background-color: transparent;
+
+  @media screen and (max-width: 1200px) {
+    margin: 0 8%;
+  }
 
   @media screen and (max-width: 768px) {
     margin: 0 5%;

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaCopy, FaClipboardCheck } from "react-icons/fa";
 
 const Banner = () => {
   return (
@@ -12,7 +12,7 @@ const Banner = () => {
           <p id="job">Développeur front-end</p>
           <p id="description">
             Autodidacte de 24 ans, je suis passionné par le développement web,
-            l'UI/UX et l'accessibilité depuis 4 ans.
+            le design graphique et l'expérience utilisateur.
           </p>
         </div>
         <div className="banner-container__btn-container">

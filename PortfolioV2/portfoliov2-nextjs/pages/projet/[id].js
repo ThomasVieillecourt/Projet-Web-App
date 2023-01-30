@@ -1,4 +1,5 @@
 import Footer from "@/components/Footer";
+import Meta from "@/components/Meta";
 import { project } from "@/projectDB";
 import Link from "next/link";
 import { FaChevronLeft } from "react-icons/fa";
@@ -6,6 +7,7 @@ import { FaChevronLeft } from "react-icons/fa";
 const projet = ({ projet }) => {
   return (
     <div className="main-container">
+      <Meta title={projet.name} description={projet.fonction} />
       <div className="btn-container">
         <Link href={"/"} id="goBack-btn">
           <FaChevronLeft

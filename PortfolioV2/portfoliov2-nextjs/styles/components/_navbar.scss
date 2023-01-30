@@ -6,14 +6,27 @@
   width: 100%;
   background-color: transparent;
   z-index: 5;
+  padding: 0 16%;
+  position: fixed;
+  top: 0;
+  transition: 0.4s;
+
+  @media screen and (max-width: 1200px) {
+    padding: 0 8%;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 0 5%;
+    grid-column: 1 / span 6;
+  }
 
   @media screen and (max-width: 500px) {
-    grid-column: 1 / span 6;
+    padding: 0 3%;
   }
 
   nav {
     @include flexRow;
-    width: 80%;
+    width: auto;
     position: relative;
     z-index: 2;
 
@@ -80,7 +93,11 @@
 
   a {
     color: $white;
-    border-bottom: 1px solid $white;
+
+    &:hover {
+      border-bottom: 1px solid $white;
+    }
+
     @media screen and (max-width: 640px) {
       width: 120px;
     }

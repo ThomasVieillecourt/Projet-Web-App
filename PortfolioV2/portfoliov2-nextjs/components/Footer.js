@@ -1,14 +1,16 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Alert from "@mui/material/Alert";
+import { FaClipboardCheck, FaClipboard } from "react-icons/fa";
 
 const Footer = () => {
   const form = useRef();
-  const [email, setEmail] = useState();
+  const [textCopy, setTextCopy] = useState(false);
   const [sendStatut, setSendStatut] = useState(false);
   const [error, setError] = useState(false);
+  const [copyClipboard, setCopyClipboard] = useState(false);
 
-  function sendMail(e) {
+  const sendMail = (e) => {
     e.preventDefault();
 
     emailjs
@@ -29,15 +31,48 @@ const Footer = () => {
         }
       );
     e.target.reset();
-  }
+  };
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText("thomas.viei@hotmail.fr");
+    setCopyClipboard(true);
+    setTextCopy(true);
+  };
+
+  useEffect(() => {
+    let timeout;
+    timeout = setTimeout(() => setTextCopy(false), 2000);
+    return () => clearTimeout(timeout);
+  }, [textCopy]);
 
   return (
     <div className="footer-global-container">
       <div className="footer-content-container">
-        <h3>Me contacter</h3>
-        <div className="content__mailCC">
-          <p>thomas.viei@hotmail.fr</p>
-          <p>Icone</p>
+        <h3 id="contact">Me contacter</h3>
+        <div className="content__mailCC" onClick={() => handleCopy()}>
+          {textCopy ? (
+            <p
+              style={
+                copyClipboard ? { color: "#5ca960" } : { color: "#d9d9d9" }
+              }
+            >
+              Copié dans le presse papier !
+            </p>
+          ) : (
+            <p
+              style={
+                copyClipboard ? { color: "#5ca960" } : { color: "#d9d9d9" }
+              }
+            >
+              thomas.viei@hotmail.fr
+            </p>
+          )}
+
+          {copyClipboard ? (
+            <FaClipboardCheck id="content__mailCC--check" />
+          ) : (
+            <FaClipboard id="content__mailCC--copy" />
+          )}
         </div>
         <form ref={form} onSubmit={(e) => sendMail(e)}>
           <label htmlFor="mailInput">Email</label>

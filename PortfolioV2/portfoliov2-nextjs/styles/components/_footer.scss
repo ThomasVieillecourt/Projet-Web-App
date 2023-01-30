@@ -7,10 +7,18 @@
   bottom: 0;
   z-index: 5;
 
+  @media screen and (max-width: 500px) {
+    grid-column: 1 / span 6;
+  }
+
   .footer-content-container {
     width: 560px;
     margin: 0 auto;
     padding: 2em 1em;
+
+    @media screen and (max-width: 650px) {
+      width: 100%;
+    }
 
     h3 {
       text-align: center;
@@ -19,11 +27,38 @@
     .content__mailCC {
       @include flexRow;
       justify-content: space-between;
-      background-color: $black;
+      background-color: rgb(51, 50, 50);
       height: 42px;
       border-radius: 6px;
-      padding: 1em;
+      padding: 1.4em;
       margin: 2em 0;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgb(88, 87, 87);
+      }
+
+      p {
+        color: $white;
+        font-size: 1.2rem;
+        transition: 0.4s;
+        font-family: $fontText_Bold;
+
+        @media screen and (max-width: 340px) {
+          font-size: 1rem;
+        }
+      }
+
+      #content__mailCC--copy {
+        color: $white;
+        font-size: 1.6rem;
+      }
+
+      #content__mailCC--check {
+        transition: 0.4s;
+        color: $green;
+        font-size: 1.6rem;
+      }
     }
 
     form {
@@ -90,7 +125,7 @@
       }
 
       img {
-        width: 68px;
+        width: 62px;
       }
     }
   }

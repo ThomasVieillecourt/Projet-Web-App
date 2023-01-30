@@ -4,7 +4,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 const Projets = () => {
   return (
-    <div className="project-container">
+    <div className="project-container" id="projets">
       <h2>Projets</h2>
       <ul>
         {project.map((projet) => (

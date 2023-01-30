@@ -17,13 +17,17 @@
 
   #elnath {
     position: absolute;
-    left: 0;
+    left: -20%;
     z-index: -2;
     transform: translateY(-20%);
     pointer-events: none;
 
+    @media screen and (max-width: 1340px) {
+      left: -40%;
+    }
+
     @media screen and (max-width: 700px) {
-      left: -80%;
+      left: -130%;
     }
   }
 
@@ -94,11 +98,6 @@
 
       &:hover {
         outline: 1px solid $white;
-
-        .cardBanner-icon {
-          transition: 0.6s;
-          color: #347c9b;
-        }
       }
 
       h3 {
