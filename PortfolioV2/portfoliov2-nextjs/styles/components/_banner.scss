@@ -35,6 +35,7 @@
     @include flexColumn;
     justify-content: center;
     gap: 4rem;
+    z-index: 2;
 
     .banner-container__text {
       z-index: 2;
@@ -109,25 +110,30 @@
     position: relative;
     display: flex;
     align-items: center;
+    width: 100%;
 
     @media screen and (max-width: 880px) {
       display: none;
     }
 
-    img {
-      position: absolute;
-      width: 82%;
-      height: auto;
-      right: 0;
-      filter: drop-shadow(-30px 48px 200px #05052296);
-      pointer-events: none;
-      z-index: 0;
-
-      @media screen and (max-width: 1280px) {
-        right: -12%;
-        top: 16%;
-        width: 100%;
-      }
+    canvas {
+      width: 100%;
     }
+
+    // img {
+    //   position: absolute;
+    //   width: 82%;
+    //   height: auto;
+    //   right: 0;
+    //   filter: drop-shadow(-30px 48px 200px #05052296);
+    //   pointer-events: none;
+    //   z-index: 0;
+
+    //   @media screen and (max-width: 1280px) {
+    //     right: -12%;
+    //     top: 16%;
+    //     width: 100%;
+    //   }
+    // }
   }
 }

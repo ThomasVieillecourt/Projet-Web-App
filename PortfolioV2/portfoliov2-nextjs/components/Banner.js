@@ -3,6 +3,7 @@ import React from "react";
 import { FaGithub } from "react-icons/fa";
 import Image from "next/image";
 import { path } from "@/config";
+import SplineAnim from "./SplineAnim";
 
 const Banner = () => {
   return (
@@ -24,7 +25,7 @@ const Banner = () => {
           </p>
         </div>
         <div className="banner-container__btn-container">
-          <Link href="https://github.com/ThomasVieillecourt" target="_blank">
+          <Link href="/#contact" scroll={false}>
             <button className="btn-banner" id="contact-btn">
               Me contacter
             </button>
@@ -37,12 +38,7 @@ const Banner = () => {
         </div>
       </div>
       <div className="banner-container__sphere">
-        <Image
-          src={path + "/img/sphere.png"}
-          alt="sphere"
-          width={480}
-          height={480}
-        />
+        <SplineAnim />
       </div>
     </div>
   );

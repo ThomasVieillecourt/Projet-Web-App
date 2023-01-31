@@ -6,7 +6,7 @@
   height: auto;
   background-color: $black;
   border-radius: 6px;
-  margin: 2em 0;
+  margin: 6em 0 2em 0;
   position: relative;
 
   @media screen and (max-width: 700px) {
@@ -79,9 +79,9 @@
 
   .spica {
     position: absolute;
-    width: auto;
-    height: 200%;
-    right: -80%;
+    width: 100%;
+    height: auto;
+    right: -90%;
     top: 0%;
     z-index: -1;
     pointer-events: none;
