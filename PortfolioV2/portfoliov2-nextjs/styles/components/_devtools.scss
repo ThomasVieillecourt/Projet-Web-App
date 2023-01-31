@@ -9,6 +9,11 @@
   margin: 2em 0;
   position: relative;
 
+  @media screen and (max-width: 700px) {
+    grid-column-start: 2;
+    grid-column-end: 12;
+  }
+
   @media screen and (max-width: 500px) {
     grid-column: 1 / span 6;
   }
@@ -60,6 +65,7 @@
 
       img {
         width: 60px;
+        height: auto;
         @media screen and (max-width: 1280px) {
           width: 40px;
         }
@@ -71,11 +77,19 @@
     }
   }
 
-  #spica {
+  .spica {
     position: absolute;
+    width: auto;
+    height: 200%;
     right: -80%;
     top: 0%;
     z-index: -1;
     pointer-events: none;
+
+    @media screen and (max-width: 700px) {
+      height: 160%;
+      top: -30%;
+      right: -100%;
+    }
   }
 }

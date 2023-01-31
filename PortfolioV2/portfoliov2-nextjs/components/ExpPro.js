@@ -1,4 +1,6 @@
+import { path } from "@/config";
 import React from "react";
+import Image from "next/image";
 
 const ExpPro = () => {
   return (
@@ -41,7 +43,13 @@ const ExpPro = () => {
           <p className="para-text">En apprentissage constant ..</p>
         </div>
       </div>
-      <img src="../img/Gacrux.png" alt="gradient background" id="gacrux" />
+      <Image
+        src={path + "/img/Gacrux.png"}
+        alt="gradient background"
+        className="gacrux"
+        width={800}
+        height={800}
+      />
     </div>
   );
 };

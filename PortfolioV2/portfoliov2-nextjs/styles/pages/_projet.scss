@@ -35,12 +35,19 @@
   text-align: center;
   position: relative;
 
-  #procyon {
+  .procyon {
     position: absolute;
+    width: 100%;
+    height: auto;
     left: -80%;
-    bottom: -20%;
+    top: -30%;
     z-index: -2;
     pointer-events: none;
+
+    @media screen and (max-width: 1340px) {
+      left: -60%;
+      top: 0%;
+    }
   }
 
   .projet-container__tech-logo {
@@ -55,8 +62,9 @@
     }
   }
 
-  #projet-container__miniature {
+  .projet-container__miniature {
     width: 100%;
+    height: auto;
     border-radius: 6px;
     margin: 2em 0 0 0;
     border: 6px solid $white;
@@ -69,9 +77,9 @@
       padding: 1em 0 1em 0;
     }
 
-    #gifPresentation {
+    .gifPresentation {
       width: 100%;
-
+      height: auto;
       border-radius: 6px;
       margin: 2em 0 0 0;
       border: 6px solid $white;

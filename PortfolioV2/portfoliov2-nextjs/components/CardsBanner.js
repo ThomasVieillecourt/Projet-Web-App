@@ -1,11 +1,18 @@
 import React from "react";
 import { FaHashtag, FaLayerGroup, FaHandshake } from "react-icons/fa";
+import { path } from "@/config";
+import Image from "next/image";
 
 const CardsBanner = () => {
   return (
     <div className="cardBanner-container">
-      <img src="../img/line.png" alt="background-line" id="line" />
-      <img src="../img/Elnath.png" alt="blur-gradient" id="elnath" />
+      <Image
+        src={path + "/img/Elnath.png"}
+        alt="blur-gradient"
+        className="elnath"
+        width={800}
+        height={800}
+      />
       <div className="cards-container">
         <div className="cards">
           <FaHashtag className="cardBanner-icon" />

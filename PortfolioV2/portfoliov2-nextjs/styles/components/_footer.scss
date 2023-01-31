@@ -4,6 +4,7 @@
   height: auto;
   margin-top: 2em;
   padding: 2em 0 4em 0;
+
   bottom: 0;
   z-index: 5;
 
@@ -125,7 +126,8 @@
       }
 
       img {
-        width: 62px;
+        width: 60px;
+        height: auto;
       }
     }
   }

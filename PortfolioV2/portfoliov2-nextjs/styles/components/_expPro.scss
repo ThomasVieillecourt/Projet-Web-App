@@ -21,18 +21,16 @@
       .para-date {
         font-size: 0.8rem;
       }
-
-      .para-text {
-      }
     }
   }
 
-  #gacrux {
+  .gacrux {
     position: absolute;
     width: 180%;
+    height: auto;
     left: -40%;
     z-index: -2;
-    bottom: -50%;
+    bottom: -80%;
     pointer-events: none;
     overflow: hidden;
 

@@ -3,6 +3,8 @@ import Meta from "@/components/Meta";
 import { project } from "@/projectDB";
 import Link from "next/link";
 import { FaChevronLeft } from "react-icons/fa";
+import Image from "next/image";
+import { path } from "@/config";
 
 const projet = ({ projet }) => {
   return (
@@ -18,29 +20,47 @@ const projet = ({ projet }) => {
         </Link>
       </div>
       <div className="projet-container">
-        <img src="../img/procyon.png" alt="gradient background" id="procyon" />
+        <Image
+          src={path + "/img/procyon.png"}
+          alt="gradient background"
+          className="procyon"
+          width={500}
+          height={500}
+        />
 
         <h1>{projet.name}</h1>
 
         <h3>{projet.concept}</h3>
 
-        <img
-          src={projet.image}
+        <Image
+          src={path + projet.image}
           alt={projet.name}
-          id="projet-container__miniature"
+          width={1280}
+          height={580}
+          className="projet-container__miniature"
+          priority
         />
         <div className="projet-container__tech-logo">
-          <img src={projet.logo1} alt="" />
-          <img src={projet.logo2} alt="" />
-          {projet.logo3 && <img src={projet.logo3} alt="" />}
+          <Image src={projet.logo1} alt={projet.name} width={36} height={36} />
+          <Image src={projet.logo2} alt={projet.name} width={36} height={36} />
+          {projet.logo3 && (
+            <Image
+              src={projet.logo3}
+              alt={projet.name}
+              width={36}
+              height={36}
+            />
+          )}
         </div>
         <div className="projet-container__content">
           <h3>Fonctionnalités du projet</h3>
           <p>{projet.fonction}</p>
-          <img
+          <Image
             src={projet.gif_presentation}
             alt={projet.name}
-            id="gifPresentation"
+            className="gifPresentation"
+            width={1280}
+            height={580}
           />
 
           <h3>Challenge du projet</h3>

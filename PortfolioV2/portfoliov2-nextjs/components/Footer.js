@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Alert from "@mui/material/Alert";
 import { FaClipboardCheck, FaClipboard } from "react-icons/fa";
+import Image from "next/image";
+import { path } from "@/config";
 
 const Footer = () => {
   const form = useRef();
@@ -125,7 +127,12 @@ const Footer = () => {
         </div>
         <div className="footer-content__realisation">
           <p>Site réalisé avec</p>
-          <img src="../img/nextJS-logo-text.png" alt="logo nextjs" />
+          <Image
+            src={path + "/img/nextJS-logo-text.png"}
+            alt="logo nextjs"
+            width={62}
+            height={42}
+          />
         </div>
       </div>
     </div>

@@ -1,11 +1,19 @@
 import Link from "next/link";
 import React from "react";
-import { FaGithub, FaCopy, FaClipboardCheck } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import Image from "next/image";
+import { path } from "@/config";
 
 const Banner = () => {
   return (
     <div className="banner-container">
-      <img src="./img/Achernar.png" alt="blur_backgroound" id="archenar" />
+      <Image
+        src={path + "/img/Achernar.png"}
+        alt="blur_backgroound"
+        className="archenar"
+        width={450}
+        height={450}
+      />
       <div className="banner-container__content">
         <div className="banner-container__text">
           <h1>Thomas Vieillecourt</h1>
@@ -29,7 +37,12 @@ const Banner = () => {
         </div>
       </div>
       <div className="banner-container__sphere">
-        <img src="./img/sphere.png" alt="sphere" />
+        <Image
+          src={path + "/img/sphere.png"}
+          alt="sphere"
+          width={480}
+          height={480}
+        />
       </div>
     </div>
   );

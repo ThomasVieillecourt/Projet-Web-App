@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  images: {
+    domains: ["localhost"],
+  },
   env: {
     REACT_APP_SERVICE_ID: process.env.REACT_APP_SERVICE_ID,
     REACT_APP_TEMPLATE_ID: process.env.REACT_APP_TEMPLATE_ID,

@@ -1,6 +1,8 @@
 import { project } from "@/projectDB";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
+import { path } from "@/config";
+import Image from "next/image";
 
 const Projets = () => {
   return (
@@ -11,7 +13,13 @@ const Projets = () => {
           <li key={projet.id}>
             <Link href="projet/[id]" as={"projet/" + projet.id}>
               <div className="project-solo__container">
-                <img src={projet.image} alt="background project" id="imgBg" />
+                <Image
+                  src={projet.image}
+                  alt="background project"
+                  className="imgBg"
+                  width={1280}
+                  height={540}
+                />
                 <div className="project-solo__container-text">
                   <h3>{projet.name}</h3>
                   <span id="plusBtn">
@@ -20,9 +28,26 @@ const Projets = () => {
                   </span>
                 </div>
                 <div className="project-solo__logo-container">
-                  <img src={projet.logo1} alt="" />
-                  <img src={projet.logo2} alt="" />
-                  {projet.logo3 && <img src={projet.logo3} alt="" />}
+                  <Image
+                    src={projet.logo1}
+                    alt={projet.name}
+                    width={32}
+                    height={32}
+                  />
+                  <Image
+                    src={projet.logo2}
+                    alt={projet.name}
+                    width={32}
+                    height={32}
+                  />
+                  {projet.logo3 && (
+                    <Image
+                      src={projet.logo3}
+                      alt={projet.name}
+                      width={32}
+                      height={32}
+                    />
+                  )}
                 </div>
               </div>
             </Link>
@@ -42,7 +67,13 @@ const Projets = () => {
           </button>
         </Link>
       </div>
-      <img src="../img/procyon.png" alt="gradient background" id="procyon" />
+      <Image
+        src={path + "/img/procyon.png"}
+        alt="gradient background"
+        className="procyon"
+        width={32}
+        height={32}
+      />
     </div>
   );
 };

@@ -3,6 +3,7 @@
   display: grid;
   grid-template-columns: 50% 50%;
   height: 72vh;
+  position: relative;
 
   @media screen and (max-width: 880px) {
     grid-template-columns: 100%;
@@ -12,17 +13,20 @@
     grid-column: 1 / span 6;
   }
 
-  #archenar {
+  .archenar {
     position: absolute;
-    top: -2%;
-    right: -10%;
+    top: -10%;
+    right: -26%;
     opacity: 0.8;
     z-index: 0;
     pointer-events: none;
+    width: 100%;
+    height: auto;
 
-    @media screen and (max-width: 700px) {
-      top: -8%;
-      right: -20%;
+    @media screen and (max-width: 1200px) {
+      right: -14%;
+      top: 0;
+      height: 100%;
     }
   }
 
@@ -113,6 +117,7 @@
     img {
       position: absolute;
       width: 82%;
+      height: auto;
       right: 0;
       filter: drop-shadow(-30px 48px 200px #05052296);
       pointer-events: none;
