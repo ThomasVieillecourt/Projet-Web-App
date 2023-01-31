@@ -3,6 +3,7 @@ import React from "react";
 import { FaGithub } from "react-icons/fa";
 import Image from "next/image";
 import { path } from "@/config";
+import Spline from "@splinetool/react-spline";
 import SplineAnim from "./SplineAnim";
 
 const Banner = () => {
@@ -38,7 +39,13 @@ const Banner = () => {
         </div>
       </div>
       <div className="banner-container__sphere">
-        <SplineAnim />
+        <Spline
+          scene="https://prod.spline.design/YmxbfcKsi75hhTxW/scene.splinecode"
+          className="canvasSpline"
+          style={{
+            position: "absolute",
+          }}
+        />
       </div>
     </div>
   );

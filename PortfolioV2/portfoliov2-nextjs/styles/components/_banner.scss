@@ -110,14 +110,17 @@
     position: relative;
     display: flex;
     align-items: center;
-    width: 100%;
+    width: 110%;
 
     @media screen and (max-width: 880px) {
       display: none;
     }
 
-    canvas {
+    .canvasSpline {
+      position: absolute;
+      right: 0;
       width: 100%;
+      height: 100%;
     }
 
     // img {
