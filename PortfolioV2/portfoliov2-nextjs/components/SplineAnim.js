@@ -7,7 +7,7 @@ const SplineAnim = () => {
   return (
     <div className="sphere-container">
       <motion.div
-        whileHover={{ scale: 1.4 }}
+        whileHover={{ scale: 1.3, rotate: 8 }}
         whileTap={{ scale: 0.8 }}
         style={{ gridArea: "js" }}
       >
@@ -21,7 +21,7 @@ const SplineAnim = () => {
       </motion.div>
       <motion.div
         style={{ gridArea: "react" }}
-        whileHover={{ scale: 1.2 }}
+        whileHover={{ scale: 1.2, rotate: 8 }}
         transition={{ type: "spring", stiffness: 400, damping: 10 }}
       >
         <Image
@@ -33,7 +33,7 @@ const SplineAnim = () => {
       </motion.div>
       <motion.div
         style={{ gridArea: "ts" }}
-        whileHover={{ scale: 1.2 }}
+        whileHover={{ scale: 1.2, rotate: 8 }}
         transition={{ type: "spring", stiffness: 400, damping: 10 }}
       >
         <Image
@@ -45,14 +45,14 @@ const SplineAnim = () => {
       </motion.div>
       <motion.div
         style={{ gridArea: "node" }}
-        whileHover={{ scale: 1.2 }}
+        whileHover={{ scale: 1.2, rotate: 8 }}
         transition={{ type: "spring", stiffness: 400, damping: 10 }}
       >
         <Image src={path + "/img/nodejs.svg"} alt="" width={180} height={180} />
       </motion.div>
       <motion.div
         style={{ gridArea: "next" }}
-        whileHover={{ scale: 1.2 }}
+        whileHover={{ scale: 1.2, rotate: 8 }}
         transition={{ type: "spring", stiffness: 400, damping: 10 }}
       >
         <Image src={path + "/img/nextjs.svg"} alt="" width={180} height={180} />

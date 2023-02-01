@@ -16,24 +16,24 @@ const Banner = () => {
         width={450}
         height={450}
       />
-      <div className="banner-container__content">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 0.8,
-            delay: 0.5,
-            ease: [0, 0.71, 0.2, 1.01],
-          }}
-          className="banner-container__text"
-        >
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.8,
+          delay: 0.5,
+          ease: [0, 0.71, 0.2, 1.01],
+        }}
+        className="banner-container__content"
+      >
+        <div className="banner-container__text">
           <h1>Thomas Vieillecourt</h1>
           <p id="job">Développeur front-end</p>
           <p id="description">
             Autodidacte de 24 ans, je suis passionné par le développement web,
             le design graphique et l'expérience utilisateur.
           </p>
-        </motion.div>
+        </div>
         <div className="banner-container__btn-container">
           <Link href="/#contact" scroll={false}>
             <button className="btn-banner" id="contact-btn">
@@ -46,11 +46,19 @@ const Banner = () => {
             </button>
           </Link>
         </div>
-      </div>
-      <div className="banner-container__sphere">
-        {/* <SplineComponent /> */}
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.8,
+          delay: 0.5,
+          ease: [0, 0.71, 0.2, 1.01],
+        }}
+        className="banner-container__sphere"
+      >
         <SplineAnim />
-      </div>
+      </motion.div>
     </div>
   );
 };

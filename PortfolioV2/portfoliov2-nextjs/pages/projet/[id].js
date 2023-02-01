@@ -5,6 +5,7 @@ import Link from "next/link";
 import { FaChevronLeft } from "react-icons/fa";
 import Image from "next/image";
 import { path } from "@/config";
+import { motion } from "framer-motion";
 
 const projet = ({ projet }) => {
   return (
@@ -19,7 +20,16 @@ const projet = ({ projet }) => {
           Revenir à l'accueil
         </Link>
       </div>
-      <div className="projet-container">
+      <motion.div
+        className="projet-container"
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 0.6,
+          delay: 0.2,
+          ease: [0, 0.71, 0.2, 1.01],
+        }}
+      >
         <Image
           src={path + "/img/procyon.png"}
           alt="gradient background"
@@ -66,7 +76,7 @@ const projet = ({ projet }) => {
           <h3>Challenge du projet</h3>
           <p>{projet.tools}</p>
         </div>
-      </div>
+      </motion.div>
       <Footer />
     </div>
   );
