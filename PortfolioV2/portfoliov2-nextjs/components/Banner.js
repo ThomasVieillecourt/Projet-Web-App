@@ -3,7 +3,7 @@ import React from "react";
 import { FaGithub } from "react-icons/fa";
 import Image from "next/image";
 import { path } from "@/config";
-import Spline from "@splinetool/react-spline";
+import { motion } from "framer-motion";
 import SplineAnim from "./SplineAnim";
 
 const Banner = () => {
@@ -17,14 +17,23 @@ const Banner = () => {
         height={450}
       />
       <div className="banner-container__content">
-        <div className="banner-container__text">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.8,
+            delay: 0.5,
+            ease: [0, 0.71, 0.2, 1.01],
+          }}
+          className="banner-container__text"
+        >
           <h1>Thomas Vieillecourt</h1>
           <p id="job">Développeur front-end</p>
           <p id="description">
             Autodidacte de 24 ans, je suis passionné par le développement web,
             le design graphique et l'expérience utilisateur.
           </p>
-        </div>
+        </motion.div>
         <div className="banner-container__btn-container">
           <Link href="/#contact" scroll={false}>
             <button className="btn-banner" id="contact-btn">
@@ -39,13 +48,8 @@ const Banner = () => {
         </div>
       </div>
       <div className="banner-container__sphere">
-        <Spline
-          scene="https://prod.spline.design/YmxbfcKsi75hhTxW/scene.splinecode"
-          className="canvasSpline"
-          style={{
-            position: "absolute",
-          }}
-        />
+        {/* <SplineComponent /> */}
+        <SplineAnim />
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { path } from "@/config";
+import { motion } from "framer-motion";
 
 const Devtools = () => {
   return (
@@ -8,7 +9,17 @@ const Devtools = () => {
       <div className="devtools__tech-container__each" id="competences">
         <h3>Mes compétences</h3>
         <div className="devtools__tech-container">
-          <div>
+          <motion.div
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            viewport={{ once: true }}
+            whileHover={{ scale: [null, 1.2, 1.1] }}
+            transition={{
+              type: "spring",
+              stiffness: 260,
+              damping: 20,
+            }}
+          >
             <Image
               src={path + "/img/javascript.png"}
               alt="logo javascript"
@@ -16,8 +27,18 @@ const Devtools = () => {
               height={60}
             />
             <p>Javascript</p>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            viewport={{ once: true }}
+            whileHover={{ scale: [null, 1.2, 1.1] }}
+            transition={{
+              type: "spring",
+              stiffness: 260,
+              damping: 20,
+            }}
+          >
             <Image
               src={path + "/img/React.png"}
               alt="logo react"
@@ -25,8 +46,18 @@ const Devtools = () => {
               height={60}
             />
             <p>React</p>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            viewport={{ once: true }}
+            whileHover={{ scale: [null, 1.2, 1.1] }}
+            transition={{
+              type: "spring",
+              stiffness: 260,
+              damping: 20,
+            }}
+          >
             <Image
               src={path + "/img/Shape.png"}
               alt="logo sass"
@@ -34,8 +65,18 @@ const Devtools = () => {
               height={60}
             />
             <p>Sass</p>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            viewport={{ once: true }}
+            whileHover={{ scale: [null, 1.2, 1.1] }}
+            transition={{
+              type: "spring",
+              stiffness: 260,
+              damping: 20,
+            }}
+          >
             <Image
               src={path + "/img/TypeScript.png"}
               alt="logo typescript"
@@ -43,8 +84,18 @@ const Devtools = () => {
               height={60}
             />
             <p>Typescript</p>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            viewport={{ once: true }}
+            whileHover={{ scale: [null, 1.2, 1.1] }}
+            transition={{
+              type: "spring",
+              stiffness: 260,
+              damping: 20,
+            }}
+          >
             <Image
               src={path + "/img/Nodejs.png"}
               alt="logo Nodejs"
@@ -52,8 +103,18 @@ const Devtools = () => {
               height={60}
             />
             <p>NodeJs</p>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            viewport={{ once: true }}
+            whileHover={{ scale: [null, 1.2, 1.1] }}
+            transition={{
+              type: "spring",
+              stiffness: 260,
+              damping: 20,
+            }}
+          >
             <Image
               src={path + "/img/Next.png"}
               alt="logo nexImage"
@@ -61,7 +122,7 @@ const Devtools = () => {
               height={60}
             />
             <p>NextJs</p>
-          </div>
+          </motion.div>
         </div>
       </div>
       <div className="devtools__tech-container__each">

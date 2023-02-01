@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 import { path } from "@/config";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const Projets = () => {
   return (
@@ -10,7 +11,16 @@ const Projets = () => {
       <h2>Projets</h2>
       <ul>
         {project.map((projet) => (
-          <li key={projet.id}>
+          <motion.li
+            key={projet.id}
+            initial={{ opacity: 0, scale: 0.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.8,
+              ease: [0, 0.71, 0.2, 1.01],
+            }}
+          >
             <Link href="projet/[id]" as={"projet/" + projet.id}>
               <div className="project-solo__container">
                 <Image
@@ -51,7 +61,7 @@ const Projets = () => {
                 </div>
               </div>
             </Link>
-          </li>
+          </motion.li>
         ))}
       </ul>
 

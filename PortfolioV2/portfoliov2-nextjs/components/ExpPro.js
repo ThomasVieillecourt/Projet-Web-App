@@ -1,12 +1,17 @@
 import { path } from "@/config";
-import React from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const ExpPro = () => {
   return (
     <div className="exp-container" id="experience">
       <h2>Expérience</h2>
-      <div className="exp-container__content">
+      <motion.div
+        className="exp-container__content"
+        whileHover={{ scale: 1.01 }}
+        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+      >
         <div className="content--para">
           <h3>Stage Designer graphique - B'Creativ</h3>
           <p className="para-date">2017</p>
@@ -42,7 +47,7 @@ const ExpPro = () => {
           <p className="para-date">Actuellement</p>
           <p className="para-text">En apprentissage constant ..</p>
         </div>
-      </div>
+      </motion.div>
       <Image
         src={path + "/img/Gacrux.png"}
         alt="gradient background"

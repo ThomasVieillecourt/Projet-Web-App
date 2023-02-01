@@ -2,6 +2,7 @@ import React from "react";
 import { FaHashtag, FaLayerGroup, FaHandshake } from "react-icons/fa";
 import { path } from "@/config";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const CardsBanner = () => {
   return (
@@ -14,14 +15,32 @@ const CardsBanner = () => {
         height={800}
       />
       <div className="cards-container">
-        <div className="cards">
+        <motion.div
+          className="cards"
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.8,
+            delay: 1,
+            ease: [0, 0.71, 0.2, 1.01],
+          }}
+        >
           <FaHashtag className="cardBanner-icon" />
           <div>
             <h3>Développeur front-end</h3>
             <p>Développement de site web, application web ou mobile.</p>
           </div>
-        </div>
-        <div className="cards">
+        </motion.div>
+        <motion.div
+          className="cards"
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.8,
+            delay: 1.1,
+            ease: [0, 0.71, 0.2, 1.01],
+          }}
+        >
           <FaLayerGroup className="cardBanner-icon" />
           <div>
             <h3>
@@ -32,8 +51,17 @@ const CardsBanner = () => {
               créations.
             </p>
           </div>
-        </div>
-        <div className="cards">
+        </motion.div>
+        <motion.div
+          className="cards"
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.8,
+            delay: 1.2,
+            ease: [0, 0.71, 0.2, 1.01],
+          }}
+        >
           <FaHandshake className="cardBanner-icon" />
           <div>
             <h3 id="competences">Accéssibilité</h3>
@@ -42,7 +70,7 @@ const CardsBanner = () => {
               d'explorer le web sur un pied d'égalité.
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
