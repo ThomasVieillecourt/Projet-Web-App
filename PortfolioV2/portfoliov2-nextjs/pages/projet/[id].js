@@ -44,7 +44,7 @@ const Projet = ({ projet }) => {
         }}
       >
         <Image
-          src={path + "/img/procyon.png"}
+          src={path + "/img/Procyon.png"}
           alt="gradient background"
           className="procyon"
           width={500}
