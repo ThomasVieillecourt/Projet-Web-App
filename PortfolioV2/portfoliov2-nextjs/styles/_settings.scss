@@ -42,10 +42,18 @@ $green: #5ca960;
   padding: 0;
 }
 
+html {
+  width: 100vw;
+  height: auto;
+  overflow-x: hidden;
+}
+
 body {
   background-color: $black;
   overflow-x: hidden;
+
   position: relative;
+  width: 100vw;
 }
 
 h1 {
@@ -125,6 +133,5 @@ button {
   @media screen and (max-width: 500px) {
     grid-template-columns: repeat(6, 1fr);
     column-gap: 10px;
-    margin: 0 3%;
   }
 }

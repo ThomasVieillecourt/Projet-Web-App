@@ -81,15 +81,18 @@
     position: absolute;
     width: 100%;
     height: auto;
-    right: -90%;
+    right: 0;
+    transform: translateX(100%);
     top: 0%;
     z-index: -1;
     pointer-events: none;
 
     @media screen and (max-width: 700px) {
-      height: 160%;
-      top: -30%;
-      right: -100%;
+      transform: translateX(50%);
+
+      height: 100%;
+      top: 0;
+      right: 0;
     }
   }
 }

@@ -6,12 +6,25 @@ import { FaChevronLeft } from "react-icons/fa";
 import Image from "next/image";
 import { path } from "@/config";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const projet = ({ projet }) => {
+  const [navColor, setNavColor] = useState("transparent");
+  const listenScrollEvent = () => {
+    window.scrollY > 10
+      ? setNavColor("rgba(18,18,18, 0.98)")
+      : setNavColor("transparent");
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", listenScrollEvent);
+    return () => {
+      window.removeEventListener("scroll", listenScrollEvent);
+    };
+  }, []);
   return (
     <div className="main-container">
       <Meta title={projet.name} description={projet.fonction} />
-      <div className="btn-container">
+      <div className="btn-container" style={{ backgroundColor: navColor }}>
         <Link href={"/"} id="goBack-btn">
           <FaChevronLeft
             style={{ transform: "translateY(2px)" }}
@@ -40,7 +53,7 @@ const projet = ({ projet }) => {
 
         <h1>{projet.name}</h1>
 
-        <h3>{projet.concept}</h3>
+        <h2>{projet.concept}</h2>
 
         <Image
           src={path + projet.image}
@@ -71,6 +84,7 @@ const projet = ({ projet }) => {
             className="gifPresentation"
             width={1280}
             height={580}
+            priority
           />
 
           <h3>Challenge du projet</h3>
