@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["localhost"],
+    domains: ["https://thomas-vieillecourt-portfolio.vercel.app/"],
     unoptimized: true,
   },
   env: {
