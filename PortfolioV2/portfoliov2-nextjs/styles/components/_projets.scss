@@ -68,7 +68,11 @@
       }
 
       @media screen and (max-width: 500px) {
+        max-height: none;
+        max-width: none;
         left: 0;
+        height: 100%;
+        width: auto;
       }
     }
 
