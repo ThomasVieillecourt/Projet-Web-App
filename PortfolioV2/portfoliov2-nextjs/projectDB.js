@@ -2,8 +2,8 @@ export const project = [
   {
     id: 1,
     name: "Crypto watch",
-    image: "/img/crypto.png",
-    logo1: "/img/react.png",
+    image: "/img/Crypto.PNG",
+    logo1: "/img/React.png",
     logo2: "/img/Shape.png",
     concept: "Application de suivi des principaux actifs en crypto-monnaie.",
     fonction:
@@ -15,9 +15,9 @@ export const project = [
   {
     id: 2,
     name: "Film database",
-    image: "/img/cinemaApp.png",
-    logo1: "/img/react.png",
-    logo2: "/img/nodejs.png",
+    image: "/img/cinemaApp.PNG",
+    logo1: "/img/React.png",
+    logo2: "/img/Nodejs.png",
     logo3: "/img/Shape.png",
     concept:
       "Application pour voir les films et séries en tendance et créer sa liste de favoris.",
@@ -30,8 +30,8 @@ export const project = [
   {
     id: 3,
     name: "Valorant",
-    image: "/img/valorant.png",
-    logo1: "/img/javascript.png",
+    image: "/img/valorant.PNG",
+    logo1: "/img/Javascript.png",
     logo2: "/img/Shape.png",
     concept: "Page d'accueil de séléction des héros du jeu Valorant.",
     fonction:
@@ -43,8 +43,8 @@ export const project = [
   {
     id: 4,
     name: "Mini game",
-    image: "/img/miniGame.png",
-    logo1: "/img/javascript.png",
+    image: "/img/miniGame.PNG",
+    logo1: "/img/Javascript.png",
     logo2: "/img/Shape.png",
     concept: "Jeu Pierre, Papier, Ciseau contre l'ordinateur",
     fonction:

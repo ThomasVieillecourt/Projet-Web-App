@@ -21,7 +21,7 @@ const Devtools = () => {
             }}
           >
             <Image
-              src={path + "/img/javascript.png"}
+              src={path + "/img/Javascript.png"}
               alt="logo javascript"
               width={60}
               height={60}
@@ -171,7 +171,7 @@ const Devtools = () => {
           </div>
           <div>
             <Image
-              src={path + "/img/Mongo.png"}
+              src={path + "/img/mongo.png"}
               alt="logo mangoDb"
               width={60}
               height={60}
@@ -180,7 +180,7 @@ const Devtools = () => {
           </div>
           <div>
             <Image
-              src={path + "/img/postman.png"}
+              src={path + "/img/Postman.png"}
               alt="logo postman"
               width={60}
               height={60}
@@ -194,7 +194,7 @@ const Devtools = () => {
         <div className="devtools__tech-container">
           <div>
             <Image
-              src={path + "/img/figma.png"}
+              src={path + "/img/Figma.png"}
               alt="logo figma"
               width={60}
               height={60}
@@ -232,7 +232,7 @@ const Devtools = () => {
         </div>
       </div>
       <Image
-        src={path + "/img/spica.png"}
+        src={path + "/img/Spica.png"}
         alt="gradient blur background"
         className="spica"
         width={60}
