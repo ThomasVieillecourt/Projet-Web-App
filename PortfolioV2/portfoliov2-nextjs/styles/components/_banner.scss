@@ -44,15 +44,16 @@
     .banner-container__text {
       padding: 0 1em;
       z-index: 2;
+      @media screen and (max-width: 500px) {
+        margin: 2em 0;
+      }
       #job {
         font-size: 2rem;
         font-family: $fontTitle;
         color: $white;
         padding: 1rem 0;
-
         @media screen and (max-width: 500px) {
           font-size: 1.4rem;
-          margin: 2em 0;
         }
       }
 
