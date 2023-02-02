@@ -47,7 +47,7 @@ const CardsBanner = () => {
               Expérience utilisateur <br />& Design
             </h3>
             <p>
-              Le design et l'expérience des utilisateurs est au coeur de mes
+              Le design et l{"'"}expérience des utilisateurs est au coeur de mes
               créations.
             </p>
           </div>
@@ -66,8 +66,8 @@ const CardsBanner = () => {
           <div>
             <h3 id="competences">Accéssibilité</h3>
             <p>
-              Développement de sites qui donne le droit à tout le monde
-              d'explorer le web sur un pied d'égalité.
+              Développement de sites qui donne le droit à tout le monde d{"'"}
+              explorer le web sur un pied d{"'"}égalité.
             </p>
           </div>
         </motion.div>

@@ -3,6 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: ["localhost"],
+    unoptimized: true,
   },
   env: {
     REACT_APP_SERVICE_ID: process.env.REACT_APP_SERVICE_ID,

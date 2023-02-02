@@ -15,6 +15,7 @@ const Banner = () => {
         className="archenar"
         width={450}
         height={450}
+        priority
       />
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -31,7 +32,7 @@ const Banner = () => {
           <p id="job">Développeur front-end</p>
           <p id="description">
             Autodidacte de 24 ans, je suis passionné par le développement web,
-            le design graphique et l'expérience utilisateur.
+            le design graphique et l{"'"}expérience utilisateur.
           </p>
         </div>
         <div className="banner-container__btn-container">

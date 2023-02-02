@@ -8,7 +8,7 @@ import { path } from "@/config";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const projet = ({ projet }) => {
+const Projet = ({ projet }) => {
   const [navColor, setNavColor] = useState("transparent");
   const listenScrollEvent = () => {
     window.scrollY > 10
@@ -30,7 +30,7 @@ const projet = ({ projet }) => {
             style={{ transform: "translateY(2px)" }}
             id="chevronLeft"
           />
-          Revenir à l'accueil
+          Revenir à l{"'"}accueil
         </Link>
       </div>
       <motion.div
@@ -96,7 +96,7 @@ const projet = ({ projet }) => {
   );
 };
 
-export default projet;
+export default Projet;
 
 export const getStaticProps = (context) => {
   const filtered = project.filter((projet) => projet.id == context.params.id);

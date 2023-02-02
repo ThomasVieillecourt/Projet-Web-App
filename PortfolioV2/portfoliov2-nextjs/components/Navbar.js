@@ -53,9 +53,9 @@ const Navbar = () => {
         </button>
       </nav>
 
-      <a href="/#contact">
+      <Link href="/#contact" scroll={false}>
         Me contacter <FaArrowRight style={{ transform: "translateY(14%)" }} />
-      </a>
+      </Link>
     </div>
   );
 };

@@ -158,7 +158,7 @@ const Devtools = () => {
         </div>
       </div>
       <div className="devtools__tech-container__each">
-        <h3>J'ai déjà travaillé avec ..</h3>
+        <h3>J{"'"}ai déjà travaillé avec ..</h3>
         <div className="devtools__tech-container">
           <div>
             <Image

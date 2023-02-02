@@ -13,12 +13,12 @@ const ExpPro = () => {
         transition={{ type: "spring", stiffness: 400, damping: 10 }}
       >
         <div className="content--para">
-          <h3>Stage Designer graphique - B'Creativ</h3>
+          <h3>Stage Designer graphique - B{"'"}Creativ</h3>
           <p className="para-date">2017</p>
           <p className="para-text">
-            Stage en agence événementiel, j'ai travaillé sur la cration visuel
-            pour des visuels web ainsi que sur la confection graphique
-            d'éléments print (flyers, carte de visite, panneau publicitaire).
+            Stage en agence événementiel, j{"'"}ai travaillé sur la création
+            graphique de visuels web ainsi que sur la confection graphique d
+            {"'"}éléments print (flyers, carte de visite, panneau publicitaire).
           </p>
         </div>
 
@@ -26,7 +26,7 @@ const ExpPro = () => {
           <h3>Stage Chef de projet digital - Solocal</h3>
           <p className="para-date">2018</p>
           <p className="para-text">
-            En charge de l'organisation des événements en interne du groupe.
+            En charge de l{"'"}organisation des événements en interne du groupe.
             Cela pouvait concerner les formations, la mise en place des biais de
             communication et la cohérence graphique de ces derniers.
           </p>
@@ -36,9 +36,10 @@ const ExpPro = () => {
           <h3>Chef de projet digital - Big Youth</h3>
           <p className="para-date">2019-2022</p>
           <p className="para-text">
-            Chef de projet, responsable de l'organisation, la planification et
-            la livraison des projets web. J'ai pu travailler avec une équipe
-            d'UI, UX designers ainsi que des développeurs front et back.
+            Chef de projet, responsable de l{"'"}organisation, la planification
+            et la livraison des projets web. J{"'"}ai pu travailler avec une
+            équipe d{"'"}UI, UX designers ainsi que des développeurs front et
+            back.
           </p>
         </div>
 

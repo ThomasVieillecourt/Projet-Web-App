@@ -121,8 +121,8 @@ const Footer = () => {
         </form>
         <div className="footer-content__like">
           <p>
-            Site réalisé à la main, aucune donnée n'est collectée. L'entiereté
-            du code est disponible sur mon GitHub.
+            Site réalisé à la main, aucune donnée n{"'"}est collectée. L{"'"}
+            entiereté du code est disponible sur mon GitHub.
           </p>
         </div>
         <div className="footer-content__realisation">
