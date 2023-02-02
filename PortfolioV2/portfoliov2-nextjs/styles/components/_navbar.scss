@@ -33,7 +33,7 @@
     @include flexRow;
     width: auto;
     position: relative;
-    z-index: 2;
+    z-index: 10000;
 
     ul {
       @include flexRow;
@@ -55,6 +55,7 @@
         padding: 20%;
         font-size: 1.4rem;
         align-items: flex-start;
+        z-index: 10000;
 
         .nav-close-btn {
           position: absolute;
