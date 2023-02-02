@@ -46,7 +46,7 @@ const ExpPro = () => {
         <div className="content--para">
           <h3>Autodidacte</h3>
           <p className="para-date">Actuellement</p>
-          <p className="para-text">En apprentissage constant ..</p>
+          <p className="para-text">En apprentissage constant !</p>
         </div>
       </motion.div>
       <Image

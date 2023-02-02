@@ -67,7 +67,7 @@ const CardsBanner = () => {
             <h3 id="competences">Accéssibilité</h3>
             <p>
               Développement de sites qui donne le droit à tout le monde d{"'"}
-              explorer le web sur un pied d{"'"}égalité.
+              explorer le web sur un même pied d{"'"}égalité.
             </p>
           </div>
         </motion.div>
