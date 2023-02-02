@@ -237,6 +237,7 @@ const Devtools = () => {
         className="spica"
         width={60}
         height={60}
+        priority
       />
     </div>
   );

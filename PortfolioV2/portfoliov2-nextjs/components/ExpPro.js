@@ -55,6 +55,7 @@ const ExpPro = () => {
         className="gacrux"
         width={800}
         height={800}
+        priority
       />
     </div>
   );

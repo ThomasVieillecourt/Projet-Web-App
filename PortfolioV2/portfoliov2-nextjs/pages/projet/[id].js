@@ -49,6 +49,7 @@ const Projet = ({ projet }) => {
           className="procyon"
           width={500}
           height={500}
+          priority
         />
 
         <h1>{projet.name}</h1>
