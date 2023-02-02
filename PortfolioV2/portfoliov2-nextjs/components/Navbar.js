@@ -5,6 +5,7 @@ import { FaBars, FaTimes, FaArrowRight } from "react-icons/fa";
 const Navbar = () => {
   const navRef = useRef();
   const [navColor, setNavColor] = useState("transparent");
+  const [isNavExtended, setIsNavExtended] = useState(false);
 
   const showNav = () => {
     navRef.current.classList.toggle("responsive_nav");
@@ -27,28 +28,53 @@ const Navbar = () => {
       <nav>
         <ul ref={navRef}>
           <li>
-            <Link href="/">Accueil</Link>
+            <Link href="/" onClick={isNavExtended ? showNav : ""}>
+              Accueil
+            </Link>
           </li>
           <li>
-            <Link href="#competences" scroll={false}>
+            <Link
+              href="#competences"
+              scroll={false}
+              onClick={isNavExtended ? showNav : ""}
+            >
               Compétences
             </Link>
           </li>
           <li>
-            <Link href="#projets" scroll={false}>
+            <Link
+              href="#projets"
+              scroll={false}
+              onClick={isNavExtended ? showNav : ""}
+            >
               Projets
             </Link>
           </li>
           <li>
-            <Link href="#experience" scroll={false}>
+            <Link
+              href="#experience"
+              scroll={false}
+              onClick={isNavExtended ? showNav : ""}
+            >
               Expérience
             </Link>
           </li>
-          <button className="nav-btn nav-close-btn" onClick={showNav}>
+          <button
+            className="nav-btn nav-close-btn"
+            onClick={() => {
+              setIsNavExtended(false), showNav();
+            }}
+          >
             <FaTimes />
           </button>
         </ul>
-        <button className="nav-btn" onClick={showNav} id="openBtn">
+        <button
+          className="nav-btn"
+          onClick={() => {
+            showNav(), setIsNavExtended(true);
+          }}
+          id="openBtn"
+        >
           <FaBars />
         </button>
       </nav>
