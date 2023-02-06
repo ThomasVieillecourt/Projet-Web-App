@@ -38,11 +38,10 @@
     z-index: 2;
 
     @media screen and (max-width: 500px) {
-      gap: 0;
+      gap: 2em;
     }
 
     .banner-container__text {
-      padding: 0 1em;
       z-index: 2;
       @media screen and (max-width: 500px) {
         margin: 2em 0;
