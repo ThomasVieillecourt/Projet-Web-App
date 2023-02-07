@@ -16,6 +16,7 @@ const Header = ({ modifysetIdData }) => {
               modifysetIdData("trending/movie/week");
             }
           }}
+          data-testid="titleId"
         >
           Movies
         </li>
